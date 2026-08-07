@@ -28,7 +28,6 @@ ENV UPLOADS_EXTRACT_DIR=/app/.migration-work
 RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
 
 # Next.js standalone output
-RUN mkdir -p /app/new-site/public
 COPY --from=builder /app/new-site/public ./public
 COPY --from=builder /app/new-site/.next/standalone ./
 COPY --from=builder /app/new-site/.next/static ./.next/static
@@ -53,5 +52,5 @@ EXPOSE 3000
 ENV PORT=3000
 ENV HOSTNAME=0.0.0.0
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/bin/sh", "/docker-entrypoint.sh"]
 CMD ["node", "server.js"]
