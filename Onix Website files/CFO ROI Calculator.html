@@ -1,0 +1,981 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">/* ── Onix ROI Calculator — all rules scoped to #onix-roi-calc — safe for WordPress ── */</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-bg: hsl(210, 20%, 98%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-fg: hsl(215, 25%, 15%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-card: hsl(0, 0%, 100%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-card-fg: hsl(215, 25%, 15%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-primary: hsl(216, 58%, 34%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-primary-fg: hsl(0, 0%, 100%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-primary-glow: hsl(216, 65%, 44%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-muted: hsl(210, 15%, 95%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-muted-fg: hsl(215, 10%, 50%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-accent: hsl(4, 66%, 42%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-border: hsl(215, 20%, 88%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-input: hsl(215, 20%, 88%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-ring: hsl(216, 58%, 34%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-radius: 0.625rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-shadow-card: 0 1px 3px 0 hsl(216 20% 15% / 0.06), 0 1px 2px -1px hsl(216 20% 15% / 0.06);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-shadow-elevated: 0 4px 16px -2px hsl(216 20% 15% / 0.1), 0 2px 4px -2px hsl(216 20% 15% / 0.06);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-font-display: 'Space Grotesk', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--orc-font-body: 'Inter', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family: var(--orc-font-body);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: var(--orc-fg);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>line-height: 1.5;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 2rem 1rem;</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc *, #onix-roi-calc *::before, #onix-roi-calc *::after { box-sizing: border-box; margin: 0; padding: 0; }</p>
+<p class="p1">#onix-roi-calc h1, #onix-roi-calc h2, #onix-roi-calc h3,</p>
+<p class="p1">#onix-roi-calc h4, #onix-roi-calc h5, #onix-roi-calc h6 { font-family: var(--orc-font-display); }</p>
+<p class="p1">@media (min-width: 768px) { #onix-roi-calc { padding: 3rem 2rem; } }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .orc-container {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>max-width: 72rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gap: 2rem;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .header { text-align: center; }</p>
+<p class="p1">#onix-roi-calc .header h1 { font-size: 1.875rem; font-weight: 700; line-height: 1.2; }</p>
+<p class="p1">@media (min-width: 768px) { #onix-roi-calc .header h1 { font-size: 2.25rem; } }</p>
+<p class="p1">#onix-roi-calc .header p { color: var(--orc-muted-fg); max-width: 42rem; margin: 0.75rem auto 0; font-size: 0.875rem; }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .card {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: var(--orc-card);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border: 1px solid var(--orc-border);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: var(--orc-radius);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow: var(--orc-shadow-elevated);</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .card.shadow-card { box-shadow: var(--orc-shadow-card); }</p>
+<p class="p1">#onix-roi-calc .card-header {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 1.5rem 1.5rem 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gap: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family: var(--orc-font-display);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 1.125rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: var(--orc-card-fg);</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .card-header svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--orc-muted-fg); }</p>
+<p class="p1">#onix-roi-calc .card-header.accent-icon svg { color: var(--orc-accent); }</p>
+<p class="p1">#onix-roi-calc .card-header.sm { font-size: 1rem; padding-bottom: 0.75rem; }</p>
+<p class="p1">#onix-roi-calc .card-header.sm svg { width: 16px; height: 16px; }</p>
+<p class="p1">#onix-roi-calc .card-body { padding: 0 1.5rem 1.5rem; }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .grid-1 { display: grid; grid-template-columns: 1fr; gap: 1rem; }</p>
+<p class="p1">#onix-roi-calc .grid-2 { display: grid; grid-template-columns: 1fr; gap: 1rem; }</p>
+<p class="p1">#onix-roi-calc .grid-3 { display: grid; grid-template-columns: 1fr; gap: 1rem; }</p>
+<p class="p1">@media (min-width: 640px) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#onix-roi-calc .grid-2 { grid-template-columns: 1fr 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#onix-roi-calc .grid-3 { grid-template-columns: 1fr 1fr; }</p>
+<p class="p1">}</p>
+<p class="p1">@media (min-width: 1024px) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#onix-roi-calc .grid-3 { grid-template-columns: 1fr 1fr 1fr; }</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .field { display: flex; flex-direction: column; gap: 0.375rem; }</p>
+<p class="p1">#onix-roi-calc .field label {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 0.875rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: var(--orc-fg);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items: center;</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .field label .req { color: var(--orc-accent); margin-left: 0.125rem; }</p>
+<p class="p1">#onix-roi-calc .field .input-wrap { position: relative; }</p>
+<p class="p1">#onix-roi-calc .field input, #onix-roi-calc .field select {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 0.5rem 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border: 1px solid var(--orc-input);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: calc(var(--orc-radius) - 2px);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 0.875rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family: var(--orc-font-body);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: var(--orc-bg);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: var(--orc-fg);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transition: border-color 0.15s;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>outline: none;</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .field input:focus, #onix-roi-calc .field select:focus {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-color: var(--orc-ring);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow: 0 0 0 2px hsl(216 58% 34% / 0.15);</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .field input.has-prefix { padding-left: 3rem; }</p>
+<p class="p1">#onix-roi-calc .field input.has-suffix { padding-right: 3.5rem; }</p>
+<p class="p1">#onix-roi-calc .field .prefix, #onix-roi-calc .field .suffix {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>top: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transform: translateY(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 0.875rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: var(--orc-muted-fg);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>pointer-events: none;</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .field .prefix { left: 0.75rem; }</p>
+<p class="p1">#onix-roi-calc .field .suffix { right: 0.75rem; }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .info-btn {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: inline-flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: var(--orc-muted-fg);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-left: 0.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transition: color 0.15s;</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .info-btn:hover { color: var(--orc-primary); }</p>
+<p class="p1">#onix-roi-calc .info-btn svg { width: 14px; height: 14px; }</p>
+<p class="p1">#onix-roi-calc .info-btn .tip {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>bottom: calc(100% + 8px);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>left: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transform: translateX(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: var(--orc-fg);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: var(--orc-primary-fg);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 0.5rem 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: calc(var(--orc-radius) - 2px);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family: var(--orc-font-body);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: max-content;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>max-width: 16rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>z-index: 50;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>line-height: 1.4;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align: left;</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .info-btn:hover .tip, #onix-roi-calc .info-btn:focus .tip { display: block; }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .switch-row { display: flex; align-items: center; gap: 0.75rem; height: 2.5rem; }</p>
+<p class="p1">#onix-roi-calc .switch-track {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 2.75rem; height: 1.5rem; border-radius: 9999px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: var(--orc-input); cursor: pointer; position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transition: background 0.2s; flex-shrink: 0;</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .switch-track.on { background: var(--orc-primary); }</p>
+<p class="p1">#onix-roi-calc .switch-thumb {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 1.25rem; height: 1.25rem; border-radius: 9999px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: white; position: absolute; top: 0.125rem; left: 0.125rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transition: transform 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.2);</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .switch-track.on .switch-thumb { transform: translateX(1.25rem); }</p>
+<p class="p1">#onix-roi-calc .switch-row span { font-size: 0.875rem; color: var(--orc-muted-fg); }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .hint { font-size: 0.75rem; color: var(--orc-muted-fg); margin-top: -0.5rem; }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .collapsible-trigger {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>user-select: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transition: background 0.15s;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: var(--orc-radius) var(--orc-radius) 0 0;</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .collapsible-trigger:hover { background: hsl(210 15% 95% / 0.3); }</p>
+<p class="p1">#onix-roi-calc .collapsible-trigger .chevron {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transition: transform 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-left: auto;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 16px; height: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: var(--orc-muted-fg);</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .collapsible-trigger.open .chevron { transform: rotate(180deg); }</p>
+<p class="p1">#onix-roi-calc .collapsible-body { display: none; }</p>
+<p class="p1">#onix-roi-calc .collapsible-body.open { display: block; }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .separator { border: none; border-top: 1px solid var(--orc-border); }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .results { display: none; flex-direction: column; gap: 1.5rem; }</p>
+<p class="p1">#onix-roi-calc .results.visible { display: flex; animation: orcFadeIn 0.5s ease-out; }</p>
+<p class="p1">@keyframes orcFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .results-grid-4 { display: grid; grid-template-columns: 1fr; gap: 1rem; }</p>
+<p class="p1">@media (min-width: 640px) { #onix-roi-calc .results-grid-4 { grid-template-columns: 1fr 1fr; } }</p>
+<p class="p1">@media (min-width: 1024px) { #onix-roi-calc .results-grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; } }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .results-grid-2 { display: grid; grid-template-columns: 1fr; gap: 1rem; }</p>
+<p class="p1">@media (min-width: 640px) { #onix-roi-calc .results-grid-2 { grid-template-columns: 1fr 1fr; } }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .result-card {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border: 1px solid var(--orc-border);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: var(--orc-radius);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow: var(--orc-shadow-card);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: var(--orc-card);</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .result-card .rlabel {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 0.75rem; font-weight: 500; text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>letter-spacing: 0.05em; color: var(--orc-muted-fg);</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .result-card .rvalue {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 1.5rem; font-weight: 700; font-family: var(--orc-font-display);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-top: 0.25rem; color: var(--orc-fg);</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .result-card .rsub { font-size: 0.75rem; margin-top: 0.25rem; color: var(--orc-muted-fg); }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .rc-savings { background: hsl(216 58% 34% / 0.05); border-color: hsl(216 58% 34% / 0.2); }</p>
+<p class="p1">#onix-roi-calc .rc-savings .rlabel, #onix-roi-calc .rc-savings .rsub { color: hsl(216 58% 34% / 0.7); }</p>
+<p class="p1">#onix-roi-calc .rc-savings .rvalue { color: var(--orc-primary); }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .rc-cost { background: hsl(4 66% 42% / 0.05); border-color: hsl(4 66% 42% / 0.2); }</p>
+<p class="p1">#onix-roi-calc .rc-cost .rlabel, #onix-roi-calc .rc-cost .rsub { color: hsl(4 66% 42% / 0.7); }</p>
+<p class="p1">#onix-roi-calc .rc-cost .rvalue { color: var(--orc-accent); }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .rc-highlight {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: linear-gradient(135deg, var(--orc-primary), var(--orc-primary-glow));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-color: transparent;</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .rc-highlight .rlabel { color: hsl(0 0% 100% / 0.8); }</p>
+<p class="p1">#onix-roi-calc .rc-highlight .rvalue { color: var(--orc-primary-fg); }</p>
+<p class="p1">#onix-roi-calc .rc-highlight .rsub { color: hsl(0 0% 100% / 0.8); }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .breakdown-chart { margin-top: 0.5rem; }</p>
+<p class="p1">#onix-roi-calc .bar-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }</p>
+<p class="p1">#onix-roi-calc .bar-label { width: 70px; font-size: 0.8125rem; font-weight: 500; text-align: right; flex-shrink: 0; }</p>
+<p class="p1">#onix-roi-calc .bar-track { flex: 1; height: 32px; display: flex; border-radius: 4px; overflow: hidden; background: var(--orc-muted); }</p>
+<p class="p1">#onix-roi-calc .bar-segment { height: 100%; transition: width 0.4s ease; position: relative; }</p>
+<p class="p1">#onix-roi-calc .bar-segment:hover .bar-tip { display: block; }</p>
+<p class="p1">#onix-roi-calc .bar-tip {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: none; position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: var(--orc-fg); color: hsl(0,0%,100%); padding: 4px 8px; border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 0.6875rem; white-space: nowrap; z-index: 10; pointer-events: none;</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .bar-total { font-size: 0.8125rem; font-weight: 600; white-space: nowrap; flex-shrink: 0; }</p>
+<p class="p1">#onix-roi-calc .legend { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.75rem; }</p>
+<p class="p1">#onix-roi-calc .legend-item { display: flex; align-items: center; gap: 0.375rem; font-size: 0.75rem; }</p>
+<p class="p1">#onix-roi-calc .legend-swatch { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .config-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }</p>
+<p class="p1">@media (min-width: 640px) { #onix-roi-calc .config-grid { grid-template-columns: 1fr 1fr 1fr 1fr; } }</p>
+<p class="p1">#onix-roi-calc .config-item .ci-label { font-size: 0.75rem; color: var(--orc-muted-fg); }</p>
+<p class="p1">#onix-roi-calc .config-item .ci-value { font-size: 1.125rem; font-weight: 700; font-family: var(--orc-font-display); color: var(--orc-fg); }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .assumptions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; font-size: 0.875rem; }</p>
+<p class="p1">@media (min-width: 640px) { #onix-roi-calc .assumptions-grid { grid-template-columns: 1fr 1fr 1fr 1fr; } }</p>
+<p class="p1">#onix-roi-calc .assumptions-grid .al { color: var(--orc-muted-fg); }</p>
+<p class="p1">#onix-roi-calc .assumptions-grid .av { font-weight: 500; }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .adjust-link {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-top: 0.75rem; font-size: 0.875rem; color: var(--orc-primary);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor: pointer; font-weight: 500; background: none; border: none; font-family: var(--orc-font-body);</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .adjust-link:hover { text-decoration: underline; }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .disclaimers { text-align: center; font-size: 0.75rem; color: var(--orc-muted-fg); }</p>
+<p class="p1">#onix-roi-calc .disclaimers p { margin: 0.25rem 0; }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .space-y-4 &gt; * + * { margin-top: 1rem; }</p>
+<p class="p1">#onix-roi-calc .hidden { display: none !important; }</p>
+<p class="p2"><br></p>
+<p class="p1">#onix-roi-calc .rate-badge-fetching { color: var(--orc-muted-fg); }</p>
+<p class="p1">#onix-roi-calc .rate-badge-live { color: #16a34a; }</p>
+<p class="p1">#onix-roi-calc .rate-badge-cached { color: #ca8a04; }</p>
+<p class="p1">#onix-roi-calc .rate-badge-fallback { color: var(--orc-accent); }</p>
+<p class="p1">#onix-roi-calc .rate-dot {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: inline-block; width: 6px; height: 6px; border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-right: 4px; vertical-align: middle;</p>
+<p class="p1">}</p>
+<p class="p1">#onix-roi-calc .rate-dot-live { background: #22c55e; }</p>
+<p class="p1">#onix-roi-calc .rate-dot-cached { background: #eab308; }</p>
+<p class="p1">#onix-roi-calc .rate-dot-fallback { background: hsl(4, 66%, 42%); }</p>
+<p class="p1">@keyframes orcPulse { 0%,100%{opacity:1} 50%{opacity:0.4} }</p>
+<p class="p1">#onix-roi-calc .rate-dot-fetching { background: var(--orc-muted-fg); animation: orcPulse 1.2s ease-in-out infinite; }</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;div id="onix-roi-calc" class="orc-page"&gt;</p>
+<p class="p1">&lt;div class="orc-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Header --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;&lt;span style="color:#B12D24"&gt;Onix&lt;/span&gt; &lt;span style="color:#243F87"&gt;Colocation ROI Calculator&lt;/span&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Compare the true cost of running an in-house server room in Ghana with colocating at Onix Data Centres.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Your Infrastructure --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/&gt;&lt;path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/&gt;&lt;path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/&gt;&lt;path d="M10 6h4"/&gt;&lt;path d="M10 10h4"/&gt;&lt;path d="M10 14h4"/&gt;&lt;path d="M10 18h4"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Your Infrastructure</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-body space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Number of Racks &lt;span class="req"&gt;*&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Total number of server racks you operate or plan to operate.&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="input-wrap"&gt;&lt;input id="racks" type="text" inputmode="decimal" placeholder="0"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Workload Type</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Standard = 3 kW/rack. Higher-density = 5 kW/rack. Not sure defaults to 3 kW.&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;select id="workload"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="standard"&gt;Standard infrastructure&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="higher"&gt;Higher-density compute&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="unsure"&gt;Not sure&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Electricity Tariff</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Your electricity cost per kilowatt-hour. Ghana default: 2.45 GH₵.&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="input-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="prefix"&gt;GH₵&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="tariff" type="text" inputmode="decimal" placeholder="2.45" value="2.45" class="has-prefix has-suffix"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="suffix"&gt;/kWh&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Commercial Space Cost</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Monthly rent per square metre. Default: 200 GH₵.&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="input-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="prefix"&gt;GH₵&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="spaceCostM2" type="text" inputmode="decimal" placeholder="200" value="200" class="has-prefix has-suffix"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="suffix"&gt;/m²/mo&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Physical Segregation (Cage)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Dedicated cage required? Adds $1,000/rack one-off NRE at Onix.&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="switch-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="switch-track" id="segregationTrack" onclick="toggleSwitch()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="switch-thumb"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span id="segregationLabel"&gt;No&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input type="hidden" id="segregation" value="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Facility Infrastructure &amp; Generator --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M3 7V5a2 2 0 0 1 2-2h2"/&gt;&lt;path d="M17 3h2a2 2 0 0 1 2 2v2"/&gt;&lt;path d="M21 17v2a2 2 0 0 1-2 2h-2"/&gt;&lt;path d="M7 21H5a2 2 0 0 1-2-2v-2"/&gt;&lt;path d="M8 7v10"/&gt;&lt;path d="M12 7v10"/&gt;&lt;path d="M16 7v10"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Facility Infrastructure &amp;amp; Generator</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-body space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Room Infrastructure CapEx</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;One-time server room buildout (cooling, UPS, generator, security). Amortised over 10 years.&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="input-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="prefix"&gt;GH₵&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input id="facilityCapex" type="text" inputmode="decimal" placeholder="350000" value="350000" class="has-prefix"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="hint"&gt;One-time server room buildout (cooling, UPS, generator, security) — amortised over 10 years.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Generator Run Hours/Year</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Estimated generator run time per year due to power outages. Ghana default: ~1,200 hours (3–4 hrs/day).&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="input-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="genRunHours" type="text" inputmode="decimal" placeholder="1200" value="1200" class="has-suffix"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="suffix"&gt;hrs/yr&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Generator Fuel Cost</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Fuel cost per hour to run your generator. Default: GH₵160/hr for a typical diesel generator.&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="input-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="prefix"&gt;GH₵&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="genFuelCost" type="text" inputmode="decimal" placeholder="160" value="160" class="has-prefix has-suffix"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="suffix"&gt;/hr&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Operational Risk &amp; Downtime Impact --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header accent-icon"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--orc-accent)"&gt;&lt;path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/&gt;&lt;path d="M12 9v4"/&gt;&lt;path d="M12 17h.01"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Operational Risk &amp;amp; Downtime Impact</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-body space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Downtime Sensitivity</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Estimated cost per hour of downtime to your business.&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;select id="downtimeSens"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="low"&gt;Low — GH₵5,000/hr&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="moderate" selected&gt;Moderate — GH₵15,000/hr&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="high"&gt;High — GH₵40,000/hr&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="critical"&gt;Mission Critical — GH₵100,000/hr&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Estimated Downtime Hours/Year</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Typical in-house downtime hours per year. Default: 16 hours.&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;select id="downtimeHours"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="2"&gt;2 hours&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="6"&gt;6 hours&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="16" selected&gt;16 hours&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="36"&gt;36 hours&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Advanced Assumptions (Collapsible) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card shadow-card" id="advCard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header sm collapsible-trigger" id="advTrigger" onclick="toggleAdvanced()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/&gt;&lt;circle cx="12" cy="12" r="3"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Advanced Assumptions</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="m6 9 6 6 6-6"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="collapsible-body" id="advBody"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card-body space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="hint" style="margin-top:0"&gt;Override any default assumption. Leave blank to use defaults.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;kW per Rack&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="input-wrap"&gt;&lt;input id="advKw" type="text" inputmode="decimal" placeholder="3" class="has-suffix"&gt;&lt;span class="suffix"&gt;kW&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;PUE</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Power Usage Effectiveness. Ghana in-house default: 2.2 (hot/humid climate).&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="input-wrap"&gt;&lt;input id="advPue" type="text" inputmode="decimal" placeholder="2.2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;m² per Rack&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="input-wrap"&gt;&lt;input id="advM2" type="text" inputmode="decimal" placeholder="3.5" class="has-suffix"&gt;&lt;span class="suffix"&gt;m²&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Labour Rate&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="input-wrap"&gt;&lt;span class="prefix"&gt;GH₵&lt;/span&gt;&lt;input id="advLabour" type="text" inputmode="decimal" placeholder="120" class="has-prefix has-suffix"&gt;&lt;span class="suffix"&gt;/hr&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Server CapEx per Rack&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="input-wrap"&gt;&lt;span class="prefix"&gt;GH₵&lt;/span&gt;&lt;input id="advCapex" type="text" inputmode="decimal" placeholder="70000" class="has-prefix"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Maintenance %</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Percentage of infrastructure CapEx for annual maintenance.&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="input-wrap"&gt;&lt;input id="advMaint" type="text" inputmode="decimal" placeholder="10" class="has-suffix"&gt;&lt;span class="suffix"&gt;%&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Cross-Connects (qty)</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Number of cross-connects. Leave blank to auto-estimate based on rack count.&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="input-wrap"&gt;&lt;input id="advCrossConnects" type="text" inputmode="decimal" placeholder="Auto"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;USD → GH₵ Rate</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button type="button" class="info-btn"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;&lt;span class="tip"&gt;Exchange rate for converting Onix USD pricing to GH₵. Fetched live — override if needed.&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="input-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input id="advUsdRate" type="text" inputmode="decimal" placeholder="Fetching…"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Live rate status indicator --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="liveRateInfo" style="font-size:0.75rem;margin-top:0.25rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="rate-dot rate-dot-fetching" id="rateDot"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span id="liveRateStatus" class="rate-badge-fetching"&gt;Fetching live rate…&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Results --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="results" class="results"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;hr class="separator"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="results-grid-4" id="summaryCards"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="results-grid-2" id="downtimeCards"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Cost Breakdown Chart --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card shadow-card" id="chartCard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card-header sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;rect x="3" y="3" width="18" height="18" rx="2"/&gt;&lt;path d="M9 17V10"/&gt;&lt;path d="M12 17V6"/&gt;&lt;path d="M15 17V13"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Cost Breakdown Comparison</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card-body" id="chartBody"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Config Summary --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card shadow-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card-header sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--orc-primary)"&gt;&lt;rect width="20" height="8" x="2" y="2" rx="2" ry="2"/&gt;&lt;rect width="20" height="8" x="2" y="14" rx="2" ry="2"/&gt;&lt;line x1="6" x2="6.01" y1="6" y2="6"/&gt;&lt;line x1="6" x2="6.01" y1="18" y2="18"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Equivalent Colocation Configuration</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="config-grid" id="configGrid"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Assumptions --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card shadow-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card-header sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;path d="M12 16v-4"/&gt;&lt;path d="M12 8h.01"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Assumptions Used</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="assumptions-grid" id="assumptionsGrid"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="adjust-link" id="adjustLink" onclick="toggleAdvanced(true)"&gt;Adjust assumptions →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Disclaimers --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="disclaimers" id="disclaimers"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Illustrative comparison only; prices indicative; not a formal quote.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="disclaimerRate"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// ─── Pricing Constants (identical to pricing-constants.ts) ───</p>
+<p class="p1">const P = {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>rack3kw: 2100, rack5kw: 3200,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>extraKwPerMonth: 500,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>crossConnectMRC: 100, crossConnectNRC: 200,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cageNREPerRack: 1000,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>remoteHandsPerHour: 100,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>usdToGhs: 12,<span class="Apple-converted-space">          </span>// hard fallback only — never shown as a "live" rate</p>
+<p class="p1"><span class="Apple-converted-space">  </span>defaultTariff: 2.45,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>defaultPUE: 2.2,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>defaultKwPerRack3: 3, defaultKwPerRack5: 5,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>defaultSpaceFactor: 3.5,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>defaultSpaceCostM2: 200,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>defaultLabourRate: 120,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>defaultMaintenanceRate: 0.10,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>defaultAmortisationYears: 4,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>capexPerRack3kw: 70000, capexPerRack5kw: 110000,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>defaultFacilityCapex: 350000,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>facilityAmortisationYears: 10,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>defaultGenRunHours: 1200,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>defaultGenFuelCostPerHour: 160,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>hoursPerYear: 8760,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>staffingTiers: [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ max: 2, hours: 300 },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ max: 5, hours: 520 },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ max: 10, hours: 1040 },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ max: 20, hours: 2000 },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ max: Infinity, hours: 4000 },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>],</p>
+<p class="p1"><span class="Apple-converted-space">  </span>crossConnectTiers: [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ max: 1, qty: 1 },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ max: 5, qty: 2 },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ max: Infinity, qty: 2 },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>],</p>
+<p class="p1"><span class="Apple-converted-space">  </span>downtimeSensitivity: { low: 5000, moderate: 15000, high: 40000, critical: 100000 },</p>
+<p class="p1">};</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── Helpers ───</p>
+<p class="p1">const ghsFmt = n =&gt; `GH₵${Math.round(n).toLocaleString('en-US')}`;</p>
+<p class="p1">const numVal = (id, def = 0) =&gt; { const v = parseFloat(document.getElementById(id).value); return isNaN(v) ? def : v; };</p>
+<p class="p2"><br></p>
+<p class="p1">function getStaffHours(r) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>for (const t of P.staffingTiers) { if (r &lt;= t.max) return t.hours; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return 4000;</p>
+<p class="p1">}</p>
+<p class="p1">function getCrossConnects(r) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>for (const t of P.crossConnectTiers) { if (r &lt;= t.max) return t.qty; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return 2;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── Live exchange rate ───</p>
+<p class="p1">// liveUsdRate is null until resolved (live, cached, or fallback).</p>
+<p class="p1">// The calculator will not run until it is set.</p>
+<p class="p1">let liveUsdRate = null;</p>
+<p class="p1">let rateSource = 'fetching'; // 'live' | 'cached' | 'fallback'</p>
+<p class="p2"><br></p>
+<p class="p1">const CACHE_KEY = 'usd_ghs_rate_v3';</p>
+<p class="p1">const CACHE_TTL = 6 * 60 * 60 * 1000; // 6-hour cache</p>
+<p class="p2"><br></p>
+<p class="p1">function setRateIndicator(source, rate, date) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const dot = document.getElementById('rateDot');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const status = document.getElementById('liveRateStatus');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>dot.className = 'rate-dot';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (source === 'live') {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>dot.classList.add('rate-dot-live');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.className = 'rate-badge-live';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const timeStr = date ? date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.textContent = `Live rate: ${rate} GH₵/USD · updated ${timeStr}`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else if (source === 'cached') {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>dot.classList.add('rate-dot-cached');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.className = 'rate-badge-cached';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const timeStr = date ? date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.textContent = `Cached rate: ${rate} GH₵/USD · as of ${timeStr}`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else if (source === 'fallback') {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>dot.classList.add('rate-dot-fallback');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.className = 'rate-badge-fallback';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.textContent = `Could not fetch live rate — using default (${rate}). Override above if needed.`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>dot.classList.add('rate-dot-fetching');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.className = 'rate-badge-fetching';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.textContent = 'Fetching live rate…';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function applyRate(rate, source, date) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>liveUsdRate = rate;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>rateSource = source;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Only update the placeholder if the user hasn't typed their own value</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const input = document.getElementById('advUsdRate');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (!input.value) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>input.placeholder = String(rate);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>setRateIndicator(source, rate, date);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>calculate(); // re-run now that rate is known</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">(function fetchLiveRate() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// 1. Try cache first</p>
+<p class="p1"><span class="Apple-converted-space">  </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const cached = localStorage.getItem(CACHE_KEY);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (cached) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const p = JSON.parse(cached);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (Date.now() - p.timestamp &lt; CACHE_TTL &amp;&amp; p.rate) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>applyRate(p.rate, 'cached', new Date(p.timestamp));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Still try to refresh in background if cache is older than 1 hour</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (Date.now() - p.timestamp &gt; 60 * 60 * 1000) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>fetchFromAPI(true); // silent background refresh</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} catch (e) {}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// 2. No valid cache — fetch live</p>
+<p class="p1"><span class="Apple-converted-space">  </span>fetchFromAPI(false);</p>
+<p class="p1">})();</p>
+<p class="p2"><br></p>
+<p class="p1">function fetchFromAPI(silent) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Three APIs tried in sequence — first success wins.</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// API 1: fawazahmed0/exchange-api via jsDelivr (no key, no rate limit)</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// API 2: fawazahmed0/exchange-api via Cloudflare fallback</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// API 3: open.er-api.com open endpoint</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const apis = [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>url: 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>extract: data =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const rate = data?.usd?.ghs;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!rate) throw new Error('No GHS in response');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return Math.round(rate * 100) / 100;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>url: 'https://latest.currency-api.pages.dev/v1/currencies/usd.json',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>extract: data =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const rate = data?.usd?.ghs;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!rate) throw new Error('No GHS in response');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return Math.round(rate * 100) / 100;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>url: 'https://open.er-api.com/v6/latest/USD',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>extract: data =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (data?.result !== 'success' || !data.rates?.GHS) throw new Error('Invalid response');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return Math.round(data.rates.GHS * 100) / 100;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function tryNext(index) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (index &gt;= apis.length) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!silent) applyRate(P.usdToGhs, 'fallback', null);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const api = apis[index];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>fetch(api.url)</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.then(r =&gt; { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.then(data =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const rate = api.extract(data);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>localStorage.setItem(CACHE_KEY, JSON.stringify({ rate, timestamp: Date.now() }));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} catch (e) {}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>applyRate(rate, 'live', new Date());</p>
+<p class="p1"><span class="Apple-converted-space">      </span>})</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.catch(() =&gt; tryNext(index + 1));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>tryNext(0);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── Switch toggle ───</p>
+<p class="p1">let segregationOn = false;</p>
+<p class="p1">function toggleSwitch() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>segregationOn = !segregationOn;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('segregationTrack').classList.toggle('on', segregationOn);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('segregationLabel').textContent = segregationOn ? 'Yes' : 'No';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('segregation').value = segregationOn ? '1' : '0';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>calculate();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── Collapsible ───</p>
+<p class="p1">let advOpen = false;</p>
+<p class="p1">function toggleAdvanced(forceOpen) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>advOpen = forceOpen === true ? true : !advOpen;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('advTrigger').classList.toggle('open', advOpen);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('advBody').classList.toggle('open', advOpen);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('adjustLink').style.display = advOpen ? 'none' : 'block';</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── Numeric filter + auto-calculate ───</p>
+<p class="p1">const inputs = ['racks','tariff','spaceCostM2','facilityCapex','genRunHours','genFuelCost',</p>
+<p class="p1"><span class="Apple-converted-space">  </span>'advKw','advPue','advM2','advLabour','advCapex','advMaint','advCrossConnects','advUsdRate'];</p>
+<p class="p1">inputs.forEach(id =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById(id).addEventListener('input', function() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (this.value !== '' &amp;&amp; !/^\d*\.?\d*$/.test(this.value))</p>
+<p class="p1"><span class="Apple-converted-space">      </span>this.value = this.value.slice(0, -1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>calculate();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">});</p>
+<p class="p1">['workload','downtimeSens','downtimeHours'].forEach(id =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById(id).addEventListener('change', calculate);</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── Bar chart colors (matches CostBreakdownChart COLORS) ───</p>
+<p class="p1">const COLORS = [</p>
+<p class="p1"><span class="Apple-converted-space">  </span>'hsl(215, 80%, 45%)',</p>
+<p class="p1"><span class="Apple-converted-space">  </span>'hsl(215, 70%, 60%)',</p>
+<p class="p1"><span class="Apple-converted-space">  </span>'hsl(215, 50%, 70%)',</p>
+<p class="p1"><span class="Apple-converted-space">  </span>'hsl(200, 60%, 50%)',</p>
+<p class="p1"><span class="Apple-converted-space">  </span>'hsl(190, 50%, 55%)',</p>
+<p class="p1"><span class="Apple-converted-space">  </span>'hsl(0, 80%, 55%)',</p>
+<p class="p1"><span class="Apple-converted-space">  </span>'hsl(25, 90%, 55%)',</p>
+<p class="p1"><span class="Apple-converted-space">  </span>'hsl(280, 55%, 55%)',</p>
+<p class="p1">];</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── Main calculation ───</p>
+<p class="p1">function calculate() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const r = numVal('racks');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const el = document.getElementById('results');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Don't calculate until the exchange rate has been resolved</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (liveUsdRate === null || r &lt;= 0) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>el.classList.remove('visible');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const workload = document.getElementById('workload').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const defaultKw = workload === 'higher' ? P.defaultKwPerRack5 : P.defaultKwPerRack3;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const advKwVal = document.getElementById('advKw').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const kw = advKwVal ? parseFloat(advKwVal) || defaultKw : defaultKw;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const advPueVal = document.getElementById('advPue').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const pue = advPueVal ? parseFloat(advPueVal) || P.defaultPUE : P.defaultPUE;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const advM2Val = document.getElementById('advM2').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const m2Factor = advM2Val ? parseFloat(advM2Val) || P.defaultSpaceFactor : P.defaultSpaceFactor;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const advLabourVal = document.getElementById('advLabour').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const labourRate = advLabourVal ? parseFloat(advLabourVal) || P.defaultLabourRate : P.defaultLabourRate;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const advMaintVal = document.getElementById('advMaint').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const maintRate = advMaintVal ? (parseFloat(advMaintVal) || P.defaultMaintenanceRate * 100) / 100 : P.defaultMaintenanceRate;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Use user override if provided, otherwise use the resolved live/cached/fallback rate</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const advUsdVal = document.getElementById('advUsdRate').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const usdRate = advUsdVal ? parseFloat(advUsdVal) || liveUsdRate : liveUsdRate;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const defaultCapex = kw &gt;= 5 ? P.capexPerRack5kw : P.capexPerRack3kw;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const advCapexVal = document.getElementById('advCapex').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const capexPerRack = advCapexVal ? parseFloat(advCapexVal) || defaultCapex : defaultCapex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const advCCVal = document.getElementById('advCrossConnects').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ccQty = advCCVal ? parseFloat(advCCVal) || 0 : getCrossConnects(r);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const staffHoursYear = getStaffHours(r);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const segregation = document.getElementById('segregation').value === '1';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ─── In-house costs (GH₵) ───</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const itLoad = r * kw;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const facilityLoad = itLoad * pue;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const annualKwh = facilityLoad * P.hoursPerYear;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const tariffVal = numVal('tariff', P.defaultTariff);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const powerCost = annualKwh * tariffVal;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const spaceRequired = r * m2Factor;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const spaceCostM2Val = numVal('spaceCostM2', P.defaultSpaceCostM2);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const annualSpaceCost = spaceRequired * spaceCostM2Val * 12;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const annualStaffCost = staffHoursYear * labourRate;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const capexTotal = r * capexPerRack;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const annualCapex = capexTotal / P.defaultAmortisationYears;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const maintenanceCost = capexTotal * maintRate;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const facilityCapexVal = numVal('facilityCapex', P.defaultFacilityCapex);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const annualFacilityCapex = facilityCapexVal / P.facilityAmortisationYears;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const genHours = numVal('genRunHours', P.defaultGenRunHours);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const genCostPerHr = numVal('genFuelCost', P.defaultGenFuelCostPerHour);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const annualGenFuel = genHours * genCostPerHr;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const inHouseTotal = powerCost + annualSpaceCost + annualStaffCost + maintenanceCost + annualCapex + annualFacilityCapex + annualGenFuel;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ─── Downtime ───</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const downtimeSens = document.getElementById('downtimeSens').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const downtimeCostPerHour = P.downtimeSensitivity[downtimeSens];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const dtHours = parseFloat(document.getElementById('downtimeHours').value) || 16;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const downtimeLoss = dtHours * downtimeCostPerHour;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const riskAdjustedInHouse = inHouseTotal + downtimeLoss;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ─── Onix costs (USD → GH₵) ───</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rackPriceUSD = kw &gt;= 5 ? P.rack5kw : P.rack3kw;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const packageCap = kw &gt;= 5 ? r * 5 : r * 3;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const extraKw = Math.max(0, itLoad - packageCap);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const extraPowerUSD = extraKw * P.extraKwPerMonth;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rackCostUSD = r * rackPriceUSD * 12;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ccMrcUSD = ccQty * P.crossConnectMRC * 12;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ccNrcUSD = ccQty * P.crossConnectNRC;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const extraPowerAnnualUSD = extraPowerUSD * 12;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const onixTotalUSD = rackCostUSD + ccMrcUSD + extraPowerAnnualUSD;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const onixTotal = onixTotalUSD * usdRate;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const cageNRE = segregation ? r * P.cageNREPerRack : 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const oneOffUSD = ccNrcUSD + cageNRE;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const oneOff = oneOffUSD * usdRate;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const savings = inHouseTotal - onixTotal;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const riskSavings = riskAdjustedInHouse - onixTotal;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const payback = savings &gt; 0 &amp;&amp; oneOff &gt; 0 ? oneOff / (savings / 12) : null;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ─── Render Summary Cards ───</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('summaryCards').innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="result-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rlabel"&gt;In-House Annual Cost&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rvalue"&gt;${ghsFmt(inHouseTotal)}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="result-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rlabel"&gt;Onix Annual Cost&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rvalue"&gt;${ghsFmt(onixTotal)}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="result-card ${savings &gt;= 0 ? 'rc-savings' : 'rc-cost'}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rlabel"&gt;${savings &gt;= 0 ? 'Estimated Annual Savings' : 'Estimated Annual Difference'}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rvalue"&gt;${ghsFmt(Math.abs(savings))}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rsub"&gt;${savings &gt;= 0 ? 'You save with Onix' : 'In-house is cheaper'}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="result-card rc-highlight"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rlabel"&gt;Payback Period&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rvalue"&gt;${payback !== null ? Math.ceil(payback) + ' months' : 'N/A'}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rsub"&gt;${payback !== null ? 'On ' + ghsFmt(oneOff) + ' one-off costs' : (savings &lt;= 0 ? 'No savings to offset' : 'No one-off costs')}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ─── Downtime Cards ───</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('downtimeCards').innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="result-card rc-cost"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rlabel"&gt;Downtime Losses (In-House)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rvalue"&gt;${ghsFmt(downtimeLoss)}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rsub"&gt;${dtHours} hrs × ${ghsFmt(downtimeCostPerHour)}/hr&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="result-card ${riskSavings &gt;= 0 ? 'rc-savings' : 'rc-cost'}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rlabel"&gt;Risk-Adjusted Savings&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rvalue"&gt;${ghsFmt(Math.abs(riskSavings))}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="rsub"&gt;${riskSavings &gt;= 0 ? 'Including downtime impact' : 'Onix is more expensive even with downtime'}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ─── Breakdown Chart ───</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ihBreakdown = [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: 'Power', value: powerCost },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: 'Space', value: annualSpaceCost },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: 'Staff', value: annualStaffCost },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: 'Maintenance', value: maintenanceCost },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: 'Server CapEx', value: annualCapex },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: 'Facility CapEx', value: annualFacilityCapex },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: 'Generator Fuel', value: annualGenFuel },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: 'Downtime', value: downtimeLoss },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const onixBreakdown = [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: 'Rack Cost', value: rackCostUSD * usdRate },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: 'Cross-Connect', value: ccMrcUSD * usdRate },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: 'Addtl Power', value: extraPowerAnnualUSD * usdRate },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const allNames = [...new Set([...ihBreakdown.map(i=&gt;i.name), ...onixBreakdown.map(i=&gt;i.name)])];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const maxVal = Math.max(</p>
+<p class="p1"><span class="Apple-converted-space">    </span>ihBreakdown.reduce((s,i) =&gt; s+i.value, 0),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>onixBreakdown.reduce((s,i) =&gt; s+i.value, 0)</p>
+<p class="p1"><span class="Apple-converted-space">  </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function renderBar(label, items, total) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const segs = items.filter(i =&gt; i.value &gt; 0).map(i =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const ci = allNames.indexOf(i.name);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const pct = maxVal &gt; 0 ? (i.value / maxVal * 100) : 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `&lt;div class="bar-segment" style="width:${pct}%;background:${COLORS[ci % COLORS.length]}"&gt;&lt;span class="bar-tip"&gt;${i.name}: ${ghsFmt(i.value)}&lt;/span&gt;&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}).join('');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return `&lt;div class="bar-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="bar-label"&gt;${label}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="bar-track"&gt;${segs}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="bar-total"&gt;${ghsFmt(total)}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const legendHtml = allNames.map((n, i) =&gt; `&lt;div class="legend-item"&gt;&lt;div class="legend-swatch" style="background:${COLORS[i % COLORS.length]}"&gt;&lt;/div&gt;${n}&lt;/div&gt;`).join('');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('chartBody').innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="breakdown-chart"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${renderBar('In-House', ihBreakdown, ihBreakdown.reduce((s,i)=&gt;s+i.value,0))}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${renderBar('Onix', onixBreakdown, onixBreakdown.reduce((s,i)=&gt;s+i.value,0))}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="legend"&gt;${legendHtml}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ─── Config Summary ───</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rackPkg = kw &gt;= 5 ? '5 kW' : '3 kW';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('configGrid').innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="config-item"&gt;&lt;p class="ci-label"&gt;Racks&lt;/p&gt;&lt;p class="ci-value"&gt;${r}&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="config-item"&gt;&lt;p class="ci-label"&gt;Rack Package&lt;/p&gt;&lt;p class="ci-value"&gt;${rackPkg}&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="config-item"&gt;&lt;p class="ci-label"&gt;Total IT Load&lt;/p&gt;&lt;p class="ci-value"&gt;${itLoad} kW&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="config-item"&gt;&lt;p class="ci-label"&gt;Cross-Connects&lt;/p&gt;&lt;p class="ci-value"&gt;${ccQty}&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ─── Assumptions ───</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rateLabel = advUsdVal ? `${usdRate} (manual)` : `${usdRate} (${rateSource})`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('assumptionsGrid').innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;span class="al"&gt;Rack density:&lt;/span&gt; &lt;span class="av"&gt;${kw} kW&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;span class="al"&gt;PUE:&lt;/span&gt; &lt;span class="av"&gt;${pue}&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;span class="al"&gt;Space factor:&lt;/span&gt; &lt;span class="av"&gt;${m2Factor} m²/rack&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;span class="al"&gt;Maintenance:&lt;/span&gt; &lt;span class="av"&gt;${(maintRate*100).toFixed(0)}%&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;span class="al"&gt;Staff hrs/yr:&lt;/span&gt; &lt;span class="av"&gt;${staffHoursYear.toLocaleString()}&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;span class="al"&gt;Labour rate:&lt;/span&gt; &lt;span class="av"&gt;GH₵${labourRate}/hr&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;span class="al"&gt;Tariff:&lt;/span&gt; &lt;span class="av"&gt;GH₵${tariffVal}/kWh&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;span class="al"&gt;USD rate:&lt;/span&gt; &lt;span class="av"&gt;1 USD = ${rateLabel} GH₵&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;span class="al"&gt;Facility CapEx:&lt;/span&gt; &lt;span class="av"&gt;${ghsFmt(facilityCapexVal)}&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;span class="al"&gt;Gen hours/yr:&lt;/span&gt; &lt;span class="av"&gt;${genHours.toLocaleString()}&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;span class="al"&gt;Gen fuel:&lt;/span&gt; &lt;span class="av"&gt;GH₵${genCostPerHr}/hr&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;span class="al"&gt;HW amortisation:&lt;/span&gt; &lt;span class="av"&gt;${P.defaultAmortisationYears} years&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('adjustLink').style.display = advOpen ? 'none' : 'block';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ─── Disclaimer ───</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const sourceLabel = rateSource === 'live' ? 'live' : rateSource === 'cached' ? 'cached' : 'default';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('disclaimerRate').textContent = `Onix pricing is converted at ${usdRate} GH₵ per USD (${sourceLabel} rate).`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>el.classList.add('visible');</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+</body>
+</html>
