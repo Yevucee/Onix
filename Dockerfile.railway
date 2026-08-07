@@ -12,6 +12,7 @@ RUN npm ci
 FROM base AS builder
 COPY --from=deps /app/new-site/node_modules ./node_modules
 COPY new-site/ .
+RUN mkdir -p public
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
@@ -27,6 +28,7 @@ ENV UPLOADS_EXTRACT_DIR=/app/.migration-work
 RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
 
 # Next.js standalone output
+RUN mkdir -p /app/new-site/public
 COPY --from=builder /app/new-site/public ./public
 COPY --from=builder /app/new-site/.next/standalone ./
 COPY --from=builder /app/new-site/.next/static ./.next/static
