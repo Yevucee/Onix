@@ -2,7 +2,6 @@
 # Railway staging entrypoint — fix volume permissions, optional bootstrap, start app.
 set -e
 
-# Railway volumes mount as root; ensure nextjs can write media
 chown -R nextjs:nodejs /app/media /app/.migration-work 2>/dev/null || true
 
 if [ "${RUN_BOOTSTRAP:-false}" = "true" ]; then
