@@ -1,5 +1,4 @@
-import fs from 'fs'
-import path from 'path'
+import redirectsData from '../../data/redirects.json'
 
 export type RedirectRule = {
   sourcePath: string
@@ -12,10 +11,9 @@ export type RedirectRule = {
 let cached: RedirectRule[] | null = null
 
 export function getRedirectRules(): RedirectRule[] {
-  if (cached) return cached.filter((r) => r.active)
-  const filePath = path.join(process.cwd(), 'data/redirects.json')
-  if (!fs.existsSync(filePath)) return []
-  cached = JSON.parse(fs.readFileSync(filePath, 'utf-8')) as RedirectRule[]
+  if (!cached) {
+    cached = redirectsData as RedirectRule[]
+  }
   return cached.filter((r) => r.active)
 }
 

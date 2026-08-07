@@ -189,15 +189,30 @@ export async function importCorporatePages(payload: Payload): Promise<PageImport
       },
     }
 
-    const existing = await payload.find({
+    const byLegacy = await payload.find({
       collection: 'pages',
       where: { 'legacy.legacyPath': { equals: legacyPath } },
       limit: 1,
     })
 
-    if (existing.docs[0]) {
-      await payload.update({ collection: 'pages', id: existing.docs[0].id, data: data as never })
-      results.push({ legacyPath, slug, title, status: 'updated', notes: 'Idempotent update' })
+    let existingDoc = byLegacy.docs[0]
+    if (!existingDoc) {
+      const bySlug = await payload.find({
+        collection: 'pages',
+        where: { slug: { equals: slug } },
+        limit: 1,
+      })
+      existingDoc = bySlug.docs[0]
+    }
+
+    if (existingDoc) {
+      await payload.update({ collection: 'pages', id: existingDoc.id, data: data as never })
+      const note = byLegacy.docs[0]
+        ? 'Idempotent update'
+        : existingDoc.legacy?.legacyPath
+          ? 'Updated by slug match'
+          : 'Updated seed placeholder'
+      results.push({ legacyPath, slug, title, status: 'updated', notes: note })
     } else {
       await payload.create({ collection: 'pages', data: data as never })
       results.push({ legacyPath, slug, title, status: 'imported', notes: '' })

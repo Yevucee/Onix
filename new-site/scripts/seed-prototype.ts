@@ -11,6 +11,10 @@ async function seed() {
 
   const admin = await payload.find({ collection: 'users', limit: 1 })
   if (!admin.docs.length) {
+    if (process.env.SITE_ENV === 'staging') {
+      console.error('Staging requires STAGING_ADMIN_EMAIL/PASSWORD via npm run staging:admin — not default seed')
+      process.exit(1)
+    }
     await payload.create({
       collection: 'users',
       data: {

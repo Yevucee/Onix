@@ -10,8 +10,12 @@ import { importRequiredMedia } from '../../src/migration/import-media'
 
 async function main() {
   const payload = await getPayload({ config })
-  console.log('Importing media...')
-  await importRequiredMedia(payload)
+  if (process.env.MIGRATE_PAGES_SKIP_MEDIA !== '1') {
+    console.log('Importing media...')
+    await importRequiredMedia(payload)
+  } else {
+    console.log('Skipping media import (MIGRATE_PAGES_SKIP_MEDIA=1)')
+  }
   console.log('Importing corporate pages...')
   const results = await importCorporatePages(payload)
   writeCsv(path.join(MIGRATION_CONFIG.repoRoot, 'phase4/corporate-page-import.csv'), results)
