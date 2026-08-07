@@ -1,37 +1,34 @@
-# French content status (Phase 2)
+# French content status (Phase 3)
 
 ## Policy
 
-- Existing `/fr/` URLs are **preserved** in routing architecture.
-- French locale is enabled in Payload (`locales: en`, `fr`).
-- Full translation workflow is **not** implemented in Phase 2.
+Existing `/fr/` URLs are preserved. No translation project was performed — only existing French content is represented.
 
-## Current implementation
+## URLs identified
 
-| Area | Status |
-|------|--------|
-| Payload locale config | Implemented (`en`, `fr`) |
-| Frontend `/fr/` route | Catch-all placeholder; About page partially mirrored |
-| Header/footer FR links | Present in seed navigation |
-| Article FR translations | Not migrated in Phase 2 |
-| Corporate page FR | `/fr/a-propos/` — manual review; content not fully seeded |
-| Contact FR | `/fr/contactez-nous/` — form not rebuilt |
+| URL | Status | Notes |
+|-----|--------|-------|
+| `/fr/home-francais/` | Partial | WordPress page exists; Phase 3 route scaffold at `/fr/` |
+| `/fr/contactez-nous/` | Not migrated | Contact form implemented at `/contact-us` (EN); FR form Phase 4 |
+| `/fr/a-propos/` | Not migrated | Corporate page reconstruction is Phase 4 |
+| `/fr/author/*` | Not migrated | Author archive URLs — low priority |
 
-## Known gaps (from Phase 1)
+## Migrated in Phase 3
 
-- Polylang linkage exists in WordPress DB (extracted references) but not fully mapped in prototype.
-- Some FR pages return 200 with partial or English content on live site.
-- Footer newsletter form has separate Fluent Form ID for FR.
+- Payload locale config (`en`, `fr`) — unchanged from Phase 2
+- `/fr/` catch-all route preserved for homepage, about-us, senegal mirrors
+- No French blog articles (none exist in WordPress export)
 
-## Untranslated / partial (document for Phase 3)
+## Partial / manual review
 
-- Most data centre pages: EN only in prototype
-- Leadership profiles: EN only
-- Blog articles: predominantly EN; FR blog structure unclear
-- Homepage: FR variant not prototyped
+- French homepage (`home-francais`) is Elementor-built — requires Phase 4 page migration
+- Footer newsletter FR form not rebuilt
+- Polylang translation pairs not fully mapped (requires secure DB copy if needed)
 
-## Recommendation
+## English-only equivalents
 
-1. Export Polylang translation pairs from secure DB copy (post ID ↔ FR post ID).
-2. Seed `locale` field on Pages/Articles during bulk migration.
-3. Implement `next-intl` or Payload-localized fields for public FR routes before launch.
+Most production content is English-only. Data centre pages, leadership, and articles have no FR counterparts in the export.
+
+## Architecture
+
+Payload localized fields and `/fr/` routing support future French expansion without a separate translation platform.

@@ -1,0 +1,149 @@
+[
+  {
+    "sourcePath": "/mamadoukebe/",
+    "destination": "/o-home/mamadoukebe/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/2023/11/21/bluespace-financial-cloud-and-onix-data-centre-join-forces-to-redefine-financial-technology-landscape/",
+    "destination": "/2023/11/21/bluespace-financial-cloud-onix-data-centre/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-ghana/",
+    "destination": "/o-home/o-ghana/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/senegal/",
+    "destination": "/o-home/senegal/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/2024/01/16/navigating-the-future-reflecting-on-vertivs-2024-data-centre-trends-and-their-implications-for-onix-data-centre/",
+    "destination": "/2024/01/16/navigating-2024-data-centre-trends/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/2024/03/07/the-role-of-edge-computing-in-ghanas-digital-transformation-in-ghana/",
+    "destination": "/2024/03/07/edge-computing-in-ghana/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/home-v2/",
+    "destination": "/o-home/home-v2/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/baraawafall/",
+    "destination": "/o-home/senegal/baraawafall/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-home/eric-tenkorang/",
+    "destination": "/o-home/o-ghana/eric-tenkorang/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-home/razak/",
+    "destination": "/o-home/razak-awudulai/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-home/o-ghana/eric-tenkorang-copy/",
+    "destination": "/o-home/o-ghana/staging123/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-ghana/contact-us/onix-team-contact/",
+    "destination": "/o-ghana/onix-team-contact/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/pitch-competition/",
+    "destination": "/pitch/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/2025/08/28/the-hidden-cost-of-latency-why-every-millisecond-matters-in-ghanas-digital-economy/",
+    "destination": "/2025/08/28/hidden-latency-ghana/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/elementor-9727/",
+    "destination": "/linx1/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/linx1/",
+    "destination": "/linx/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/linx/",
+    "destination": "/linxaccra/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-home/blog/",
+    "destination": "/blog/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-home/about-us/",
+    "destination": "/about-us/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-home/o-contact-us/",
+    "destination": "/contact-us/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/home/o-infrastructure/",
+    "destination": "/home/infrastructure/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  }
+]

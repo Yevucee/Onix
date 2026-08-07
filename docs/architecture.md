@@ -72,7 +72,17 @@ Middleware applies `X-Robots-Tag` on all non-static routes when staging.
 
 Articles use Lexical rich text with controlled custom blocks (image, gallery, CTA, quote, etc.). Pages use structured block fields — not a visual page builder.
 
-## Migration architecture
+## Media storage (Phase 3)
+
+| Environment | Storage |
+|-------------|---------|
+| Development | Local directory (`MEDIA_STORAGE_PATH`, default `./media`) |
+| Staging/Production | Persistent volume or S3-compatible object storage (adapter can be added) |
+
+- WordPress derivative files (`-150x150`, `-scaled`) are **not** imported — Payload/Sharp generates `hero`, `article`, `card`, `thumbnail`.
+- Legacy mapping preserved on Media records (`legacy.wordpressId`, `legacy.uploadPath`).
+- Migration source archive (`uploads.zip`) is never deployed to production.
+
 
 | Tool | Location | Purpose |
 |------|----------|---------|

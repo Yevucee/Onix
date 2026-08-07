@@ -56,6 +56,6 @@ docker-compose.override.yml
 coverage/
 .nyc_output/
 
-# Temporary extraction directories
-/tmp/
-onix-audit/
+# Temporary migration working files (extracted uploads, caches)
+.migration-work/
+

@@ -25,7 +25,7 @@ path,title,wordpress_status,sitemap_present,publicly_accessible,linked_from_navi
 /home/virtual-machine/,Virtual Machines,unknown (empty in export),yes,yes,no,MIGRATE,high,Production page
 /infrastructure-innovation/,Infrastructure Innovation,unknown (empty in export),no,unknown,yes,MIGRATE,high,Production page
 /linxaccra/,Linx Accra,unknown (empty in export),yes,yes,no,MIGRATE,high,Production page
-/michaelnahon__trashed/,Michael Nahon,unknown (empty in export),no,unknown,no,MANUAL REVIEW,low,Uncertain — verify before migration
+/michaelnahon__trashed/,Michael Nahon,unknown (empty in export),no,unknown,no,EXCLUDE,high,Trashed WordPress page — not public production content
 /news/,News,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
 /o-home/,Home,unknown (empty in export),yes,yes,no,EXCLUDE,high,Staging/duplicate/dev page
 /o-home/bretttucker/,Brett Tucker,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
@@ -46,7 +46,7 @@ path,title,wordpress_status,sitemap_present,publicly_accessible,linked_from_navi
 /o-home/serwaakankam/,Serwaa Kankam,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
 /o-home/stephenappiah/,Stephen Appiah Fordjour,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
 /partners/,Partners,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
-/pitch/,Pitch Competition,unknown (empty in export),yes,no,no,MANUAL REVIEW,low,Uncertain — verify before migration
+/pitch/,Pitch Competition,unknown (empty in export),yes,no,no,EXCLUDE,high,Event page not publicly accessible (404 on crawl) — exclude from Phase 3
 /services/,Services,unknown (empty in export),no,unknown,yes,MIGRATE,high,Production page
 /staging-tab/,Staging tab,unknown (empty in export),yes,no,no,EXCLUDE,high,Staging/duplicate/dev page
-/yen-choi__trashed/,Yen Choi,unknown (empty in export),no,unknown,no,MANUAL REVIEW,low,Uncertain — verify before migration
+/yen-choi__trashed/,Yen Choi,unknown (empty in export),no,unknown,no,EXCLUDE,high,Trashed WordPress page — not public production content

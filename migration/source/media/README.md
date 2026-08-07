@@ -1,12 +1,31 @@
 # Media source material
 
-No `wp-content/uploads` directory or media archive was supplied in this repository.
+## Archive
 
-Attachment metadata for **563 files** exists in the WordPress XML export, with URLs pointing to the live production site (`https://onixdatacentres.com/wp-content/uploads/...`).
+| Item | Value |
+|------|-------|
+| **Path** | `migration/source/media/uploads.zip` |
+| **Tracking** | Git LFS |
+| **Compressed size** | ~1.4 GB (1,505,051,521 bytes) |
+| **Contents** | WordPress `wp-content/uploads/` tree |
 
-A full media download from production (or a separate uploads archive) will be required before migration.
+## Extraction
 
-See:
+Extract to a **gitignored** working directory (not committed):
 
-- `migration/reports/media-inventory.csv`
-- `migration/reports/media-summary.md`
+```bash
+mkdir -p .migration-work
+unzip -q migration/source/media/uploads.zip -d .migration-work/ -x '__MACOSX/*'
+```
+
+Expected structure: `.migration-work/uploads/YYYY/MM/...` plus plugin directories (`elementor/`, etc.).
+
+## Migration
+
+- Inventory: `npm run media:inventory` (from `new-site/`)
+- Reconciliation: `npm run migrate:reconcile-media`
+- Import: `npm run migrate:media`
+
+See `docs/migration.md` for the full workflow.
+
+**Do not** commit extracted files or modify the source ZIP.

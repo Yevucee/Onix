@@ -23,7 +23,22 @@ Blog/news content with WordPress-compatible date URLs.
 
 **Drafts:** Enabled (`_status`: draft / published).
 
-**Migration:** Import via `npm run import:article`. Deduplication by `legacy.wordpressId`.
+**Migration:** `npm run migrate:articles` (see `docs/migration.md`). Deduplication by `legacy.wordpressId`.
+
+### Editor workflow (articles)
+
+1. Log in to `/admin` → Articles → Create
+2. Enter **title** (slug auto-generated or set manually)
+3. Set **published date** and choose **category/categories**
+4. Add **excerpt** (used on `/news` listing)
+5. Upload or select **featured image** — enter **alt text** on the Media record
+6. Write body in **Lexical editor**: headings, lists, bold/italic, links
+7. Insert blocks via toolbar: image, gallery, video, CTA, download, table, divider
+8. Open **SEO** tab: title, description, canonical, social image
+9. **Save as draft** or **Publish**
+10. Published articles appear automatically at `/news` and their legacy date URL
+
+Draft articles do not appear in public listings or sitemap.
 
 ### Pages
 

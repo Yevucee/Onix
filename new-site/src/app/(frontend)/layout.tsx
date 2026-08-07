@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const defaultNav = [
   { label: 'Our Solutions', url: '/about-us' },
   { label: 'Infrastructure', url: '/about-us' },
-  { label: 'Blog', url: '/2025/11/13/what-is-peering/' },
+        { label: 'Blog', url: '/news' },
   { label: 'Contact Us', url: '/about-us' },
 ]
 

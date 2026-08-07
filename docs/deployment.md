@@ -67,8 +67,8 @@ Requires PostgreSQL reachable at build time for Payload initialization during st
 ## Media strategy
 
 1. **Phase 2:** Local `./media` directory (Docker volume)
-2. **Phase 3:** Import `wp-content/uploads` archive using `media-migration-map.csv`
-3. **Production:** Persistent volume or S3-compatible storage
+2. **Phase 3:** Import selected master assets from `migration/source/media/uploads.zip` via `npm run migrate:media` (see `docs/migration.md`). Extracted archive lives in gitignored `.migration-work/`.
+3. **Production:** Persistent volume or S3-compatible object storage — configure Payload storage adapter; do not rely on ephemeral container filesystem.
 
 Do not depend on production WordPress URLs for media in the final site.
 

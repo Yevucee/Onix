@@ -7,9 +7,10 @@ type ButtonProps = {
   variant?: 'primary' | 'outline'
   className?: string
   type?: 'button' | 'submit'
+  disabled?: boolean
 }
 
-export function Button({ href, children, variant = 'primary', className = '', type = 'button' }: ButtonProps) {
+export function Button({ href, children, variant = 'primary', className = '', type = 'button', disabled }: ButtonProps) {
   const base =
     'inline-flex items-center justify-center rounded-[var(--radius-card)] px-6 py-3 text-sm font-medium transition-colors'
   const styles =
@@ -26,7 +27,7 @@ export function Button({ href, children, variant = 'primary', className = '', ty
   }
 
   return (
-    <button type={type} className={`${base} ${styles} ${className}`}>
+    <button type={type} disabled={disabled} className={`${base} ${styles} ${className}`}>
       {children}
     </button>
   )
