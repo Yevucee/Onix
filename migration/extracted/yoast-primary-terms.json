@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "post_id": 1823,
+    "term_id": 30,
+    "taxonomy": "portfolio_cat"
+  },
+  {
+    "id": 2,
+    "post_id": 1263,
+    "term_id": 38,
+    "taxonomy": "category"
+  },
+  {
+    "id": 3,
+    "post_id": 3164,
+    "term_id": 38,
+    "taxonomy": "category"
+  },
+  {
+    "id": 4,
+    "post_id": 3191,
+    "term_id": 38,
+    "taxonomy": "category"
+  },
+  {
+    "id": 5,
+    "post_id": 3194,
+    "term_id": 38,
+    "taxonomy": "category"
+  },
+  {
+    "id": 6,
+    "post_id": 3196,
+    "term_id": 38,
+    "taxonomy": "category"
+  },
+  {
+    "id": 7,
+    "post_id": 3198,
+    "term_id": 38,
+    "taxonomy": "category"
+  },
+  {
+    "id": 8,
+    "post_id": 3498,
+    "term_id": 39,
+    "taxonomy": "category"
+  }
+]

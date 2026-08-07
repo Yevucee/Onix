@@ -1,0 +1,21 @@
+{
+  "extracted_at": "2026-08-07T18:54:21Z",
+  "source": "Sanitised extraction from onix db.gz \u2014 raw dump purged from repository",
+  "counts": {
+    "posts": 198,
+    "yoast_meta": 24,
+    "redirects": 25,
+    "pretty_links": 1,
+    "fluent_forms": 4,
+    "options": 13,
+    "primary_terms": 8,
+    "yoast_records": 12,
+    "crawl_seo_records": 154
+  },
+  "notes": [
+    "wp_yoast_indexable table contained only stale dev.onixdc.com URLs \u2014 not exported",
+    "Yoast SEO extracted from wp_postmeta (_yoast_wpseo_*) joined to wp_posts (public fields only)",
+    "Live crawl SEO provided as supplementary source in seo-from-live-crawl.json",
+    "post_content, post_password, user tables, submissions, and secrets excluded"
+  ]
+}

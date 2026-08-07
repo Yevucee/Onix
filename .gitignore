@@ -7,12 +7,14 @@
 id_rsa
 id_rsa.pub
 
-# Database dumps and backups (sensitive — see migration/SOURCE-INVENTORY.md)
+# Database dumps and backups (sensitive — never commit)
 *.sql
 *.sql.gz
 *.sql.bz2
-# Note: onix db.gz is currently tracked for migration reference.
-# Consider removing from Git history before making the repository public.
+*.db.gz
+*db*.gz
+onix db.gz
+**/onix db.gz
 
 # WordPress runtime (not needed in new stack)
 wp-config.php
