@@ -171,22 +171,44 @@ export async function importRequiredMedia(
 }
 
 export function resolveLegacyMediaUrl(url: string, map = loadMediaMap()): string | number | null {
-  const normalized = url.replace(MIGRATION_CONFIG.uploadsUrlPrefix, '').replace(MIGRATION_CONFIG.uploadsPathPrefix, '')
+  const normalized = url
+    .replace(MIGRATION_CONFIG.uploadsUrlPrefix, '')
+    .replace(MIGRATION_CONFIG.uploadsPathPrefix, '')
+    .replace(/^https?:\/\/[^/]+\/wp-content\/uploads\//, '')
+
   for (const entry of Object.values(map)) {
     if (url.includes(entry.uploadPath) || normalized === entry.uploadPath) return entry.payloadMediaId
     if (entry.legacyUrl === url) return entry.payloadMediaId
+    const entryBase = entry.uploadPath.replace(/-\d+x\d+(?=\.[^.]+$)/i, '').replace(/-scaled(?=\.[^.]+$)/i, '')
+    const normBase = normalized.replace(/-\d+x\d+(?=\.[^.]+$)/i, '').replace(/-scaled(?=\.[^.]+$)/i, '')
+    if (entryBase === normBase) return entry.payloadMediaId
   }
 
   const items = loadWpItems()
-  const { byPath } = buildAttachmentIndex(items)
-  const rel = url.match(/wp-content\/uploads\/(.+)/)?.[1]
+  const { byPath, byUrl } = buildAttachmentIndex(items)
+  const rel = url.match(/wp-content\/uploads\/(.+)/)?.[1] || normalized
   if (rel) {
-    const att = byPath.get(rel)
+    const relBase = rel.replace(/-\d+x\d+(?=\.[^.]+$)/i, '').replace(/-scaled(?=\.[^.]+$)/i, '')
+    const att = byPath.get(rel) || byPath.get(rel.toLowerCase()) || byPath.get(relBase) || byPath.get(relBase.toLowerCase())
     if (att) {
       const wpId = Number(att['wp:post_id'])
       if (map[String(wpId)]) return map[String(wpId)].payloadMediaId
     }
+    for (const [pathKey, attachment] of byPath) {
+      const pathBase = pathKey.replace(/-\d+x\d+(?=\.[^.]+$)/i, '').replace(/-scaled(?=\.[^.]+$)/i, '')
+      if (pathBase === relBase) {
+        const wpId = Number(attachment['wp:post_id'])
+        if (map[String(wpId)]) return map[String(wpId)].payloadMediaId
+      }
+    }
   }
+
+  const attByUrl = byUrl.get(url)
+  if (attByUrl) {
+    const wpId = Number(attByUrl['wp:post_id'])
+    if (map[String(wpId)]) return map[String(wpId)].payloadMediaId
+  }
+
   return null
 }
 

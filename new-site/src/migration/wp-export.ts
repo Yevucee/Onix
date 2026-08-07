@@ -46,6 +46,18 @@ export function getAttachmentFile(item: WpItem): string {
   return getMeta(item, '_wp_attached_file')
 }
 
+export function getPageLegacyPath(item: WpItem): string {
+  const link = String(item.link || '')
+  try {
+    const url = new URL(link)
+    let path = url.pathname
+    if (!path.endsWith('/')) path += '/'
+    return path
+  } catch {
+    return `/${String(item['wp:post_name'] || '')}/`
+  }
+}
+
 export function getLegacyPostPath(item: WpItem): string {
   const slug = String(item['wp:post_name'] || '')
   const type = String(item['wp:post_type'] || '')

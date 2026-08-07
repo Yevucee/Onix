@@ -59,4 +59,96 @@ export const StatsBlock: Block = {
   ],
 }
 
-export const pageBlocks = [HeroBlock, RichTextBlock, ImageTextBlock, CtaBlock, StatsBlock]
+export const FeatureCardsBlock: Block = {
+  slug: 'featureCards',
+  fields: [
+    { name: 'heading', type: 'text' },
+    {
+      name: 'items',
+      type: 'array',
+      fields: [
+        { name: 'title', type: 'text', required: true },
+        { name: 'body', type: 'textarea' },
+        { name: 'url', type: 'text' },
+        { name: 'icon', type: 'upload', relationTo: 'media' },
+      ],
+    },
+  ],
+}
+
+export const LogoGridBlock: Block = {
+  slug: 'logoGrid',
+  fields: [
+    { name: 'heading', type: 'text' },
+    {
+      name: 'logos',
+      type: 'array',
+      fields: [
+        { name: 'image', type: 'upload', relationTo: 'media', required: true },
+        { name: 'name', type: 'text' },
+        { name: 'url', type: 'text' },
+      ],
+    },
+  ],
+}
+
+export const DownloadsBlock: Block = {
+  slug: 'downloads',
+  fields: [
+    { name: 'heading', type: 'text' },
+    {
+      name: 'files',
+      type: 'array',
+      fields: [
+        { name: 'file', type: 'upload', relationTo: 'media', required: true },
+        { name: 'label', type: 'text', required: true },
+      ],
+    },
+  ],
+}
+
+export const VideoBlock: Block = {
+  slug: 'video',
+  fields: [
+    { name: 'url', type: 'text', required: true, label: 'YouTube or Vimeo URL' },
+    { name: 'heading', type: 'text' },
+    { name: 'caption', type: 'text' },
+  ],
+}
+
+export const GalleryBlock: Block = {
+  slug: 'gallery',
+  fields: [
+    { name: 'heading', type: 'text' },
+    {
+      name: 'images',
+      type: 'array',
+      fields: [
+        { name: 'image', type: 'upload', relationTo: 'media', required: true },
+        { name: 'caption', type: 'text' },
+      ],
+    },
+  ],
+}
+
+export const LeadershipGridBlock: Block = {
+  slug: 'leadershipGrid',
+  fields: [
+    { name: 'heading', type: 'text' },
+    { name: 'intro', type: 'textarea' },
+  ],
+}
+
+export const pageBlocks = [
+  HeroBlock,
+  RichTextBlock,
+  ImageTextBlock,
+  CtaBlock,
+  StatsBlock,
+  FeatureCardsBlock,
+  LogoGridBlock,
+  DownloadsBlock,
+  VideoBlock,
+  GalleryBlock,
+  LeadershipGridBlock,
+]

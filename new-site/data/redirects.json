@@ -145,5 +145,40 @@
     "statusCode": "301",
     "active": true,
     "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/home/",
+    "destination": "/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 4 — homepage canonical at /"
+  },
+  {
+    "sourcePath": "/blog/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 4 — news listing"
+  },
+  {
+    "sourcePath": "/fr/author/onixdc/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 4 — author archive not migrated"
+  },
+  {
+    "sourcePath": "/fr/author/samuel/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 4 — author archive not migrated"
+  },
+  {
+    "sourcePath": "/fr/author/yinka/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 4 — author archive not migrated"
   }
 ]

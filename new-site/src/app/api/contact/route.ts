@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getSiteEnv } from '@/lib/env'
+import { getContactRecipient, sendEmail } from '@/lib/email'
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
@@ -21,12 +22,28 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid form data' }, { status: 400 })
     }
 
-    if (getSiteEnv() === 'staging') {
-      console.log('[staging] Contact form (not emailed)', { firstName, lastName, company })
-      return NextResponse.json({ ok: true })
+    const recipient = getContactRecipient()
+    const result = await sendEmail({
+      to: recipient,
+      subject: `[Onix Contact] ${firstName} ${lastName} — ${company}`,
+      replyTo: email,
+      text: [
+        `Name: ${firstName} ${lastName}`,
+        `Company: ${company}`,
+        `Email: ${email}`,
+        `Phone: ${phone || '—'}`,
+        '',
+        message,
+        '',
+        `Environment: ${getSiteEnv()}`,
+      ].join('\n'),
+    })
+
+    if (!result.ok) {
+      console.error('[contact] Email failed', result.error)
+      return NextResponse.json({ error: 'Unable to send message' }, { status: 500 })
     }
 
-    console.log('[contact] Submission', { firstName, lastName, company, email, phone })
     return NextResponse.json({ ok: true })
   } catch {
     return NextResponse.json({ error: 'Invalid request' }, { status: 400 })

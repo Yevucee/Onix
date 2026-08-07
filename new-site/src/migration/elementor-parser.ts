@@ -18,6 +18,7 @@ const SUPPORTED_WIDGETS = new Set([
   'text-editor',
   'image',
   'image-gallery',
+  'image-carousel',
   'video',
   'button',
   'divider',
@@ -131,14 +132,18 @@ function mapWidget(
       legacyMediaUrls.push(url)
       blocks.push({ blockType: 'image', legacyUrl: url, alt: String(settings.caption || '') })
     }
-  } else if (wt === 'image-gallery') {
-    const gallery = (settings.gallery as Array<{ url?: string }>) || []
+  } else if (wt === 'image-gallery' || wt === 'image-carousel') {
+    const gallery =
+      (settings.gallery as Array<{ url?: string }>) ||
+      (settings.carousel as Array<{ url?: string }>) ||
+      (settings.slides as Array<{ image?: { url?: string } }>)?.map((s) => ({ url: s.image?.url })) ||
+      []
     const images = gallery.map((g) => g.url).filter(Boolean) as string[]
     images.forEach((u) => legacyMediaUrls.push(u))
     if (images.length) blocks.push({ blockType: 'gallery', legacyUrls: images })
   } else if (wt === 'video') {
     const url = String(settings.youtube_url || settings.vimeo_url || settings.hosted_url || '')
-    if (url) blocks.push({ blockType: 'externalVideo', url })
+    if (url) blocks.push({ blockType: 'video', url })
   } else if (wt === 'button') {
     blocks.push({
       blockType: 'cta',

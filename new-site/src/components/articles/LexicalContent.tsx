@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import type { LexicalElementNode, LexicalRoot, LexicalTextNode } from '@/lib/lexical'
+import { ArticleBlocksRenderer, type ArticleBlock } from './ArticleBlocksRenderer'
 
 function renderTextNode(node: LexicalTextNode, key: number) {
   let content: ReactNode = node.text
@@ -21,11 +22,12 @@ function renderNode(node: LexicalElementNode | LexicalTextNode, key: number): Re
       const tag = element.tag || 'h2'
       if (tag === 'h3') return <h3 key={key}>{children}</h3>
       if (tag === 'h4') return <h4 key={key}>{children}</h4>
+      if (tag === 'h5') return <h5 key={key}>{children}</h5>
       return <h2 key={key}>{children}</h2>
     }
     case 'list': {
       const ListTag = element.listType === 'number' ? 'ol' : 'ul'
-      return <ListTag key={key}>{children}</ListTag>
+      return <ListTag key={key} className="list-inside list-disc space-y-1">{children}</ListTag>
     }
     case 'listitem':
       return <li key={key}>{children}</li>
@@ -44,11 +46,19 @@ function renderNode(node: LexicalElementNode | LexicalTextNode, key: number): Re
   }
 }
 
-export function LexicalContent({ content }: { content?: LexicalRoot | null }) {
-  if (!content?.root?.children?.length) return null
+export function LexicalContent({
+  content,
+  blocks,
+}: {
+  content?: LexicalRoot | null
+  blocks?: ArticleBlock[] | null
+}) {
   return (
     <div className="lexical-content space-y-4">
-      {content.root.children.map((node, index) => renderNode(node as LexicalElementNode, index))}
+      {content?.root?.children?.length
+        ? content.root.children.map((node, index) => renderNode(node as LexicalElementNode, index))
+        : null}
+      <ArticleBlocksRenderer blocks={blocks} />
     </div>
   )
 }

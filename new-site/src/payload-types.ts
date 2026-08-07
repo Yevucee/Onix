@@ -248,6 +248,18 @@ export interface Category {
     wordpressId?: number | null;
     legacyPath?: string | null;
     legacyUrl?: string | null;
+    /**
+     * Article media blocks from migration (internal use)
+     */
+    migrationBlocks?:
+      | {
+          [k: string]: unknown;
+        }
+      | unknown[]
+      | string
+      | number
+      | boolean
+      | null;
   };
   updatedAt: string;
   createdAt: string;
@@ -299,6 +311,18 @@ export interface Article {
     wordpressId?: number | null;
     legacyPath?: string | null;
     legacyUrl?: string | null;
+    /**
+     * Article media blocks from migration (internal use)
+     */
+    migrationBlocks?:
+      | {
+          [k: string]: unknown;
+        }
+      | unknown[]
+      | string
+      | number
+      | boolean
+      | null;
   };
   updatedAt: string;
   createdAt: string;
@@ -362,6 +386,76 @@ export interface Page {
             blockName?: string | null;
             blockType: 'stats';
           }
+        | {
+            heading?: string | null;
+            items?:
+              | {
+                  title: string;
+                  body?: string | null;
+                  url?: string | null;
+                  icon?: (number | null) | Media;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'featureCards';
+          }
+        | {
+            heading?: string | null;
+            logos?:
+              | {
+                  image: number | Media;
+                  name?: string | null;
+                  url?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'logoGrid';
+          }
+        | {
+            heading?: string | null;
+            files?:
+              | {
+                  file: number | Media;
+                  label: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'downloads';
+          }
+        | {
+            url: string;
+            heading?: string | null;
+            caption?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'video';
+          }
+        | {
+            heading?: string | null;
+            images?:
+              | {
+                  image: number | Media;
+                  caption?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'gallery';
+          }
+        | {
+            heading?: string | null;
+            intro?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'leadershipGrid';
+          }
       )[]
     | null;
   seo?: {
@@ -377,6 +471,18 @@ export interface Page {
     wordpressId?: number | null;
     legacyPath?: string | null;
     legacyUrl?: string | null;
+    /**
+     * Article media blocks from migration (internal use)
+     */
+    migrationBlocks?:
+      | {
+          [k: string]: unknown;
+        }
+      | unknown[]
+      | string
+      | number
+      | boolean
+      | null;
   };
   updatedAt: string;
   createdAt: string;
@@ -495,6 +601,18 @@ export interface DataCentre {
     wordpressId?: number | null;
     legacyPath?: string | null;
     legacyUrl?: string | null;
+    /**
+     * Article media blocks from migration (internal use)
+     */
+    migrationBlocks?:
+      | {
+          [k: string]: unknown;
+        }
+      | unknown[]
+      | string
+      | number
+      | boolean
+      | null;
   };
   updatedAt: string;
   createdAt: string;
@@ -540,6 +658,18 @@ export interface Leadership {
     wordpressId?: number | null;
     legacyPath?: string | null;
     legacyUrl?: string | null;
+    /**
+     * Article media blocks from migration (internal use)
+     */
+    migrationBlocks?:
+      | {
+          [k: string]: unknown;
+        }
+      | unknown[]
+      | string
+      | number
+      | boolean
+      | null;
   };
   updatedAt: string;
   createdAt: string;
@@ -776,6 +906,7 @@ export interface CategoriesSelect<T extends boolean = true> {
         wordpressId?: T;
         legacyPath?: T;
         legacyUrl?: T;
+        migrationBlocks?: T;
       };
   updatedAt?: T;
   createdAt?: T;
@@ -816,6 +947,7 @@ export interface ArticlesSelect<T extends boolean = true> {
         wordpressId?: T;
         legacyPath?: T;
         legacyUrl?: T;
+        migrationBlocks?: T;
       };
   updatedAt?: T;
   createdAt?: T;
@@ -884,6 +1016,82 @@ export interface PagesSelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
+        featureCards?:
+          | T
+          | {
+              heading?: T;
+              items?:
+                | T
+                | {
+                    title?: T;
+                    body?: T;
+                    url?: T;
+                    icon?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        logoGrid?:
+          | T
+          | {
+              heading?: T;
+              logos?:
+                | T
+                | {
+                    image?: T;
+                    name?: T;
+                    url?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        downloads?:
+          | T
+          | {
+              heading?: T;
+              files?:
+                | T
+                | {
+                    file?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        video?:
+          | T
+          | {
+              url?: T;
+              heading?: T;
+              caption?: T;
+              id?: T;
+              blockName?: T;
+            };
+        gallery?:
+          | T
+          | {
+              heading?: T;
+              images?:
+                | T
+                | {
+                    image?: T;
+                    caption?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        leadershipGrid?:
+          | T
+          | {
+              heading?: T;
+              intro?: T;
+              id?: T;
+              blockName?: T;
+            };
       };
   seo?:
     | T
@@ -902,6 +1110,7 @@ export interface PagesSelect<T extends boolean = true> {
         wordpressId?: T;
         legacyPath?: T;
         legacyUrl?: T;
+        migrationBlocks?: T;
       };
   updatedAt?: T;
   createdAt?: T;
@@ -969,6 +1178,7 @@ export interface DataCentresSelect<T extends boolean = true> {
         wordpressId?: T;
         legacyPath?: T;
         legacyUrl?: T;
+        migrationBlocks?: T;
       };
   updatedAt?: T;
   createdAt?: T;
@@ -1003,6 +1213,7 @@ export interface LeadershipSelect<T extends boolean = true> {
         wordpressId?: T;
         legacyPath?: T;
         legacyUrl?: T;
+        migrationBlocks?: T;
       };
   updatedAt?: T;
   createdAt?: T;

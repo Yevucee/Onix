@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Container } from './Container'
+import { NewsletterForm } from '@/components/forms/NewsletterForm'
 
 type FooterColumn = { heading?: string; links?: { label: string; url: string }[] }
 
@@ -7,12 +8,32 @@ type FooterProps = {
   columns?: FooterColumn[]
   copyright?: string
   legalLinks?: { label: string; url: string }[]
+  showNewsletter?: boolean
+  locale?: 'en' | 'fr'
 }
 
-export function Footer({ columns = [], copyright, legalLinks = [] }: FooterProps) {
+export function Footer({ columns = [], copyright, legalLinks = [], showNewsletter = true, locale = 'en' }: FooterProps) {
+  const isFr = locale === 'fr'
   return (
     <footer className="mt-16 border-t border-[var(--color-border)] bg-[var(--color-background-alt)]">
       <Container className="grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-4">
+        {showNewsletter && (
+          <div className="lg:col-span-1">
+            <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide">
+              {isFr ? 'Newsletter' : 'Newsletter'}
+            </h2>
+            <p className="mb-4 text-sm text-[var(--color-muted)]">
+              {isFr ? 'Recevez nos actualités.' : 'Get updates from Onix Data Centre.'}
+            </p>
+            <NewsletterForm
+              labels={
+                isFr
+                  ? { placeholder: 'Votre adresse e-mail', submit: "S'abonner", success: 'Merci pour votre inscription.' }
+                  : undefined
+              }
+            />
+          </div>
+        )}
         {columns.map((column, index) => (
           <div key={column.heading || index}>
             {column.heading && <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide">{column.heading}</h2>}

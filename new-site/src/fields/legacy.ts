@@ -10,6 +10,12 @@ export const legacyFields: Field[] = [
       { name: 'wordpressId', type: 'number', label: 'WordPress post ID', unique: true },
       { name: 'legacyPath', type: 'text', label: 'Legacy URL path' },
       { name: 'legacyUrl', type: 'text', label: 'Full legacy URL' },
+      {
+        name: 'migrationBlocks',
+        type: 'json',
+        label: 'Migrated content blocks',
+        admin: { description: 'Article media blocks from migration (internal use)', readOnly: true },
+      },
     ],
   },
 ]

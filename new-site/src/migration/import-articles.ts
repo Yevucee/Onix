@@ -48,6 +48,32 @@ function loadSeoFromYoast(wpId: number) {
   return data.yoast_postmeta?.find((e) => e.post_id === wpId)
 }
 
+function enrichBlocksWithMedia(
+  blocks: Array<{ blockType: string; [key: string]: unknown }>,
+  mediaMap: ReturnType<typeof loadMediaMap>,
+) {
+  return blocks.map((block) => {
+    if (block.blockType === 'image' && block.legacyUrl) {
+      const mediaId = resolveLegacyMediaUrl(String(block.legacyUrl), mediaMap)
+      return { ...block, image: mediaId || undefined }
+    }
+    if (block.blockType === 'gallery' && Array.isArray(block.legacyUrls)) {
+      return {
+        ...block,
+        images: (block.legacyUrls as string[]).map((url) => ({
+          legacyUrl: url,
+          image: resolveLegacyMediaUrl(url, mediaMap) || undefined,
+        })),
+      }
+    }
+    if (block.blockType === 'download' && block.legacyUrl) {
+      const mediaId = resolveLegacyMediaUrl(String(block.legacyUrl), mediaMap)
+      return { ...block, file: mediaId || undefined }
+    }
+    return block
+  })
+}
+
 export async function importArticle(
   payload: Payload,
   slug: string,
@@ -101,6 +127,7 @@ export async function importArticle(
   }
 
   const mediaMap = loadMediaMap()
+  const enrichedBlocks = enrichBlocksWithMedia(conversion.blocks, mediaMap)
   let mappedInline = 0
   let missingInline = 0
   for (const url of conversion.legacyMediaUrls) {
@@ -154,6 +181,7 @@ export async function importArticle(
       wordpressId: wpId,
       legacyPath,
       legacyUrl: `https://onixdatacentres.com${legacyPath}`,
+      migrationBlocks: enrichedBlocks.length ? enrichedBlocks : undefined,
     },
     seo: {
       title: seoTitle || undefined,

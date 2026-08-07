@@ -126,7 +126,10 @@ export default async function ArticlePage({ params }: Props) {
       <Section>
         <Container className="prose max-w-3xl">
           {article.excerpt && <p className="lead text-lg text-[var(--color-muted)]">{article.excerpt}</p>}
-          <LexicalContent content={article.content} />
+          <LexicalContent
+            content={article.content}
+            blocks={(article.legacy?.migrationBlocks as Parameters<typeof LexicalContent>[0]['blocks']) || undefined}
+          />
         </Container>
       </Section>
     </>

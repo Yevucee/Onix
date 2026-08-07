@@ -20,10 +20,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const defaultNav = [
-  { label: 'Our Solutions', url: '/about-us' },
-  { label: 'Infrastructure', url: '/about-us' },
-        { label: 'Blog', url: '/news' },
-  { label: 'Contact Us', url: '/about-us' },
+  { label: 'Our Solutions', url: '/home/our-solutions' },
+  { label: 'Infrastructure', url: '/home/infrastructure' },
+  { label: 'News', url: '/news' },
+  { label: 'About Us', url: '/about-us' },
+  { label: 'Contact Us', url: '/contact-us' },
 ]
 
 export default async function FrontendLayout({ children }: { children: React.ReactNode }) {

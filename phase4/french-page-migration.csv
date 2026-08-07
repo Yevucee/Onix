@@ -1,0 +1,5 @@
+english_url,french_url,status,content_complete,seo_complete,media_complete,notes
+/,/fr/home-francais/,IN_PROGRESS,partial,partial,partial,FR homepage via Payload locale
+/about-us/,/fr/a-propos/,OPEN,no,no,n/a,Awaiting FR page import
+/contact-us/,/fr/contactez-nous/,IN_PROGRESS,partial,no,n/a,Form route live; CMS content pending
+/news/,n/a,ACCEPTED_LIMITATION,n/a,n/a,n/a,No FR articles in export
