@@ -1,0 +1,56 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+
+# Database dumps and backups (sensitive — see migration/SOURCE-INVENTORY.md)
+*.sql
+*.sql.gz
+*.sql.bz2
+# Note: onix db.gz is currently tracked for migration reference.
+# Consider removing from Git history before making the repository public.
+
+# WordPress runtime (not needed in new stack)
+wp-config.php
+wp-config-local.php
+
+# Node / Next.js (future new-site work)
+node_modules/
+.next/
+out/
+dist/
+build/
+.turbo/
+.vercel/
+
+# Payload CMS
+payload-types.ts.bak
+media/uploads/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker local overrides
+docker-compose.override.yml
+
+# Test and coverage
+coverage/
+.nyc_output/
+
+# Temporary extraction directories
+/tmp/
+onix-audit/
