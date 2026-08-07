@@ -1,0 +1,684 @@
+{
+  "fluentform": [
+    {
+      "id": 1,
+      "title": "Contact Form Demo",
+      "status": "published",
+      "fields": [
+        {
+          "index": 0,
+          "element": "input_name",
+          "attributes": {
+            "name": "names",
+            "data-type": "name-element"
+          },
+          "settings": {
+            "container_class": "",
+            "admin_field_label": "Name",
+            "conditional_logics": []
+          },
+          "fields": {
+            "first_name": {
+              "element": "input_text",
+              "attributes": {
+                "type": "text",
+                "name": "first_name",
+                "value": "",
+                "id": "",
+                "class": "",
+                "placeholder": "First Name"
+              },
+              "settings": {
+                "container_class": "",
+                "label": "First Name",
+                "help_message": "",
+                "visible": true,
+                "validation_rules": {
+                  "required": {
+                    "value": false,
+                    "message": "This field is required"
+                  }
+                },
+                "conditional_logics": []
+              },
+              "editor_options": {
+                "template": "inputText"
+              }
+            },
+            "middle_name": {
+              "element": "input_text",
+              "attributes": {
+                "type": "text",
+                "name": "middle_name",
+                "value": "",
+                "id": "",
+                "class": "",
+                "placeholder": "",
+                "required": false
+              },
+              "settings": {
+                "container_class": "",
+                "label": "Middle Name",
+                "help_message": "",
+                "error_message": "",
+                "visible": false,
+                "validation_rules": {
+                  "required": {
+                    "value": false,
+                    "message": "This field is required"
+                  }
+                },
+                "conditional_logics": []
+              },
+              "editor_options": {
+                "template": "inputText"
+              }
+            },
+            "last_name": {
+              "element": "input_text",
+              "attributes": {
+                "type": "text",
+                "name": "last_name",
+                "value": "",
+                "id": "",
+                "class": "",
+                "placeholder": "Last Name",
+                "required": false
+              },
+              "settings": {
+                "container_class": "",
+                "label": "Last Name",
+                "help_message": "",
+                "error_message": "",
+                "visible": true,
+                "validation_rules": {
+                  "required": {
+                    "value": false,
+                    "message": "This field is required"
+                  }
+                },
+                "conditional_logics": []
+              },
+              "editor_options": {
+                "template": "inputText"
+              }
+            }
+          },
+          "editor_options": {
+            "title": "Name Fields",
+            "element": "name-fields",
+            "icon_class": "ff-edit-name",
+            "template": "nameFields"
+          },
+          "uniqElKey": "el_1570866006692"
+        },
+        {
+          "index": 1,
+          "element": "input_email",
+          "attributes": {
+            "type": "email",
+            "name": "email",
+            "value": "",
+            "id": "",
+            "class": "",
+            "placeholder": "Email Address"
+          },
+          "settings": {
+            "container_class": "",
+            "label": "Email",
+            "label_placement": "",
+            "help_message": "",
+            "admin_field_label": "",
+            "validation_rules": {
+              "required": {
+                "value": true,
+                "message": "This field is required"
+              },
+              "email": {
+                "value": true,
+                "message": "This field must contain a valid email"
+              }
+            },
+            "conditional_logics": []
+          },
+          "editor_options": {
+            "title": "Email Address",
+            "icon_class": "ff-edit-email",
+            "template": "inputText"
+          },
+          "uniqElKey": "el_1570866012914"
+        },
+        {
+          "index": 2,
+          "element": "input_text",
+          "attributes": {
+            "type": "text",
+            "name": "subject",
+            "value": "",
+            "class": "",
+            "placeholder": "Subject"
+          },
+          "settings": {
+            "container_class": "",
+            "label": "Subject",
+            "label_placement": "",
+            "admin_field_label": "Subject",
+            "help_message": "",
+            "validation_rules": {
+              "required": {
+                "value": false,
+                "message": "This field is required"
+              }
+            },
+            "conditional_logics": {
+              "type": "any",
+              "status": false,
+              "conditions": [
+                {
+                  "field": "",
+                  "value": "",
+                  "operator": ""
+                }
+              ]
+            }
+          },
+          "editor_options": {
+            "title": "Simple Text",
+            "icon_class": "ff-edit-text",
+            "template": "inputText"
+          },
+          "uniqElKey": "el_1570878958648"
+        },
+        {
+          "index": 3,
+          "element": "textarea",
+          "attributes": {
+            "name": "message",
+            "value": "",
+            "id": "",
+            "class": "",
+            "placeholder": "Your Message",
+            "rows": 4,
+            "cols": 2
+          },
+          "settings": {
+            "container_class": "",
+            "label": "Your Message",
+            "admin_field_label": "",
+            "label_placement": "",
+            "help_message": "",
+            "validation_rules": {
+              "required": {
+                "value": true,
+                "message": "This field is required"
+              }
+            },
+            "conditional_logics": {
+              "type": "any",
+              "status": false,
+              "conditions": [
+                {
+                  "field": "",
+                  "value": "",
+                  "operator": ""
+                }
+              ]
+            }
+          },
+          "editor_options": {
+            "title": "Text Area",
+            "icon_class": "ff-edit-textarea",
+            "template": "inputTextarea"
+          },
+          "uniqElKey": "el_1570879001207"
+        }
+      ],
+      "submit_button": {
+        "uniqElKey": "el_1524065200616",
+        "element": "button",
+        "attributes": {
+          "type": "submit",
+          "class": ""
+        },
+        "settings": {
+          "align": "left",
+          "button_style": "default",
+          "container_class": "",
+          "help_message": "",
+          "background_color": "#1a7efb",
+          "button_size": "md",
+          "color": "#ffffff",
+          "button_ui": {
+            "type": "default",
+            "text": "Submit Form",
+            "img_url": ""
+          }
+        },
+        "editor_options": {
+          "title": "Submit Button"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "title": "Subscription Form",
+      "status": "published",
+      "fields": [
+        {
+          "index": 1,
+          "element": "container",
+          "attributes": [],
+          "settings": {
+            "container_class": "",
+            "conditional_logics": {
+              "type": "any",
+              "status": false,
+              "conditions": [
+                {
+                  "field": "",
+                  "value": "",
+                  "operator": ""
+                }
+              ]
+            }
+          },
+          "columns": [
+            {
+              "fields": [
+                {
+                  "index": 1,
+                  "element": "input_email",
+                  "attributes": {
+                    "type": "email",
+                    "name": "email",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "Your Email Address"
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "",
+                    "label_placement": "",
+                    "help_message": "",
+                    "admin_field_label": "Email",
+                    "validation_rules": {
+                      "required": {
+                        "value": true,
+                        "message": "This field is required"
+                      },
+                      "email": {
+                        "value": true,
+                        "message": "This field must contain a valid email"
+                      }
+                    },
+                    "conditional_logics": [],
+                    "is_unique": "no",
+                    "unique_validation_message": "Email address need to be unique."
+                  },
+                  "editor_options": {
+                    "title": "Email Address",
+                    "icon_class": "ff-edit-email",
+                    "template": "inputText"
+                  },
+                  "uniqElKey": "el_16231279686950.8779857923682932"
+                }
+              ]
+            },
+            {
+              "fields": [
+                {
+                  "index": 15,
+                  "element": "custom_submit_button",
+                  "attributes": {
+                    "class": "",
+                    "type": "submit"
+                  },
+                  "settings": {
+                    "button_style": "",
+                    "button_size": "md",
+                    "align": "left",
+                    "container_class": "",
+                    "current_state": "normal_styles",
+                    "background_color": "",
+                    "color": "",
+                    "hover_styles": {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#1a7efb",
+                      "color": "#1a7efb",
+                      "borderRadius": "",
+                      "minWidth": "100%"
+                    },
+                    "normal_styles": {
+                      "backgroundColor": "#1a7efb",
+                      "borderColor": "#1a7efb",
+                      "color": "#ffffff",
+                      "borderRadius": "",
+                      "minWidth": "100%"
+                    },
+                    "button_ui": {
+                      "text": "Subscribe",
+                      "type": "default",
+                      "img_url": ""
+                    },
+                    "conditional_logics": {
+                      "type": "any",
+                      "status": false,
+                      "conditions": [
+                        {
+                          "field": "",
+                          "value": "",
+                          "operator": ""
+                        }
+                      ]
+                    }
+                  },
+                  "editor_options": {
+                    "title": "Custom Submit Button",
+                    "icon_class": "dashicons dashicons-arrow-right-alt",
+                    "template": "customButton"
+                  },
+                  "uniqElKey": "el_16231279798380.5947400167493171"
+                }
+              ]
+            }
+          ],
+          "editor_options": {
+            "title": "Two Column Container",
+            "icon_class": "ff-edit-column-2"
+          },
+          "uniqElKey": "el_16231279284710.40955091024524304"
+        }
+      ],
+      "submit_button": {
+        "uniqElKey": "el_1524065200616",
+        "element": "button",
+        "attributes": {
+          "type": "submit",
+          "class": ""
+        },
+        "settings": {
+          "align": "left",
+          "button_style": "default",
+          "container_class": "",
+          "help_message": "",
+          "background_color": "#1a7efb",
+          "button_size": "md",
+          "color": "#ffffff",
+          "button_ui": {
+            "type": "default",
+            "text": "Subscribe",
+            "img_url": ""
+          }
+        },
+        "editor_options": {
+          "title": "Submit Button"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "title": "Feedback form",
+      "status": "published",
+      "fields": [
+        {
+          "index": 2,
+          "element": "input_text",
+          "attributes": {
+            "type": "text",
+            "name": "input_text",
+            "value": "",
+            "class": "",
+            "placeholder": "Full Name",
+            "maxlength": ""
+          },
+          "settings": {
+            "container_class": "",
+            "label": "Name",
+            "label_placement": "",
+            "admin_field_label": "",
+            "help_message": "",
+            "prefix_label": "",
+            "suffix_label": "",
+            "validation_rules": {
+              "required": {
+                "value": false,
+                "message": "This field is required",
+                "global_message": "This field is required",
+                "global": true
+              }
+            },
+            "conditional_logics": [],
+            "is_unique": "no",
+            "unique_validation_message": "This value need to be unique."
+          },
+          "editor_options": {
+            "title": "Simple Text",
+            "icon_class": "ff-edit-text",
+            "template": "inputText"
+          },
+          "uniqElKey": "el_173193373249949"
+        },
+        {
+          "index": 1,
+          "element": "input_email",
+          "attributes": {
+            "type": "email",
+            "name": "email",
+            "value": "",
+            "id": "",
+            "class": "",
+            "placeholder": "Email Address"
+          },
+          "settings": {
+            "container_class": "",
+            "label": "Email",
+            "label_placement": "",
+            "help_message": "",
+            "admin_field_label": "",
+            "prefix_label": "",
+            "suffix_label": "",
+            "validation_rules": {
+              "required": {
+                "value": false,
+                "message": "This field is required",
+                "global_message": "This field is required",
+                "global": true
+              },
+              "email": {
+                "value": true,
+                "message": "This field must contain a valid email",
+                "global_message": "This field must contain a valid email",
+                "global": true
+              }
+            },
+            "conditional_logics": [],
+            "is_unique": "no",
+            "unique_validation_message": "Email address need to be unique."
+          },
+          "editor_options": {
+            "title": "Email",
+            "icon_class": "ff-edit-email",
+            "template": "inputText"
+          },
+          "uniqElKey": "el_173193293370095"
+        },
+        {
+          "index": 6,
+          "element": "input_number",
+          "attributes": {
+            "type": "number",
+            "name": "numeric_field",
+            "value": "",
+            "id": "",
+            "class": "",
+            "placeholder": "Phone Number"
+          },
+          "settings": {
+            "container_class": "",
+            "label": "Phone Number",
+            "admin_field_label": "",
+            "label_placement": "",
+            "help_message": "",
+            "number_step": "",
+            "prefix_label": "",
+            "suffix_label": "",
+            "numeric_formatter": "",
+            "validation_rules": {
+              "required": {
+                "value": false,
+                "message": "This field is required",
+                "global_message": "This field is required",
+                "global": true
+              },
+              "numeric": {
+                "value": true,
+                "message": "This field must contain numeric value",
+                "global_message": "This field must contain numeric value",
+                "global": true
+              },
+              "min": {
+                "value": "",
+                "message": "Validation fails for minimum value",
+                "global_message": "Validation fails for minimum value",
+                "global": true
+              },
+              "max": {
+                "value": "",
+                "message": "Validation fails for maximum value",
+                "global_message": "Validation fails for maximum value",
+                "global": true
+              },
+              "digits": {
+                "value": "",
+                "message": "Validation fails for limited digits",
+                "global_message": "Validation fails for limited digits",
+                "global": true
+              }
+            },
+            "conditional_logics": [],
+            "calculation_settings": {
+              "status": false,
+              "formula": ""
+            }
+          },
+          "editor_options": {
+            "title": "Numeric Field",
+            "icon_class": "ff-edit-numeric",
+            "template": "inputText"
+          },
+          "uniqElKey": "el_17319329516370"
+        },
+        {
+          "index": 3,
+          "element": "textarea",
+          "attributes": {
+            "name": "description",
+            "value": "",
+            "id": "",
+            "class": "",
+            "placeholder": "",
+            "rows": 3,
+            "cols": 2,
+            "maxlength": ""
+          },
+          "settings": {
+            "container_class": "",
+            "label": "Feedback",
+            "admin_field_label": "",
+            "label_placement": "",
+            "help_message": "",
+            "validation_rules": {
+              "required": {
+                "value": true,
+                "message": "This field is required",
+                "global_message": "This field is required",
+                "global": true
+              }
+            },
+            "conditional_logics": []
+          },
+          "editor_options": {
+            "title": "Text Area",
+            "icon_class": "ff-edit-textarea",
+            "template": "inputTextarea"
+          },
+          "uniqElKey": "el_1731932998636"
+        }
+      ],
+      "submit_button": {
+        "uniqElKey": "el_1524065200616",
+        "element": "button",
+        "attributes": {
+          "type": "submit",
+          "class": ""
+        },
+        "settings": {
+          "align": "left",
+          "button_style": "",
+          "container_class": "",
+          "help_message": "",
+          "background_color": "",
+          "button_size": "md",
+          "color": "",
+          "button_ui": {
+            "type": "default",
+            "text": "Submit Form",
+            "img_url": ""
+          },
+          "normal_styles": {
+            "backgroundColor": "rgba(191, 43, 5, 1)",
+            "borderColor": "rgba(255, 255, 255, 0)",
+            "color": "#ffffff",
+            "borderRadius": "",
+            "minWidth": ""
+          },
+          "hover_styles": {
+            "backgroundColor": "rgba(0, 0, 0, 1)",
+            "borderColor": "rgba(0, 0, 0, 0)",
+            "color": "rgba(255, 255, 255, 1)",
+            "borderRadius": "",
+            "minWidth": ""
+          },
+          "current_state": "hover_styles"
+        },
+        "editor_options": {
+          "title": "Submit Button"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "title": "Pitch Form 01",
+      "status": "published",
+      "fields": [],
+      "submit_button": {
+        "uniqElKey": "el_1524065200616",
+        "element": "button",
+        "attributes": {
+          "type": "submit",
+          "class": ""
+        },
+        "settings": {
+          "align": "left",
+          "button_style": "default",
+          "container_class": "",
+          "help_message": "",
+          "background_color": "#1a7efb",
+          "button_size": "md",
+          "color": "#ffffff",
+          "button_ui": {
+            "type": "default",
+            "text": "Submit Form",
+            "img_url": ""
+          }
+        },
+        "editor_options": {
+          "title": "Submit Button"
+        }
+      }
+    }
+  ],
+  "forminator_and_cf7": "See migration/source/wordpress/onixdatacentre.WordPress.2026-08-07.xml (forminator_forms, wpcf7_contact_form post types)",
+  "note": "Submission data intentionally excluded"
+}

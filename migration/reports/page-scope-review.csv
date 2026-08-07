@@ -1,0 +1,52 @@
+path,title,wordpress_status,sitemap_present,publicly_accessible,linked_from_navigation,recommendation,confidence,notes
+/about-us/,About Us,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
+/baraawafall/,Bara Awa Fall,unknown (empty in export),no,unknown,no,MIGRATE,high,Leadership profile page
+/blog/,Blog,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
+/contact-us/,Contact Us,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
+/elementor-9089/,Cookie Policy,unknown (empty in export),yes,yes,no,EXCLUDE,high,Staging/duplicate/dev page
+/fr/author/onixdc/,onixdc – Onix Data Centre,unknown,yes,yes,unknown,MIGRATE,high,French URL — preserve content and path
+/fr/author/samuel/,Samuel – Onix Data Centre,unknown,yes,yes,unknown,MIGRATE,high,French URL — preserve content and path
+/fr/author/yinka/,Yinka Oyelade – Onix Data Centre,unknown,yes,yes,unknown,MIGRATE,high,French URL — preserve content and path
+/fr/home-francais/,Home – Français – Onix Data Centre,unknown,yes,yes,unknown,MIGRATE,high,French URL — preserve content and path
+/home-english/,Home - English,unknown (empty in export),yes,yes,no,EXCLUDE,high,Staging/duplicate/dev page
+/home-francais/,Home - Français,unknown (empty in export),no,unknown,no,EXCLUDE,high,Staging/duplicate/dev page
+/home/,Onix Data Centre,unknown (empty in export),no,unknown,yes,MIGRATE,high,Production page
+/home/cfo-roi/,CFO ROI,unknown (empty in export),yes,yes,no,MIGRATE,high,Production page
+/home/cfo/,CFO,unknown (empty in export),yes,yes,no,MIGRATE,high,Production page
+/home/eric-tenkorang/,Eric Tenkorang,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/home/feedback/,Feedback,unknown (empty in export),yes,yes,no,MIGRATE,high,Production page
+/home/finance/,Finance,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
+/home/infrastructure/,Infrastructure,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
+/home/o-services/,Services,unknown (empty in export),yes,yes,no,EXCLUDE,high,Staging/duplicate/dev page
+/home/onix-team-contact/,Onix team contact,unknown (empty in export),yes,yes,no,EXCLUDE,high,Staging/duplicate/dev page
+/home/our-solutions/,Our Solutions,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
+/home/staging123/,Staging page,unknown (empty in export),yes,yes,no,EXCLUDE,high,Staging/duplicate/dev page
+/home/sustainability/,Sustainability,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
+/home/virtual-machine/,Virtual Machines,unknown (empty in export),yes,yes,no,MIGRATE,high,Production page
+/infrastructure-innovation/,Infrastructure Innovation,unknown (empty in export),no,unknown,yes,MIGRATE,high,Production page
+/linxaccra/,Linx Accra,unknown (empty in export),yes,yes,no,MIGRATE,high,Production page
+/michaelnahon__trashed/,Michael Nahon,unknown (empty in export),no,unknown,no,MANUAL REVIEW,low,Uncertain — verify before migration
+/news/,News,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
+/o-home/,Home,unknown (empty in export),yes,yes,no,EXCLUDE,high,Staging/duplicate/dev page
+/o-home/bretttucker/,Brett Tucker,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/o-home/certification/,Certification,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
+/o-home/edemscott/,Edem Scott,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/o-home/home-v2/,Home V2,unknown (empty in export),yes,yes,no,EXCLUDE,high,Staging/duplicate/dev page
+/o-home/kevinopata/,Kevin Opata,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/o-home/leonardmckinlay/,Leornard McKinlay,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/o-home/mamadoukebe/,Mamadou KEBE,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/o-home/michaelthompson/,Michael Thompson,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/o-home/paulrichards/,Paul Richards,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/o-home/privacy-policy/,Privacy Policy,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
+/o-home/razak-awudulai/,Razak,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/o-home/razak-awudulai1/,Razak Awudulai,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/o-home/samuel-osew-kwatia/,Samuel Osew-Kwatia,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/o-home/samuelpolley/,Samuel Polley,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/o-home/senegal/,Senegal &#x1f1f8;&#x1f1f3;,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
+/o-home/serwaakankam/,Serwaa Kankam,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/o-home/stephenappiah/,Stephen Appiah Fordjour,unknown (empty in export),yes,yes,no,MIGRATE,high,Leadership profile page
+/partners/,Partners,unknown (empty in export),yes,yes,yes,MIGRATE,high,Production page
+/pitch/,Pitch Competition,unknown (empty in export),yes,no,no,MANUAL REVIEW,low,Uncertain — verify before migration
+/services/,Services,unknown (empty in export),no,unknown,yes,MIGRATE,high,Production page
+/staging-tab/,Staging tab,unknown (empty in export),yes,no,no,EXCLUDE,high,Staging/duplicate/dev page
+/yen-choi__trashed/,Yen Choi,unknown (empty in export),no,unknown,no,MANUAL REVIEW,low,Uncertain — verify before migration

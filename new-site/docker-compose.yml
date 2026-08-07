@@ -1,0 +1,42 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: onix
+      POSTGRES_PASSWORD: onix
+      POSTGRES_DB: onix
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U onix -d onix']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://onix:onix@postgres:5432/onix
+      SITE_ENV: development
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - media:/app/media
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: sh -c "npm install && npm run dev"
+
+volumes:
+  pgdata:
+  media:

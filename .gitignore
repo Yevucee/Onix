@@ -28,6 +28,9 @@ dist/
 build/
 .turbo/
 .vercel/
+new-site/.env
+new-site/media/
+*.tsbuildinfo
 
 # Payload CMS
 payload-types.ts.bak
