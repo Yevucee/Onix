@@ -11,7 +11,7 @@
 | Category | Supplied? | Location | Migration usefulness |
 |----------|-----------|----------|-------------------|
 | WordPress WXR export | Yes | `migration/source/wordpress/onixdatacentre.WordPress.2026-08-07.xml` | **Critical** — primary structured content source |
-| Database dump | Yes | `migration/source/wordpress/onix db.gz` | **High** — SEO (Yoast), redirects, forms, full postmeta |
+| Database dump | **Removed** | Sanitised data in `migration/extracted/` | **Extracted** — raw file purged from Git |
 | Elementor kit export | **No** | Data embedded in XML + DB | **High** — requires parsing, not direct import |
 | Active theme | Partial | `migration/source/themes/astra theme.zip` | **Low** — stock Astra, no child theme |
 | Child theme | **No** | — | N/A |
@@ -46,15 +46,24 @@
 
 | Field | Value |
 |-------|-------|
-| **Path** | `migration/source/wordpress/onix db.gz` |
-| **Size** | ~15 MB compressed / ~172 MB uncompressed |
-| **Format** | UpdraftPlus MySQL dump (MariaDB 11.8, WordPress 7.0.3) |
-| **Contains** | Full WordPress database: posts, postmeta, users, options, Yoast indexables, redirection rules, form submissions, Polylang/TranslatePress tables, plugin configuration |
-| **Usefulness** | **High** — supplements XML for SEO titles/descriptions, redirects, form definitions, plugin settings |
-| **Remain in Git?** | **Recommend removal from Git** before any public access; keep in secure offline storage |
-| **Sensitive?** | **Yes — HIGH** — user password hashes, user emails, API/plugin keys, form submission data, IP logs (Wordfence tables present) |
-| **Missing** | Nothing structurally — this is a complete DB backup |
-| **Further extraction** | Export Yoast indexables to CSV; export redirection rules; inventory active plugins from `wp_options` |
+| **Path** | ~~`migration/source/wordpress/onix db.gz`~~ **REMOVED** |
+| **Status** | Raw dump **purged from repository and Git history** (2026-08-07) |
+| **Sanitised replacement** | `migration/extracted/` — see README in that folder |
+| **Offline backup** | Retained separately by project team (not in GitHub) |
+
+**Previously contained (now extracted in sanitised form):** Yoast SEO postmeta, redirect rules, FluentForm structure, site options, primary category terms. User data, submissions, secrets, and logs were **not** exported.
+
+| Sanitised file | Records |
+|----------------|---------|
+| `yoast-seo.json` | 12 posts with Yoast fields |
+| `seo-from-live-crawl.json` | 154 URLs (supplementary) |
+| `redirects.json` | 25 redirect rules |
+| `fluentform-config.json` | 4 form definitions |
+| `site-config.json` | 13 non-sensitive options |
+| `yoast-primary-terms.json` | 8 primary category assignments |
+| `pretty-links.json` | 1 short link |
+
+**Note:** `wp_yoast_indexable` in the raw dump contained only stale `dev.onixdc.com` URLs and was not exported.
 
 ### 3. Astra theme archive
 
@@ -154,8 +163,8 @@ Files moved with `git mv` to preserve Git history.
 
 ## Recommended actions before Phase 2
 
-1. **Obtain `wp-content/uploads` archive** from production or hosting backup
-2. **Remove `onix db.gz` from Git history** if repository visibility changes; store securely offline
+1. ~~**Obtain `wp-content/uploads` archive**~~ → **Still required:** obtain `wp-content/uploads` archive from production or hosting backup
+2. ~~**Remove `onix db.gz` from Git history**~~ → **Done** (2026-08-07). Sanitised data in `migration/extracted/`
 3. **Redact author emails** from XML export if publishing repository
 4. **Confirm French (`/fr/`) content scope** — Polylang active; partial French pages in sitemap
 5. **Confirm which pages are production vs staging** — export contains `staging-tab`, `staging123`, `home-v2`, duplicate slugs
