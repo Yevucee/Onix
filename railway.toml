@@ -1,0 +1,13 @@
+# Onix private staging — Railway configuration
+# Project: onix-staging (create via Railway CLI)
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile.railway"
+watchPatterns = ["new-site/**", "migration/**", "scripts/railway/**", "Dockerfile.railway"]
+
+[deploy]
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+healthcheckPath = "/"
+healthcheckTimeout = 300

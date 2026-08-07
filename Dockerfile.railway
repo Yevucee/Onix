@@ -1,0 +1,55 @@
+# Railway staging — monorepo build (repo root context)
+# Builds Next.js from new-site/ and includes migration assets for bootstrap.
+
+FROM node:20-alpine AS base
+RUN apk add --no-cache libc6-compat
+WORKDIR /app/new-site
+
+FROM base AS deps
+COPY new-site/package.json new-site/package-lock.json* ./
+RUN npm ci
+
+FROM base AS builder
+COPY --from=deps /app/new-site/node_modules ./node_modules
+COPY new-site/ .
+ENV NEXT_TELEMETRY_DISABLED=1
+RUN npm run build
+
+FROM node:20-alpine AS runner
+RUN apk add --no-cache libc6-compat su-exec
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV MEDIA_STORAGE_PATH=/app/media
+ENV UPLOADS_EXTRACT_DIR=/app/.migration-work
+
+RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
+
+# Next.js standalone output
+COPY --from=builder /app/new-site/public ./public
+COPY --from=builder /app/new-site/.next/standalone ./
+COPY --from=builder /app/new-site/.next/static ./.next/static
+
+# Migration / bootstrap tooling (tsx + Payload scripts)
+COPY new-site/package.json new-site/package-lock.json new-site/tsconfig.json ./new-site/
+COPY new-site/scripts ./new-site/scripts/
+COPY new-site/src ./new-site/src/
+COPY --from=deps /app/new-site/node_modules ./new-site/node_modules/
+
+# Repo migration assets (uploads.zip ~1.5GB — required for media import)
+COPY migration ./migration
+COPY phase4 ./phase4
+COPY phase5 ./phase5
+
+RUN mkdir -p /app/media /app/.migration-work && chown -R nextjs:nodejs /app/media /app/.migration-work
+
+COPY scripts/railway/docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
+EXPOSE 3000
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["node", "server.js"]
