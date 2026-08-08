@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { LIVE_HOMEPAGE } from '@/data/live-site'
 import { OnixCardIcon, type CardIconName } from '@/components/onix/OnixIcons'
+import { OnixButton } from '@/components/onix/OnixButton'
 
 type CardItem = {
   title: string
@@ -19,19 +20,16 @@ type CardSectionProps = {
 
 function ServiceCard({ item }: { item: CardItem }) {
   return (
-    <Link
-      href={item.url}
-      className="group flex flex-col items-center bg-[var(--onix-navy)] px-[30px] py-[50px] text-center transition-colors duration-300 hover:bg-[#151b38]"
-    >
+    <div className="group flex flex-col items-center bg-[var(--onix-navy)] px-[30px] py-[50px] text-center transition-colors duration-300 hover:bg-[#151b38]">
       <span className="mb-6 text-[var(--onix-red)]">
         <OnixCardIcon name={item.icon} />
       </span>
-      <h3 className="text-[40px] font-semibold leading-[48px] text-white">{item.title}</h3>
+      <h3 className="onix-heading-light text-[40px] font-semibold leading-[48px]">{item.title}</h3>
       <p className="mt-4 text-base leading-[22.4px] text-white/80">{item.body}</p>
-      <span className="mt-7 inline-block bg-white px-4 py-2 text-[15px] font-normal text-[var(--onix-navy)] transition-colors group-hover:bg-white/90">
+      <OnixButton variant="solid-white" href={item.url} className="mt-7">
         Learn More
-      </span>
-    </Link>
+      </OnixButton>
+    </div>
   )
 }
 
@@ -41,7 +39,7 @@ function CardSection({ heading, intro, items, bgImage, variant = 'dark-header' }
       <>
         <section className="bg-white py-10 text-center">
           <div className="onix-content px-6">
-            <h2 className="text-[40px] font-semibold leading-[1.2] text-[var(--onix-navy)] md:text-[45px] md:leading-[48px]">
+            <h2 className="onix-heading-dark text-[40px] font-semibold leading-[1.2] md:text-[45px] md:leading-[48px]">
               {heading}
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-[22.4px] text-[var(--onix-body)]">{intro}</p>
@@ -68,7 +66,7 @@ function CardSection({ heading, intro, items, bgImage, variant = 'dark-header' }
       >
         <div className="absolute inset-0 bg-[var(--onix-navy)]/91" />
         <div className="onix-content relative z-10 px-6">
-          <h2 className="text-[40px] font-semibold leading-[1.2] text-white md:text-[45px] md:leading-[48px]">{heading}</h2>
+          <h2 className="onix-heading-light text-[40px] font-semibold leading-[1.2] md:text-[45px] md:leading-[48px]">{heading}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-[22.4px] text-white/80">{intro}</p>
         </div>
       </section>

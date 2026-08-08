@@ -621,5 +621,19 @@
     "statusCode": "301",
     "active": true,
     "notes": "Fix round 1 — legacy WordPress Our Solutions permalink"
+  },
+  {
+    "sourcePath": "/ims-policy/",
+    "destination": "/documents/IMS-SIMPLIFIED-12-May-2025.pdf",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Fix round 2 — IMS Policy document alias"
+  },
+  {
+    "sourcePath": "/ims-policy",
+    "destination": "/documents/IMS-SIMPLIFIED-12-May-2025.pdf",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Fix round 2 — IMS Policy document alias (no trailing slash)"
   }
 ]

@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import { LIVE_HOMEPAGE } from '@/data/live-site'
+import { OnixButton } from '@/components/onix/OnixButton'
 
 export function WhoWeAre() {
   const { heading, body } = LIVE_HOMEPAGE.whoWeAre
@@ -9,19 +9,15 @@ export function WhoWeAre() {
       <div className="onix-container">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <h2 className="text-[40px] font-semibold leading-[48px] text-[var(--onix-navy)]">{heading}</h2>
+            <h2 className="onix-heading-dark text-[40px] font-semibold leading-[48px]">{heading}</h2>
             {body.split('\n\n').map((para, i) => (
               <p key={i} className="mt-4 text-base leading-[22.4px] text-[var(--onix-body)]">
                 {para}
               </p>
             ))}
-            <Link
-              href="/o-home/about-us"
-              className="mt-8 inline-flex items-center gap-[17px] border-2 border-[var(--onix-red)] bg-[var(--onix-red)] px-[55px] py-4 text-base text-white transition-colors hover:bg-transparent hover:text-[var(--onix-red)]"
-            >
+            <OnixButton variant="primary-red" href="/o-home/about-us" className="mt-8" icon={<span aria-hidden>→</span>}>
               Learn more
-              <span aria-hidden>→</span>
-            </Link>
+            </OnixButton>
           </div>
           <div className="relative aspect-[4/3] w-full">
             {/* eslint-disable-next-line @next/next/no-img-element */}

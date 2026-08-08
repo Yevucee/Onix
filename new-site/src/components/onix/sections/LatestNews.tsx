@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { getMediaUrl } from '@/lib/media-url'
+import { OnixButton } from '@/components/onix/OnixButton'
 import type { Article, Media } from '@/payload-types'
 
 type ArticleDoc = Pick<Article, 'id' | 'title' | 'slug' | 'excerpt' | 'publishedAt'> & {
@@ -14,12 +15,9 @@ export function LatestNews({ articles }: { articles: ArticleDoc[] }) {
     <section className="bg-white py-0">
       <div className="onix-container py-8">
         <div className="mb-6 text-center">
-          <Link
-            href="/news"
-            className="inline-block bg-[var(--onix-navy)] px-8 py-3 text-sm text-white transition-colors hover:bg-[var(--onix-red)]"
-          >
+          <OnixButton variant="navy-pill" href="/news">
             Latest News
-          </Link>
+          </OnixButton>
         </div>
 
         {/* Magazine grid — live uses asymmetric layout */}

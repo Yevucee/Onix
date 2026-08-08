@@ -33,7 +33,7 @@ export function OnixFooter() {
 
           {/* Navigate */}
           <div>
-            <h3 className="mb-4 text-[22px] font-semibold text-white">{navigate.heading}</h3>
+            <h3 className="onix-heading-light mb-4 text-[22px] font-semibold">{navigate.heading}</h3>
             <ul className="space-y-[5px]">
               {navigate.links.map((link) => (
                 <li key={link.url}>
@@ -53,7 +53,7 @@ export function OnixFooter() {
 
           {/* Get in touch */}
           <div>
-            <h3 className="mb-4 text-[22px] font-semibold text-white">{contact.heading}</h3>
+            <h3 className="onix-heading-light mb-4 text-[22px] font-semibold">{contact.heading}</h3>
             <ul className="space-y-3">
               <li>
                 <a href={`mailto:${contact.email}`} className="flex items-center gap-2 text-sm text-white transition-colors hover:text-[#ed0221]">

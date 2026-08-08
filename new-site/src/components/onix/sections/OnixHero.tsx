@@ -1,34 +1,35 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { LIVE_HOMEPAGE } from '@/data/live-site'
+import { OnixButton } from '@/components/onix/OnixButton'
+
+/** Production hero background — Elementor background_video_link on live homepage */
+const HERO_VIDEO_ID = 'XNjRm7W4OvA'
+const HERO_VIDEO_EMBED = `https://www.youtube.com/embed/${HERO_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${HERO_VIDEO_ID}&controls=0&rel=0&playsinline=1&showinfo=0&modestbranding=1&enablejsapi=1`
 
 const SLIDES = [
   {
     title: 'Welcome to Onix Data Centres',
-    body: LIVE_HOMEPAGE.hero.body,
-    image: '/images/onix/hero/slide-1.jpg',
+    body: 'Onix is the leading provider of Tier IV Colocation data centre services in Ghana. Our state-of-the-art facility is designed to meet the growing demands of businesses in Ghana and the region. Our carrier-neutral data centre ensures freedom of choice and maximum flexibility for our clients.',
+    cta: { label: 'About Us', url: '/o-home/about-us' },
   },
   {
     title: 'Virtual Machines',
     body: "Maximise efficiency with VMs, offering direct access to Ghana's top networks.",
-    image: '/images/onix/hero/slide-2.jpg',
+    cta: { label: 'Our Solutions', url: '/home/our-solutions' },
   },
   {
     title: 'Managed Services',
     body: 'Boost IT reliability with our comprehensive Managed Services.',
-    image: '/images/onix/hero/slide-3.jpg',
+    cta: { label: 'Learn More', url: '/home/our-solutions' },
   },
   {
     title: 'Cyber Security',
     body: 'Defend against cyber threats with cutting-edge security measures.',
-    image: '/images/onix/hero/slide-4.jpg',
+    cta: { label: 'Learn More', url: '/home/our-solutions' },
   },
 ]
 
-const CTA = { label: 'About Us', url: LIVE_HOMEPAGE.hero.ctaUrl }
 const AUTOPLAY_MS = 6000
 
 export function OnixHero() {
@@ -45,29 +46,35 @@ export function OnixHero() {
   const slide = SLIDES[current]
 
   return (
-    <section className="relative min-h-[60vh] overflow-hidden md:min-h-[650px]">
-      {SLIDES.map((s, i) => (
-        <div
-          key={s.title}
-          className={`absolute inset-0 transition-opacity duration-700 ${i === current ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
-          aria-hidden={i !== current}
-        >
-          <Image src={s.image} alt="" fill priority={i === 0} className="object-cover" sizes="100vw" />
-          <div className="absolute inset-0 bg-black/45" />
-        </div>
-      ))}
+    <section className="relative min-h-[500px] overflow-hidden md:min-h-[650px]">
+      {/* Desktop: YouTube drone video background (live Elementor background video) */}
+      <div className="absolute inset-0 hidden md:block" aria-hidden>
+        <iframe
+          src={HERO_VIDEO_EMBED}
+          title="Onix Data Centre, Ghana, from Above."
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2 border-0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          tabIndex={-1}
+        />
+      </div>
 
-      <div className="onix-content relative z-10 flex min-h-[60vh] flex-col items-center justify-center px-6 py-20 text-center md:min-h-[650px]">
-        <h1 className="max-w-3xl text-[40px] font-semibold leading-[1.07] text-white md:text-[45px] md:leading-[48px]">
+      {/* Mobile: static drone poster (live hides desktop video on mobile) */}
+      <div
+        className="absolute inset-0 bg-cover bg-center md:hidden"
+        style={{ backgroundImage: 'url(/images/onix/hero/mobile-poster.jpg)' }}
+        aria-hidden
+      />
+
+      <div className="absolute inset-0 bg-black/45" aria-hidden />
+
+      <div className="onix-content relative z-10 flex min-h-[500px] flex-col items-center justify-center px-6 py-20 text-center md:min-h-[650px]">
+        <h1 className="onix-heading-light max-w-3xl text-[40px] font-semibold leading-[1.07] md:text-[45px] md:leading-[48px]">
           {slide.title}
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-[22.4px] text-white">{slide.body}</p>
-        <Link
-          href={CTA.url}
-          className="mt-8 inline-block bg-white px-10 py-3 text-[15px] font-normal text-[var(--onix-navy)] transition-colors hover:bg-white/90"
-        >
-          {CTA.label}
-        </Link>
+        <OnixButton variant="solid-white" href={slide.cta.url} className="mt-8">
+          {slide.cta.label}
+        </OnixButton>
       </div>
 
       <button

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { LIVE_HEADER_NAV, LIVE_CLIENT_SUPPORT_CTA } from '@/data/live-site'
+import { OnixButton } from '@/components/onix/OnixButton'
 
 export function OnixHeader() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -56,14 +57,14 @@ export function OnixHeader() {
           })}
         </nav>
 
-        <a
+        <OnixButton
+          variant="header-support"
           href={LIVE_CLIENT_SUPPORT_CTA.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden bg-[var(--onix-red)] px-6 py-3 text-[15px] text-white transition-colors hover:bg-[var(--onix-red-hover)] lg:inline-block"
+          external
+          className="hidden lg:inline-flex"
         >
           {LIVE_CLIENT_SUPPORT_CTA.label}
-        </a>
+        </OnixButton>
 
         <button
           type="button"
@@ -80,7 +81,7 @@ export function OnixHeader() {
           <div className="fixed inset-0 z-40 bg-black/40" onClick={() => setMobileOpen(false)} />
           <div className="fixed right-0 top-0 z-50 flex h-full w-[min(20rem,85vw)] flex-col overflow-y-auto bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b px-4 py-4">
-              <span className="font-semibold text-[var(--onix-navy)]">Menu</span>
+              <span className="onix-heading-dark font-semibold">Menu</span>
               <button type="button" onClick={() => setMobileOpen(false)} className="text-2xl leading-none" aria-label="Close">
                 ×
               </button>
@@ -119,15 +120,15 @@ export function OnixHeader() {
                   </div>
                 )
               })}
-              <a
+              <OnixButton
+                variant="header-support"
                 href={LIVE_CLIENT_SUPPORT_CTA.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                external
                 onClick={() => setMobileOpen(false)}
-                className="mt-4 bg-[var(--onix-red)] px-4 py-3 text-center text-sm text-white"
+                className="mt-4 w-full text-center"
               >
                 {LIVE_CLIENT_SUPPORT_CTA.label}
-              </a>
+              </OnixButton>
             </nav>
           </div>
         </>

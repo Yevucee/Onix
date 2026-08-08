@@ -79,7 +79,7 @@ export const LIVE_FOOTER = {
       { label: 'Privacy Policy', url: '/o-home/privacy-policy' },
       {
         label: 'IMS Policy',
-        url: 'https://onixdatacentres.com/wp-content/uploads/2025/05/IMS-SIMPLIFIED-12-May-2025.pdf',
+        url: '/documents/IMS-SIMPLIFIED-12-May-2025.pdf',
         external: true,
       },
     ],

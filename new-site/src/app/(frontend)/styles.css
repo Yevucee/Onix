@@ -39,9 +39,16 @@ body {
 }
 
 h1, h2, h3, h4 {
-  color: var(--onix-heading);
   font-weight: 600;
   line-height: 1.25;
+}
+
+.onix-heading-dark {
+  color: var(--onix-heading);
+}
+
+.onix-heading-light {
+  color: #ffffff;
 }
 
 a { color: inherit; }
