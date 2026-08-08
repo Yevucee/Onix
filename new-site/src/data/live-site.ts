@@ -113,7 +113,7 @@ export const LIVE_HOMEPAGE = {
   whoWeAre: {
     heading: 'Who we are',
     body: 'Onix flagship facility is the Tier IV certified, carrier neutral co-location facility, in Accra, Ghana. The Accra facility is the only Tier IV certified facility in the region. As an enterprise class facility, the Data Centre offers stable, reliable, and uninterrupted service with an annual uptime of 99.995%.\n\nAs a neutral colocation facility, clients benefit from the ability to select carriers and internet exchanges providing IP transit services as well as well as cloud service providers. Tier IV cooling, fire suppression and back up power systems offer redundancy, mitigating for the use of the colocation facility in preference to building and maintaining an in-house facility.',
-    image: '/images/home-collage.png',
+    image: '/images/onix/collage.png',
     stats: [
       { value: '99.995%', label: 'Uptime Guaranteed' },
       { value: '15+', label: 'Network Carriers' },

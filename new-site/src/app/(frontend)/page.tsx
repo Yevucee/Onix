@@ -1,4 +1,4 @@
-import { HomePageView } from '@/components/home/HomePageView'
+import { OnixHomePage } from '@/components/onix/OnixHomePage'
 import { getPayloadClient } from '@/lib/payload'
 import { buildMetadata } from '@/lib/seo'
 
@@ -26,11 +26,9 @@ export default async function HomePage() {
     collection: 'articles',
     where: { _status: { equals: 'published' } },
     sort: '-publishedAt',
-    limit: 4,
+    limit: 5,
+    depth: 1,
   })
 
-  // Homepage uses dedicated live-site reconstruction (HomePageView).
-  // Do NOT render migrated CMS blocks — they contain flattened Elementor
-  // template/footer content (see visual-rebuild/global-template-migration-bug.md).
-  return <HomePageView articles={articles.docs} />
+  return <OnixHomePage articles={articles.docs} />
 }

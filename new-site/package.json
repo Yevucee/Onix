@@ -61,6 +61,7 @@
     "sharp": "^0.34.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4.1.7",
     "@types/node": "^22.15.21",
     "@types/react": "^19.1.4",
@@ -68,6 +69,9 @@
     "@types/sanitize-html": "^2.16.1",
     "eslint": "^9.27.0",
     "eslint-config-next": "15.4.11",
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.62.1",
+    "pngjs": "^7.0.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.7",
     "tsx": "^4.19.4",

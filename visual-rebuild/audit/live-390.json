@@ -1,0 +1,605 @@
+{
+  "url": "https://onixdatacentres.com",
+  "name": "live",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "timestamp": "2026-08-08T08:30:53.640Z",
+  "screenshot": "/workspace/visual-rebuild/audit/screenshots/live-390.png",
+  "sections": [
+    {
+      "tag": "H2",
+      "text": "Cyber Security",
+      "top": 0,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H2",
+      "text": "Welcome to Onix Data Centres",
+      "top": 0,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H2",
+      "text": "Virtual Machines",
+      "top": 0,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H2",
+      "text": "Managed Services",
+      "top": 0,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Who we are",
+      "top": 833,
+      "images": [
+        "https://onixdatacentres.com/wp-content/uploads/2024/04/Images-collage-3.png"
+      ],
+      "bgImage": null
+    },
+    {
+      "tag": "H2",
+      "text": "Our Solutions",
+      "top": 1790,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Colocation",
+      "top": 2035,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Cybersecurity",
+      "top": 2390,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H2",
+      "text": "Infrastucture",
+      "top": 3117,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Secure Power Supply",
+      "top": 3362,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Sustainable Operations",
+      "top": 3723,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Advanced Security Measures",
+      "top": 4112,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H2",
+      "text": "The Lights Go Out. Does Your Business?",
+      "top": 0,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H2",
+      "text": "When Financial Data Comes Home: What Nigeria’s New Direction Means for Ghana",
+      "top": 0,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H2",
+      "text": "The AI Boom Needs More Than Bigger Data Centres",
+      "top": 0,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H2",
+      "text": "Where Should Ghana’s Health Data Live?",
+      "top": 0,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H2",
+      "text": "Your Server Room Is Not a Data Centre",
+      "top": 0,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Get in touch with us today",
+      "top": 4655,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Navigate",
+      "top": 5238,
+      "images": [
+        "https://onixdatacentres.com/wp-content/uploads/2022/11/Onix_white_logo.png"
+      ],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Get in touch",
+      "top": 5428,
+      "images": [
+        "https://onixdatacentres.com/wp-content/uploads/2022/11/Onix_white_logo.png"
+      ],
+      "bgImage": null
+    },
+    {
+      "tag": "P",
+      "text": "© 2026 All Rights Reserved.",
+      "top": 5600,
+      "images": [],
+      "bgImage": null
+    }
+  ],
+  "images": [
+    {
+      "src": "https://onixdatacentres.com/wp-content/uploads/2021/10/ONIX-logo-png-300x196.png",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "top": 0
+    },
+    {
+      "src": "https://onixdatacentres.com/wp-content/uploads/2021/10/ONIX-logo-png-300x196.png",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "top": 0
+    },
+    {
+      "src": "https://onixdatacentres.com/wp-content/uploads/2021/10/ONIX-logo-png-1024x670.png",
+      "alt": "",
+      "width": 73,
+      "height": 47,
+      "top": 20
+    },
+    {
+      "src": "https://onixdatacentres.com/wp-content/uploads/2021/10/ONIX-logo-png-1024x670.png",
+      "alt": "",
+      "width": 73,
+      "height": 47,
+      "top": 20
+    },
+    {
+      "src": "https://onixdatacentres.com/wp-content/uploads/2024/04/Images-collage-3.png",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "top": 0
+    },
+    {
+      "src": "https://onixdatacentres.com/wp-content/uploads/2022/11/Onix_white_logo.png",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "top": 5094
+    },
+    {
+      "src": "https://pixel.wp.com/g.gif?v=ext&blog=220638620&post=4842&tz=0&srv=onixdatacentres.com&hp=atomic&ac=2&amp=0&j=1%3A16.1-beta.3&host=onixdatacentres.com&ref=&fcp=0&rand=0.3313027030935679",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "top": 0
+    }
+  ],
+  "styles": {
+    "header": null,
+    "header-logo": null,
+    "nav-link": {
+      "_label": "nav-link",
+      "_selector": "nav a, .elementor-nav-menu > li > a",
+      "fontFamily": "Poppins, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "color": "rgb(236, 2, 35)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "paddingTop": "13px",
+      "paddingBottom": "13px",
+      "paddingLeft": "20px",
+      "paddingRight": "20px",
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "maxWidth": "none",
+      "width": "auto",
+      "height": "auto",
+      "minHeight": "0px",
+      "borderRadius": "0px",
+      "borderColor": "rgb(236, 2, 35)",
+      "borderWidth": "0px",
+      "boxShadow": "none",
+      "textAlign": "start",
+      "textTransform": "none",
+      "display": "flex",
+      "flexDirection": "row",
+      "gap": "normal",
+      "justifyContent": "normal",
+      "alignItems": "center",
+      "position": "relative",
+      "top": "auto",
+      "zIndex": "auto",
+      "_rect": "{\"top\":0,\"left\":0,\"width\":0,\"height\":0}"
+    },
+    "cta-button": {
+      "_label": "cta-button",
+      "_selector": ".elementor-button, a.elementor-button, header .elementor-button",
+      "fontFamily": "Poppins, sans-serif",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "lineHeight": "15px",
+      "letterSpacing": "normal",
+      "color": "rgb(255, 255, 255)",
+      "backgroundColor": "rgb(236, 2, 35)",
+      "backgroundImage": "none",
+      "paddingTop": "12px",
+      "paddingBottom": "12px",
+      "paddingLeft": "24px",
+      "paddingRight": "24px",
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "maxWidth": "none",
+      "width": "auto",
+      "height": "auto",
+      "minHeight": "0px",
+      "borderRadius": "0px",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderWidth": "0px",
+      "boxShadow": "none",
+      "textAlign": "center",
+      "textTransform": "none",
+      "display": "inline-block",
+      "flexDirection": "row",
+      "gap": "normal",
+      "justifyContent": "normal",
+      "alignItems": "normal",
+      "position": "static",
+      "top": "auto",
+      "zIndex": "auto",
+      "_rect": "{\"top\":0,\"left\":0,\"width\":0,\"height\":0}"
+    },
+    "h1": {
+      "_label": "h1",
+      "_selector": "h1, .elementor-heading-title",
+      "fontFamily": "Poppins, sans-serif",
+      "fontSize": "28px",
+      "fontWeight": "600",
+      "lineHeight": "30.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(28, 36, 75)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "maxWidth": "none",
+      "width": "370px",
+      "height": "30.7969px",
+      "minHeight": "0px",
+      "borderRadius": "0px",
+      "borderColor": "rgb(28, 36, 75)",
+      "borderWidth": "0px",
+      "boxShadow": "none",
+      "textAlign": "center",
+      "textTransform": "none",
+      "display": "block",
+      "flexDirection": "row",
+      "gap": "normal",
+      "justifyContent": "normal",
+      "alignItems": "normal",
+      "position": "static",
+      "top": "auto",
+      "zIndex": "auto",
+      "_rect": "{\"top\":832.71875,\"left\":10,\"width\":370,\"height\":30.796875}"
+    },
+    "h2": {
+      "_label": "h2",
+      "_selector": "h2.elementor-heading-title, main h2",
+      "fontFamily": "Poppins, sans-serif",
+      "fontSize": "28px",
+      "fontWeight": "600",
+      "lineHeight": "30.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(255, 255, 255)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "maxWidth": "none",
+      "width": "330px",
+      "height": "30.7969px",
+      "minHeight": "0px",
+      "borderRadius": "0px",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderWidth": "0px",
+      "boxShadow": "none",
+      "textAlign": "center",
+      "textTransform": "none",
+      "display": "block",
+      "flexDirection": "row",
+      "gap": "normal",
+      "justifyContent": "normal",
+      "alignItems": "normal",
+      "position": "static",
+      "top": "auto",
+      "zIndex": "auto",
+      "_rect": "{\"top\":1790.46875,\"left\":30,\"width\":330,\"height\":30.796875}"
+    },
+    "footer": null,
+    "body": {
+      "_label": "body",
+      "_selector": "body",
+      "fontFamily": "Poppins, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "22.4px",
+      "letterSpacing": "normal",
+      "color": "rgb(75, 79, 88)",
+      "backgroundColor": "rgb(245, 245, 245)",
+      "backgroundImage": "none",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "maxWidth": "none",
+      "width": "390px",
+      "height": "5632.94px",
+      "minHeight": "0px",
+      "borderRadius": "0px",
+      "borderColor": "rgb(75, 79, 88)",
+      "borderWidth": "0px",
+      "boxShadow": "none",
+      "textAlign": "start",
+      "textTransform": "none",
+      "display": "block",
+      "flexDirection": "row",
+      "gap": "normal",
+      "justifyContent": "normal",
+      "alignItems": "normal",
+      "position": "relative",
+      "top": "0px",
+      "zIndex": "auto",
+      "_rect": "{\"top\":0,\"left\":0,\"width\":390,\"height\":5632.9375}"
+    }
+  },
+  "navItems": [
+    {
+      "text": "🇬🇭 Ghana",
+      "href": "https://onixdatacentres.com/",
+      "hasDropdown": true
+    },
+    {
+      "text": "🇸🇳 Senegal",
+      "href": "https://onixdatacentres.com/o-home/senegal/",
+      "hasDropdown": false
+    },
+    {
+      "text": "Our Solutions",
+      "href": "https://onixdatacentres.com/home/our-solutions/",
+      "hasDropdown": true
+    },
+    {
+      "text": "Colocation",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#tangor",
+      "hasDropdown": false
+    },
+    {
+      "text": "Virtual machines",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#virtualmachines",
+      "hasDropdown": false
+    },
+    {
+      "text": "Managed Services",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#managedservices",
+      "hasDropdown": false
+    },
+    {
+      "text": "Cyber Security",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#cybersecurity",
+      "hasDropdown": false
+    },
+    {
+      "text": "Internet Exchange",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#internetexchange",
+      "hasDropdown": false
+    },
+    {
+      "text": "Carrier Neutrality",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#carriern",
+      "hasDropdown": false
+    },
+    {
+      "text": "Cloud and Connect",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#candc",
+      "hasDropdown": false
+    },
+    {
+      "text": "Peering",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#peering",
+      "hasDropdown": false
+    },
+    {
+      "text": "Finance",
+      "href": "https://onixdatacentres.com/home/finance/",
+      "hasDropdown": false
+    },
+    {
+      "text": "Infrastructure",
+      "href": "https://onixdatacentres.com/home/infrastructure/",
+      "hasDropdown": false
+    },
+    {
+      "text": "Blog",
+      "href": "https://onixdatacentres.com/blog/",
+      "hasDropdown": false
+    },
+    {
+      "text": "Contact Us",
+      "href": "https://onixdatacentres.com/home/contact-us/",
+      "hasDropdown": false
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "🇬🇭 Ghana",
+      "href": "https://onixdatacentres.com/"
+    },
+    {
+      "text": "🇸🇳 Senegal",
+      "href": "https://onixdatacentres.com/o-home/senegal/"
+    },
+    {
+      "text": "Our Solutions",
+      "href": "https://onixdatacentres.com/home/our-solutions/"
+    },
+    {
+      "text": "Colocation",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#tangor"
+    },
+    {
+      "text": "Virtual machines",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#virtualmachines"
+    },
+    {
+      "text": "Managed Services",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#managedservices"
+    },
+    {
+      "text": "Cyber Security",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#cybersecurity"
+    },
+    {
+      "text": "Internet Exchange",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#internetexchange"
+    },
+    {
+      "text": "Carrier Neutrality",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#carriern"
+    },
+    {
+      "text": "Cloud and Connect",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#candc"
+    },
+    {
+      "text": "Peering",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#peering"
+    },
+    {
+      "text": "Finance",
+      "href": "https://onixdatacentres.com/home/finance/"
+    },
+    {
+      "text": "Infrastructure",
+      "href": "https://onixdatacentres.com/home/infrastructure/"
+    },
+    {
+      "text": "Blog",
+      "href": "https://onixdatacentres.com/blog/"
+    },
+    {
+      "text": "Contact Us",
+      "href": "https://onixdatacentres.com/home/contact-us/"
+    },
+    {
+      "text": "🇬🇭 Ghana",
+      "href": "https://onixdatacentres.com/"
+    },
+    {
+      "text": "🇸🇳 Senegal",
+      "href": "https://onixdatacentres.com/o-home/senegal/"
+    },
+    {
+      "text": "Our Solutions",
+      "href": "https://onixdatacentres.com/home/our-solutions/"
+    },
+    {
+      "text": "Colocation",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#tangor"
+    },
+    {
+      "text": "Virtual machines",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#virtualmachines"
+    },
+    {
+      "text": "Managed Services",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#managedservices"
+    },
+    {
+      "text": "Cyber Security",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#cybersecurity"
+    },
+    {
+      "text": "Internet Exchange",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#internetexchange"
+    },
+    {
+      "text": "Carrier Neutrality",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#carriern"
+    },
+    {
+      "text": "Cloud and Connect",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#candc"
+    },
+    {
+      "text": "Peering",
+      "href": "https://onixdatacentres.com/o-home/o-ghana/our-solutions/#peering"
+    },
+    {
+      "text": "Finance",
+      "href": "https://onixdatacentres.com/home/finance/"
+    },
+    {
+      "text": "Infrastructure",
+      "href": "https://onixdatacentres.com/home/infrastructure/"
+    },
+    {
+      "text": "Blog",
+      "href": "https://onixdatacentres.com/blog/"
+    },
+    {
+      "text": "Contact Us",
+      "href": "https://onixdatacentres.com/home/contact-us/"
+    }
+  ]
+}

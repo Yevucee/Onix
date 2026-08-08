@@ -41,6 +41,7 @@
   "exclude": [
     "node_modules",
     "playwright.config.ts",
+    "scripts/visual-audit",
     "tests/e2e",
     "tests/int",
     "tests/helpers"
