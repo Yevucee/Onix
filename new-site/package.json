@@ -29,6 +29,8 @@
     "phase6:seed-group1": "tsx scripts/phase6/seed-group1-content.ts",
     "phase6:leadership-photos": "tsx scripts/migrate/import-leadership-photos.ts",
     "phase6:group1-staging": "tsx scripts/phase6/group1-staging.ts",
+    "phase6:seed-groups-2-4": "tsx scripts/phase6/seed-groups-2-4.ts",
+    "phase6:staging": "tsx scripts/phase6/phase6-staging.ts",
     "phase6:visual-qa": "tsx scripts/visual-audit/group1-qa.ts",
     "staging:migrate": "tsx scripts/staging/migrate-all.ts",
     "staging:admin": "tsx scripts/staging/create-admin.ts",

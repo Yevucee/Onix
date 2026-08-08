@@ -11,6 +11,7 @@ export type PageTemplate =
   | 'data-centre'
   | 'leadership'
   | 'contact'
+  | 'certification'
   | 'specialist'
   | 'news'
   | 'french'
@@ -31,7 +32,6 @@ const CORPORATE_PATHS = new Set([
   '/about-us/',
   '/o-home/about-us/',
   '/home/sustainability/',
-  '/o-home/certification/',
   '/o-home/privacy-policy/',
   '/home/cfo/',
   '/home/feedback/',
@@ -79,6 +79,7 @@ export function resolvePageTemplate(pathname: string): PageTemplate {
   if (normalized === '/news/' || normalized === '/blog/') return 'news'
   if (CONTACT_PATHS.has(normalized)) return 'contact'
   if (DATA_CENTRE_PATHS.has(normalized)) return 'data-centre'
+  if (normalized === '/o-home/certification/') return 'certification'
   if (SOLUTION_PATHS.has(normalized)) return 'solution'
   if (INFRASTRUCTURE_PATHS.has(normalized)) return 'infrastructure'
   if (CORPORATE_PATHS.has(normalized)) return 'corporate'

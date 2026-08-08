@@ -1,9 +1,8 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import { OnixButton } from '@/components/onix/OnixButton'
 import { ROI_PRICING, calculateRoi, formatGhs, type RoiInputs } from '@/lib/roi-calculator/calculate'
-import { Container, Section } from '@/components/layout/Container'
-import { PageHero } from '@/components/sections/Hero'
 
 const defaultInputs: RoiInputs = {
   racks: 4,
@@ -53,20 +52,20 @@ export function RoiCalculator() {
 
   return (
     <>
-      <Section className="border-b">
-        <Container>
-          <PageHero
-            title="CFO ROI Calculator"
-            intro="Compare estimated in-house data centre costs against Onix colocation. Figures are indicative — review assumptions before making decisions."
-          />
-          <p className="mt-2 text-sm text-[var(--color-muted)]">
+      <section className="border-b border-[var(--onix-border,#e5e5e5)] bg-white py-12 md:py-16">
+        <div className="onix-container">
+          <h1 className="onix-heading-dark text-[40px] font-semibold leading-[48px]">CFO ROI Calculator</h1>
+          <p className="mt-4 max-w-3xl text-base leading-[22.4px] text-[var(--onix-body)]">
+            Compare estimated in-house data centre costs against Onix colocation. Figures are indicative — review assumptions before making decisions.
+          </p>
+          <p className="mt-2 text-sm text-[var(--onix-muted)]">
             Exchange rate: {inputs.usdRate} GH₵/USD ({rateSource})
           </p>
-        </Container>
-      </Section>
+        </div>
+      </section>
 
-      <Section>
-        <Container className="grid gap-8 lg:grid-cols-2">
+      <section className="bg-[var(--onix-bg-alt)] py-12 md:py-16">
+        <div className="onix-container grid gap-8 lg:grid-cols-2">
           <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
             <Field label="Number of racks" id="racks" type="number" min={1} value={inputs.racks} onChange={(v) => setInputs({ ...inputs, racks: Number(v) })} />
             <label className="block text-sm font-medium">
@@ -103,7 +102,7 @@ export function RoiCalculator() {
 
           <div className="space-y-4">
             {!result ? (
-              <p className="text-[var(--color-muted)]">Enter rack count to calculate.</p>
+              <p className="text-[var(--onix-muted)]">Enter rack count to calculate.</p>
             ) : (
               <>
                 <ResultCard label="In-house annual cost" value={formatGhs(result.inHouseTotal)} />
@@ -120,12 +119,15 @@ export function RoiCalculator() {
                 <ResultCard label="Risk-adjusted savings (incl. downtime)" value={formatGhs(Math.abs(result.riskSavings))} />
               </>
             )}
-            <p className="text-xs text-[var(--color-muted)]">
+            <p className="text-xs text-[var(--onix-muted)]">
               Indicative model only. Onix pricing converted at {inputs.usdRate} GH₵ per USD ({rateSource} rate). Does not constitute a commercial offer.
             </p>
+            <OnixButton variant="primary-red" href="/contact-us" className="mt-4">
+              Discuss your requirements
+            </OnixButton>
           </div>
-        </Container>
-      </Section>
+        </div>
+      </section>
     </>
   )
 }

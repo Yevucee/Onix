@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { Media } from '@/payload-types'
 import { OnixAnimatedStat } from '@/components/onix/blocks/OnixAnimatedStat'
+import { OnixBulletedFeatures } from '@/components/onix/blocks/OnixBulletedFeatures'
+import { OnixCertificationGrid } from '@/components/onix/blocks/OnixCertificationGrid'
 import { OnixButton } from '@/components/onix/OnixButton'
 import { OnixLeadershipGrid } from '@/components/onix/templates/OnixLeadershipGrid'
 import { OnixPageCTA } from '@/components/onix/templates/OnixPageCTA'
@@ -367,6 +369,23 @@ export function OnixPageBlocksRenderer({
                   <OnixLeadershipGrid heading={block.heading as string} intro={block.intro as string} />
                 </div>
               </section>
+            )
+          case 'certificationGrid':
+            return (
+              <OnixCertificationGrid
+                key={key}
+                intro={block.intro as string}
+                items={block.items as Array<{ title: string; description?: string; image?: MediaRef; imageUrl?: string }>}
+              />
+            )
+          case 'bulletedFeatures':
+            return (
+              <OnixBulletedFeatures
+                key={key}
+                heading={block.heading as string}
+                sections={block.sections as Array<{ title?: string; bullets?: Array<{ text?: string }> }>}
+                variant={(block.variant as 'light' | 'alt') || 'light'}
+              />
             )
           case 'cta':
             return (

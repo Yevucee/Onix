@@ -1,6 +1,6 @@
-import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
-import { Container, Section } from '@/components/layout/Container'
+import { OnixBreadcrumbs } from '@/components/onix/templates/OnixBreadcrumbs'
 import { RoiCalculator } from '@/components/roi/RoiCalculator'
+import { productionCanonical } from '@/lib/canonical'
 import { buildMetadata } from '@/lib/seo'
 
 export async function generateMetadata() {
@@ -8,7 +8,7 @@ export async function generateMetadata() {
     {
       title: 'CFO ROI Calculator',
       description: 'Compare in-house data centre costs with Onix colocation.',
-      canonicalUrl: `${process.env.NEXT_PUBLIC_SITE_URL}/home/cfo-roi/`,
+      canonicalUrl: productionCanonical('/home/cfo-roi'),
     },
     'CFO ROI Calculator',
   )
@@ -17,11 +17,11 @@ export async function generateMetadata() {
 export default function CfoRoiPage() {
   return (
     <>
-      <Section className="border-b">
-        <Container>
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'CFO ROI Calculator' }]} />
-        </Container>
-      </Section>
+      <div className="border-b border-[var(--onix-border,#e5e5e5)] bg-white">
+        <div className="onix-container">
+          <OnixBreadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'CFO ROI Calculator' }]} />
+        </div>
+      </div>
       <RoiCalculator />
     </>
   )

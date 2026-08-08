@@ -27,15 +27,15 @@ URL,Page name,Audience,Current staging status,Live page type,Component template 
 /home/o-services/,Services,Public,Onix SolutionPageTemplate,Solution detail,Solution,2,Complete
 /services/,Services (alias),Public,Onix SolutionPageTemplate,Solution detail,Solution,2,Complete
 /home/sustainability/,Sustainability,Public,Onix CorporatePageTemplate,Corporate page,Corporate,4,Complete
-/o-home/certification/,Certification,Public,Onix CorporatePageTemplate,Corporate page,Corporate,4,Pending visual QA
+/o-home/certification/,Certification,Public,Onix CertificationPageTemplate,Certification page,Certification,4,Complete
 /o-home/privacy-policy/,Privacy Policy,Public,Onix CorporatePageTemplate,Legal page,Corporate,4,Complete
 /o-home/partners/,Partners,Public,Onix CorporatePageTemplate,Corporate page,Corporate,4,Complete
 /partners/,Partners (alias),Public,Onix CorporatePageTemplate,Corporate page,Corporate,4,Complete
 /home/cfo/,CFO,Public,Onix CorporatePageTemplate,Corporate page,Corporate,4,Complete
 /home/feedback/,Feedback,Public,Onix CorporatePageTemplate,Corporate page,Corporate,4,Complete
 /home/onix-team-contact/,Onix Team Contact,Public,Onix ContactPageTemplate,Contact page,Contact,4,Complete
-/linxaccra/,LINX Accra,Public,Legacy PageBlocksRenderer,Specialist landing,Corporate,4,Pending
-/home/cfo-roi/,CFO ROI,Public,Dedicated ROI calculator,Specialist tool,Specialist,4,Pending
+/linxaccra/,LINX Accra,Public,Onix SpecialistPageTemplate,Specialist landing,Specialist,4,Complete
+/home/cfo-roi/,CFO ROI,Public,Onix CFO ROI (dedicated route),Specialist tool,Specialist,4,Complete
 /infrastructure-innovation/,Infrastructure Innovation,Public,Onix InfrastructurePageTemplate,Infrastructure detail,Infrastructure,3,Complete
 /blog/,Blog,Public,Redirects to /news/,Article listing,News,6,Redirect
 /news/,News,Public,Legacy news/page,Article listing,News,6,Pending

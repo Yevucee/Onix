@@ -2,15 +2,12 @@ import type { Page } from '@/payload-types'
 import { OnixBreadcrumbs } from '@/components/onix/templates/OnixBreadcrumbs'
 import { OnixPageBlocksRenderer } from '@/components/onix/blocks/OnixPageBlocksRenderer'
 import { OnixPageCTA } from '@/components/onix/templates/OnixPageCTA'
-import { OnixPageHero } from '@/components/onix/templates/OnixPageHero'
-import { resolveSolutionBlocks } from '@/data/group2-solutions'
+import { resolveCertificationBlocks } from '@/data/certification-content'
 
 type Crumb = { label: string; href?: string }
 
-export function SolutionPageTemplate({ page, breadcrumbs }: { page: Page; breadcrumbs: Crumb[] }) {
-  const legacyPath = page.legacy?.legacyPath
-  const blocks = resolveSolutionBlocks(legacyPath, page.blocks as Parameters<typeof resolveSolutionBlocks>[1])
-  const hasHero = blocks.some((b) => b.blockType === 'hero')
+export function CertificationPageTemplate({ page, breadcrumbs }: { page: Page; breadcrumbs: Crumb[] }) {
+  const blocks = resolveCertificationBlocks(page.blocks as Parameters<typeof resolveCertificationBlocks>[0])
   const hasCta = blocks.some((b) => b.blockType === 'cta')
 
   return (
@@ -21,14 +18,12 @@ export function SolutionPageTemplate({ page, breadcrumbs }: { page: Page; breadc
         </div>
       </div>
 
-      {!hasHero && <OnixPageHero title={page.title} />}
-
-      <OnixPageBlocksRenderer blocks={blocks} featureCardVariant="navy" />
+      <OnixPageBlocksRenderer blocks={blocks} featureCardVariant="light" />
 
       {!hasCta && (
         <OnixPageCTA
-          heading="Ready to get started?"
-          body="Speak with our team about colocation, connectivity and managed services."
+          heading="Let's build this together!"
+          body="Contact our team to learn more about Onix certifications and compliance."
           buttonLabel="Contact us"
           buttonUrl="/contact-us"
         />

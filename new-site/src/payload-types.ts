@@ -456,6 +456,39 @@ export interface Page {
             blockName?: string | null;
             blockType: 'leadershipGrid';
           }
+        | {
+            intro?: string | null;
+            items?:
+              | {
+                  title: string;
+                  description?: string | null;
+                  image?: (number | null) | Media;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'certificationGrid';
+          }
+        | {
+            heading?: string | null;
+            sections?:
+              | {
+                  title?: string | null;
+                  bullets?:
+                    | {
+                        text?: string | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            variant?: ('light' | 'alt') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'bulletedFeatures';
+          }
       )[]
     | null;
   seo?: {
@@ -1089,6 +1122,41 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               heading?: T;
               intro?: T;
+              id?: T;
+              blockName?: T;
+            };
+        certificationGrid?:
+          | T
+          | {
+              intro?: T;
+              items?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    image?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        bulletedFeatures?:
+          | T
+          | {
+              heading?: T;
+              sections?:
+                | T
+                | {
+                    title?: T;
+                    bullets?:
+                      | T
+                      | {
+                          text?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              variant?: T;
               id?: T;
               blockName?: T;
             };

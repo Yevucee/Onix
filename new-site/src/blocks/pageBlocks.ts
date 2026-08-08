@@ -139,6 +139,50 @@ export const LeadershipGridBlock: Block = {
   ],
 }
 
+export const CertificationGridBlock: Block = {
+  slug: 'certificationGrid',
+  fields: [
+    { name: 'intro', type: 'textarea' },
+    {
+      name: 'items',
+      type: 'array',
+      fields: [
+        { name: 'title', type: 'text', required: true },
+        { name: 'description', type: 'textarea' },
+        { name: 'image', type: 'upload', relationTo: 'media' },
+      ],
+    },
+  ],
+}
+
+export const BulletedFeaturesBlock: Block = {
+  slug: 'bulletedFeatures',
+  fields: [
+    { name: 'heading', type: 'text' },
+    {
+      name: 'sections',
+      type: 'array',
+      fields: [
+        { name: 'title', type: 'text' },
+        {
+          name: 'bullets',
+          type: 'array',
+          fields: [{ name: 'text', type: 'text' }],
+        },
+      ],
+    },
+    {
+      name: 'variant',
+      type: 'select',
+      options: [
+        { label: 'Light', value: 'light' },
+        { label: 'Alt', value: 'alt' },
+      ],
+      defaultValue: 'light',
+    },
+  ],
+}
+
 export const pageBlocks = [
   HeroBlock,
   RichTextBlock,
@@ -151,4 +195,6 @@ export const pageBlocks = [
   VideoBlock,
   GalleryBlock,
   LeadershipGridBlock,
+  CertificationGridBlock,
+  BulletedFeaturesBlock,
 ]

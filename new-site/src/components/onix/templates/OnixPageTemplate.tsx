@@ -1,4 +1,5 @@
 import type { Page } from '@/payload-types'
+import { CertificationPageTemplate } from '@/components/onix/templates/CertificationPageTemplate'
 import { CorporatePageTemplate } from '@/components/onix/templates/CorporatePageTemplate'
 import { InfrastructurePageTemplate } from '@/components/onix/templates/InfrastructurePageTemplate'
 import { SolutionPageTemplate } from '@/components/onix/templates/SolutionPageTemplate'
@@ -22,6 +23,8 @@ export function OnixPageTemplate({
       return <SolutionPageTemplate page={page} breadcrumbs={breadcrumbs} />
     case 'infrastructure':
       return <InfrastructurePageTemplate page={page} breadcrumbs={breadcrumbs} />
+    case 'certification':
+      return <CertificationPageTemplate page={page} breadcrumbs={breadcrumbs} />
     case 'corporate':
       return (
         <CorporatePageTemplate
