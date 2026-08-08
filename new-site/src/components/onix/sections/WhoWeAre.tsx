@@ -1,9 +1,8 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { LIVE_HOMEPAGE } from '@/data/live-site'
 
 export function WhoWeAre() {
-  const { heading, body, image } = LIVE_HOMEPAGE.whoWeAre
+  const { heading, body } = LIVE_HOMEPAGE.whoWeAre
 
   return (
     <section className="bg-white py-16 md:py-20">
@@ -25,7 +24,8 @@ export function WhoWeAre() {
             </Link>
           </div>
           <div className="relative aspect-[4/3] w-full">
-            <Image src={image} alt="Onix data centre facility collage" fill className="object-contain" sizes="(max-width: 1024px) 100vw, 50vw" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/onix/collage.png" alt="Onix data centre facility collage" className="h-full w-full object-contain" />
           </div>
         </div>
       </div>

@@ -5,212 +5,240 @@
     "width": 390,
     "height": 844
   },
-  "timestamp": "2026-08-08T08:35:59.039Z",
+  "timestamp": "2026-08-08T08:40:20.451Z",
   "screenshot": "/workspace/visual-rebuild/audit/screenshots/staging-390.png",
   "sections": [
     {
       "tag": "H1",
       "text": "Welcome to Onix Data Centres",
-      "top": 135,
-      "images": [
-        "/_next/image?url=%2Fimages%2Fhome-hero-bg.jpg&w=3840&q=75"
-      ],
-      "bgImage": null
-    },
-    {
-      "tag": "H3",
-      "text": "Virtual Machines",
-      "top": 686,
-      "images": [],
-      "bgImage": null
-    },
-    {
-      "tag": "H3",
-      "text": "Managed Services",
-      "top": 861,
-      "images": [],
-      "bgImage": null
-    },
-    {
-      "tag": "H3",
-      "text": "Cyber Security",
-      "top": 1036,
-      "images": [],
-      "bgImage": null
-    },
-    {
-      "tag": "H3",
-      "text": "Internet Exchange",
-      "top": 1211,
-      "images": [],
-      "bgImage": null
-    },
-    {
-      "tag": "H3",
-      "text": "Colocation",
-      "top": 1386,
-      "images": [],
-      "bgImage": null
-    },
-    {
-      "tag": "H3",
-      "text": "Cloud and Content",
-      "top": 1560,
-      "images": [],
-      "bgImage": null
-    },
-    {
-      "tag": "H3",
-      "text": "Secure Power Supply",
-      "top": 1735,
-      "images": [],
-      "bgImage": null
-    },
-    {
-      "tag": "H3",
-      "text": "Sustainable Operations",
-      "top": 1910,
-      "images": [],
-      "bgImage": null
-    },
-    {
-      "tag": "H3",
-      "text": "Advanced Security Measures",
-      "top": 2105,
+      "top": 150,
       "images": [],
       "bgImage": null
     },
     {
       "tag": "H2",
       "text": "Who we are",
-      "top": 2355,
+      "top": 655,
       "images": [
-        "/_next/image?url=%2Fimages%2Fhome-collage.png&w=3840&q=75"
+        "/_next/image?url=%2Fimages%2Fonix%2Fcollage.png&w=3840&q=75"
       ],
       "bgImage": null
     },
     {
       "tag": "H2",
       "text": "Our Solutions",
-      "top": 3731,
+      "top": 2182,
+      "images": [],
+      "bgImage": "url(\"https://onix-staging-web-production.up.railway.app/images/onix/solutions-bg.jpg\")"
+    },
+    {
+      "tag": "H3",
+      "text": "Colocation",
+      "top": 2464,
       "images": [],
       "bgImage": null
     },
     {
       "tag": "H3",
       "text": "Cybersecurity",
-      "top": 4120,
+      "top": 2721,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Virtual Machines",
+      "top": 2979,
       "images": [],
       "bgImage": null
     },
     {
       "tag": "H2",
       "text": "Infrastucture",
-      "top": 4585,
+      "top": 3305,
       "images": [],
       "bgImage": null
     },
     {
-      "tag": "H2",
-      "text": "Latest from Onix",
-      "top": 5480,
+      "tag": "H3",
+      "text": "Secure Power Supply",
+      "top": 3507,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Sustainable Operations",
+      "top": 3764,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Advanced Security Measures",
+      "top": 4043,
       "images": [],
       "bgImage": null
     },
     {
       "tag": "H3",
       "text": "The Lights Go Out. Does Your Business?",
-      "top": 5605,
-      "images": [],
+      "top": 4619,
+      "images": [
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Flight-out-hero-wordpress-1200x800.jpg&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FNigeria-digital-sovreignty-1200x675.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fafrica-global-ai-infrastructure-map-onix-1200x800.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FOnix-Health-Care-1200x800.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fserver-room-vs-data-centre-colocation-ghana-onix.jpeg&w=3840&q=75"
+      ],
       "bgImage": null
     },
     {
       "tag": "H3",
       "text": "When Financial Data Comes Home: What Nigeria’s New Direction Means for Ghana",
-      "top": 5750,
-      "images": [],
+      "top": 4801,
+      "images": [
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Flight-out-hero-wordpress-1200x800.jpg&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FNigeria-digital-sovreignty-1200x675.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fafrica-global-ai-infrastructure-map-onix-1200x800.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FOnix-Health-Care-1200x800.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fserver-room-vs-data-centre-colocation-ghana-onix.jpeg&w=3840&q=75"
+      ],
       "bgImage": null
     },
     {
       "tag": "H3",
       "text": "The AI Boom Needs More Than Bigger Data Centres",
-      "top": 5918,
-      "images": [],
+      "top": 5029,
+      "images": [
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Flight-out-hero-wordpress-1200x800.jpg&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FNigeria-digital-sovreignty-1200x675.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fafrica-global-ai-infrastructure-map-onix-1200x800.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FOnix-Health-Care-1200x800.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fserver-room-vs-data-centre-colocation-ghana-onix.jpeg&w=3840&q=75"
+      ],
       "bgImage": null
     },
     {
       "tag": "H3",
       "text": "Where Should Ghana’s Health Data Live?",
-      "top": 6131,
-      "images": [],
-      "bgImage": null
-    },
-    {
-      "tag": "H2",
-      "text": "Get in touch with us today",
-      "top": 6309,
-      "images": [],
-      "bgImage": null
-    },
-    {
-      "tag": "H2",
-      "text": "Navigate",
-      "top": 6906,
+      "top": 5234,
       "images": [
-        "/_next/image?url=%2Fimages%2Fonix-logo.png&w=256&q=75"
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Flight-out-hero-wordpress-1200x800.jpg&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FNigeria-digital-sovreignty-1200x675.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fafrica-global-ai-infrastructure-map-onix-1200x800.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FOnix-Health-Care-1200x800.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fserver-room-vs-data-centre-colocation-ghana-onix.jpeg&w=3840&q=75"
+      ],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Your Server Room Is Not a Data Centre",
+      "top": 5439,
+      "images": [
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Flight-out-hero-wordpress-1200x800.jpg&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FNigeria-digital-sovreignty-1200x675.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fafrica-global-ai-infrastructure-map-onix-1200x800.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FOnix-Health-Care-1200x800.png&w=3840&q=75",
+        "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fserver-room-vs-data-centre-colocation-ghana-onix.jpeg&w=3840&q=75"
       ],
       "bgImage": null
     },
     {
       "tag": "H2",
-      "text": "Get in touch",
-      "top": 7111,
+      "text": "Get in touch with us today",
+      "top": 5632,
+      "images": [],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Navigate",
+      "top": 6186,
       "images": [
-        "/_next/image?url=%2Fimages%2Fonix-logo.png&w=256&q=75"
+        "/_next/image?url=%2Fimages%2Fonix%2Flogo-white.png&w=384&q=75"
+      ],
+      "bgImage": null
+    },
+    {
+      "tag": "H3",
+      "text": "Get in touch",
+      "top": 6401,
+      "images": [
+        "/_next/image?url=%2Fimages%2Fonix%2Flogo-white.png&w=384&q=75"
       ],
       "bgImage": null
     }
   ],
   "images": [
     {
-      "src": "/_next/image?url=%2Fimages%2Fonix-logo.png&w=384&q=75",
-      "alt": "Onix Data Centre",
-      "width": 61,
-      "height": 40,
-      "top": 15
-    },
-    {
-      "src": "/_next/image?url=%2Fimages%2Fhome-hero-bg.jpg&w=3840&q=75",
-      "alt": "",
-      "width": 390,
-      "height": 542,
-      "top": 71
-    },
-    {
-      "src": "/_next/image?url=%2Fimages%2Fhome-collage.png&w=3840&q=75",
-      "alt": "Onix data centre facility",
-      "width": 358,
-      "height": 269,
-      "top": 2868
-    },
-    {
-      "src": "/_next/image?url=%2Fimages%2Fonix-logo.png&w=256&q=75",
-      "alt": "Onix Data Centres",
+      "src": "/_next/image?url=%2Fimages%2Fonix%2Flogo.png&w=256&q=75",
+      "alt": "ONIX",
       "width": 74,
       "height": 48,
-      "top": 6774
+      "top": 11
+    },
+    {
+      "src": "/_next/image?url=%2Fimages%2Fonix%2Fcollage.png&w=3840&q=75",
+      "alt": "Onix data centre facility collage",
+      "width": 342,
+      "height": 257,
+      "top": 1213
+    },
+    {
+      "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Flight-out-hero-wordpress-1200x800.jpg&w=3840&q=75",
+      "alt": "The Lights Go Out. Does Your Business?",
+      "width": 342,
+      "height": 200,
+      "top": 4480
+    },
+    {
+      "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FNigeria-digital-sovreignty-1200x675.png&w=3840&q=75",
+      "alt": "When Financial Data Comes Home: What Nigeria’s New Direction Means for Ghana",
+      "width": 342,
+      "height": 200,
+      "top": 4685
+    },
+    {
+      "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fafrica-global-ai-infrastructure-map-onix-1200x800.png&w=3840&q=75",
+      "alt": "The AI Boom Needs More Than Bigger Data Centres",
+      "width": 342,
+      "height": 200,
+      "top": 4890
+    },
+    {
+      "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FOnix-Health-Care-1200x800.png&w=3840&q=75",
+      "alt": "Where Should Ghana’s Health Data Live?",
+      "width": 342,
+      "height": 200,
+      "top": 5095
+    },
+    {
+      "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fserver-room-vs-data-centre-colocation-ghana-onix.jpeg&w=3840&q=75",
+      "alt": "Your Server Room Is Not a Data Centre",
+      "width": 342,
+      "height": 200,
+      "top": 5300
+    },
+    {
+      "src": "/_next/image?url=%2Fimages%2Fonix%2Flogo-white.png&w=384&q=75",
+      "alt": "ONIX",
+      "width": 137,
+      "height": 68,
+      "top": 6006
     }
   ],
   "styles": {
     "header": {
       "_label": "header",
       "_selector": "header, .site-header, .elementor-location-header",
-      "fontFamily": "Poppins, system-ui, -apple-system, sans-serif",
+      "fontFamily": "Poppins, sans-serif",
       "fontSize": "16px",
       "fontWeight": "400",
-      "lineHeight": "26.4px",
+      "lineHeight": "22.4px",
       "letterSpacing": "normal",
-      "color": "rgb(84, 89, 95)",
+      "color": "rgb(75, 79, 88)",
       "backgroundColor": "rgb(255, 255, 255)",
       "backgroundImage": "none",
       "paddingTop": "0px",
@@ -221,12 +249,12 @@
       "marginBottom": "0px",
       "maxWidth": "none",
       "width": "390px",
-      "height": "71px",
+      "height": "70px",
       "minHeight": "0px",
       "borderRadius": "0px",
-      "borderColor": "rgb(229, 229, 229)",
-      "borderWidth": "0px 0px 1px",
-      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px",
+      "borderColor": "rgb(75, 79, 88)",
+      "borderWidth": "0px",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(229, 229, 229) 0px 1px 0px 0px",
       "textAlign": "start",
       "textTransform": "none",
       "display": "block",
@@ -237,15 +265,15 @@
       "position": "sticky",
       "top": "0px",
       "zIndex": "50",
-      "_rect": "{\"top\":0,\"left\":0,\"width\":390,\"height\":71}"
+      "_rect": "{\"top\":0,\"left\":0,\"width\":390,\"height\":70}"
     },
     "header-logo": {
       "_label": "header-logo",
       "_selector": "header img, .custom-logo",
-      "fontFamily": "Poppins, system-ui, -apple-system, sans-serif",
+      "fontFamily": "Poppins, sans-serif",
       "fontSize": "16px",
       "fontWeight": "400",
-      "lineHeight": "26.4px",
+      "lineHeight": "22.4px",
       "letterSpacing": "normal",
       "color": "rgba(0, 0, 0, 0)",
       "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -257,9 +285,9 @@
       "marginTop": "0px",
       "marginBottom": "0px",
       "maxWidth": "100%",
-      "width": "61.2188px",
-      "height": "40px",
-      "minHeight": "auto",
+      "width": "73.5px",
+      "height": "48px",
+      "minHeight": "0px",
       "borderRadius": "0px",
       "borderColor": "rgba(0, 0, 0, 0)",
       "borderWidth": "0px",
@@ -274,23 +302,23 @@
       "position": "static",
       "top": "auto",
       "zIndex": "auto",
-      "_rect": "{\"top\":15,\"left\":16,\"width\":61.21875,\"height\":40}"
+      "_rect": "{\"top\":11,\"left\":24,\"width\":73.5,\"height\":48}"
     },
     "nav-link": {
       "_label": "nav-link",
       "_selector": "nav a, .elementor-nav-menu > li > a",
-      "fontFamily": "Poppins, system-ui, -apple-system, sans-serif",
-      "fontSize": "14px",
+      "fontFamily": "Poppins, sans-serif",
+      "fontSize": "16px",
       "fontWeight": "500",
-      "lineHeight": "20px",
+      "lineHeight": "24px",
       "letterSpacing": "normal",
-      "color": "rgb(84, 89, 95)",
+      "color": "rgb(75, 79, 88)",
       "backgroundColor": "rgba(0, 0, 0, 0)",
       "backgroundImage": "none",
-      "paddingTop": "8px",
-      "paddingBottom": "8px",
-      "paddingLeft": "12px",
-      "paddingRight": "12px",
+      "paddingTop": "13px",
+      "paddingBottom": "13px",
+      "paddingLeft": "20px",
+      "paddingRight": "20px",
       "marginTop": "0px",
       "marginBottom": "0px",
       "maxWidth": "none",
@@ -298,7 +326,7 @@
       "height": "auto",
       "minHeight": "0px",
       "borderRadius": "0px",
-      "borderColor": "rgb(84, 89, 95)",
+      "borderColor": "rgb(75, 79, 88)",
       "borderWidth": "0px",
       "boxShadow": "none",
       "textAlign": "start",
@@ -317,10 +345,10 @@
     "h1": {
       "_label": "h1",
       "_selector": "h1, .elementor-heading-title",
-      "fontFamily": "Poppins, system-ui, -apple-system, sans-serif",
-      "fontSize": "36px",
+      "fontFamily": "Poppins, sans-serif",
+      "fontSize": "40px",
       "fontWeight": "600",
-      "lineHeight": "45px",
+      "lineHeight": "50px",
       "letterSpacing": "normal",
       "color": "rgb(28, 36, 75)",
       "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -331,15 +359,15 @@
       "paddingRight": "0px",
       "marginTop": "0px",
       "marginBottom": "0px",
-      "maxWidth": "none",
-      "width": "358px",
-      "height": "90px",
-      "minHeight": "0px",
+      "maxWidth": "768px",
+      "width": "342px",
+      "height": "100px",
+      "minHeight": "auto",
       "borderRadius": "0px",
       "borderColor": "rgb(28, 36, 75)",
       "borderWidth": "0px",
       "boxShadow": "none",
-      "textAlign": "start",
+      "textAlign": "center",
       "textTransform": "none",
       "display": "block",
       "flexDirection": "row",
@@ -349,15 +377,15 @@
       "position": "static",
       "top": "auto",
       "zIndex": "auto",
-      "_rect": "{\"top\":135,\"left\":16,\"width\":358,\"height\":90}"
+      "_rect": "{\"top\":150,\"left\":24,\"width\":342,\"height\":100}"
     },
     "h2": {
       "_label": "h2",
       "_selector": "h2.elementor-heading-title, main h2",
-      "fontFamily": "Poppins, system-ui, -apple-system, sans-serif",
-      "fontSize": "30px",
+      "fontFamily": "Poppins, sans-serif",
+      "fontSize": "40px",
       "fontWeight": "600",
-      "lineHeight": "37.5px",
+      "lineHeight": "50px",
       "letterSpacing": "normal",
       "color": "rgb(28, 36, 75)",
       "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -369,8 +397,8 @@
       "marginTop": "0px",
       "marginBottom": "0px",
       "maxWidth": "none",
-      "width": "358px",
-      "height": "37.5px",
+      "width": "342px",
+      "height": "50px",
       "minHeight": "0px",
       "borderRadius": "0px",
       "borderColor": "rgb(28, 36, 75)",
@@ -386,18 +414,18 @@
       "position": "static",
       "top": "auto",
       "zIndex": "auto",
-      "_rect": "{\"top\":2355.015625,\"left\":16,\"width\":358,\"height\":37.5}"
+      "_rect": "{\"top\":654.84375,\"left\":24,\"width\":342,\"height\":50}"
     },
     "footer": {
       "_label": "footer",
       "_selector": "footer, .elementor-location-footer",
-      "fontFamily": "Poppins, system-ui, -apple-system, sans-serif",
+      "fontFamily": "Poppins, sans-serif",
       "fontSize": "16px",
       "fontWeight": "400",
-      "lineHeight": "26.4px",
+      "lineHeight": "22.4px",
       "letterSpacing": "normal",
       "color": "rgb(255, 255, 255)",
-      "backgroundColor": "rgb(28, 36, 75)",
+      "backgroundColor": "rgb(0, 0, 0)",
       "backgroundImage": "none",
       "paddingTop": "0px",
       "paddingBottom": "0px",
@@ -407,7 +435,7 @@
       "marginBottom": "0px",
       "maxWidth": "none",
       "width": "390px",
-      "height": "773.391px",
+      "height": "616.828px",
       "minHeight": "0px",
       "borderRadius": "0px",
       "borderColor": "rgb(255, 255, 255)",
@@ -423,17 +451,17 @@
       "position": "static",
       "top": "auto",
       "zIndex": "auto",
-      "_rect": "{\"top\":6564.34375,\"left\":0,\"width\":390,\"height\":773.390625}"
+      "_rect": "{\"top\":5975.96875,\"left\":0,\"width\":390,\"height\":616.828125}"
     },
     "body": {
       "_label": "body",
       "_selector": "body",
-      "fontFamily": "Poppins, system-ui, -apple-system, sans-serif",
+      "fontFamily": "Poppins, sans-serif",
       "fontSize": "16px",
       "fontWeight": "400",
-      "lineHeight": "26.4px",
+      "lineHeight": "22.4px",
       "letterSpacing": "normal",
-      "color": "rgb(84, 89, 95)",
+      "color": "rgb(75, 79, 88)",
       "backgroundColor": "rgb(255, 255, 255)",
       "backgroundImage": "none",
       "paddingTop": "0px",
@@ -444,10 +472,10 @@
       "marginBottom": "0px",
       "maxWidth": "none",
       "width": "390px",
-      "height": "7337.73px",
+      "height": "6592.8px",
       "minHeight": "0px",
       "borderRadius": "0px",
-      "borderColor": "rgb(84, 89, 95)",
+      "borderColor": "rgb(75, 79, 88)",
       "borderWidth": "0px",
       "boxShadow": "none",
       "textAlign": "start",
@@ -460,19 +488,11 @@
       "position": "static",
       "top": "auto",
       "zIndex": "auto",
-      "_rect": "{\"top\":0,\"left\":0,\"width\":390,\"height\":7337.734375}"
+      "_rect": "{\"top\":0,\"left\":0,\"width\":390,\"height\":6592.796875}"
     }
   },
   "navItems": [],
   "footerLinks": [
-    {
-      "text": "Twitter",
-      "href": "https://twitter.com/ONIXDCdata"
-    },
-    {
-      "text": "LinkedIn",
-      "href": "https://www.linkedin.com/company/onixdc"
-    },
     {
       "text": "About Us",
       "href": "/o-home/about-us"

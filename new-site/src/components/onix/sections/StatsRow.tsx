@@ -5,7 +5,7 @@ import { LIVE_HOMEPAGE } from '@/data/live-site'
 
 function AnimatedCounter({ value, suffix = '' }: { value: string; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null)
-  const [display, setDisplay] = useState('0')
+  const [display, setDisplay] = useState(value)
   const numericTarget = parseFloat(value.replace(/[^0-9.]/g, ''))
   const hasDecimal = value.includes('.')
 
