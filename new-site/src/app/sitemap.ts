@@ -10,7 +10,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
   const entries: MetadataRoute.Sitemap = [{ url: `${base}/`, changeFrequency: 'weekly', priority: 1 }]
 
-  const staticPaths = ['/about-us/', '/contact-us/', '/news/', '/senegal/', '/home/cfo-roi/']
+  const staticPaths = [
+    '/about-us/',
+    '/contact-us/',
+    '/news/',
+    '/senegal/',
+    '/home/cfo-roi/',
+    '/fr/',
+    '/fr/home-francais/',
+    '/fr/contactez-nous/',
+  ]
   for (const path of staticPaths) {
     entries.push({ url: `${base}${path}`, changeFrequency: 'monthly', priority: 0.8 })
   }

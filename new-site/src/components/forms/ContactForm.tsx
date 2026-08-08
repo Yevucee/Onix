@@ -3,7 +3,37 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 
-export function ContactForm() {
+const LABELS = {
+  en: {
+    success: 'Thank you — your message has been sent.',
+    error: 'Something went wrong. Please try again.',
+    firstName: 'First name',
+    lastName: 'Last name',
+    company: 'Company',
+    email: 'Email',
+    phone: 'Phone',
+    message: 'Message',
+    required: '*',
+    send: 'Send message',
+    sending: 'Sending…',
+  },
+  fr: {
+    success: 'Merci — votre message a bien été envoyé.',
+    error: 'Une erreur est survenue. Veuillez réessayer.',
+    firstName: 'Prénom',
+    lastName: 'Nom',
+    company: 'Entreprise',
+    email: 'E-mail',
+    phone: 'Téléphone',
+    message: 'Message',
+    required: '*',
+    send: 'Envoyer',
+    sending: 'Envoi en cours…',
+  },
+} as const
+
+export function ContactForm({ locale = 'en' }: { locale?: 'en' | 'fr' }) {
+  const t = LABELS[locale]
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [error, setError] = useState('')
 
@@ -25,14 +55,14 @@ export function ContactForm() {
       form.reset()
     } catch {
       setStatus('error')
-      setError('Something went wrong. Please try again.')
+      setError(t.error)
     }
   }
 
   if (status === 'success') {
     return (
       <div className="rounded-[var(--radius-card)] border border-green-200 bg-green-50 p-6 text-green-900" role="status">
-        Thank you — your message has been sent.
+        {t.success}
       </div>
     )
   }
@@ -47,13 +77,13 @@ export function ContactForm() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <label htmlFor="firstName" className="mb-2 block text-sm font-medium">
-            First name <span className="text-[var(--color-brand)]">*</span>
+            {t.firstName} <span className="text-[var(--color-brand)]">{t.required}</span>
           </label>
           <input id="firstName" name="firstName" required className="w-full rounded border border-[var(--color-border)] px-3 py-2" />
         </div>
         <div>
           <label htmlFor="lastName" className="mb-2 block text-sm font-medium">
-            Last name <span className="text-[var(--color-brand)]">*</span>
+            {t.lastName} <span className="text-[var(--color-brand)]">{t.required}</span>
           </label>
           <input id="lastName" name="lastName" required className="w-full rounded border border-[var(--color-border)] px-3 py-2" />
         </div>
@@ -61,7 +91,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="company" className="mb-2 block text-sm font-medium">
-          Company <span className="text-[var(--color-brand)]">*</span>
+          {t.company} <span className="text-[var(--color-brand)]">{t.required}</span>
         </label>
         <input id="company" name="company" required className="w-full rounded border border-[var(--color-border)] px-3 py-2" />
       </div>
@@ -69,13 +99,13 @@ export function ContactForm() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <label htmlFor="email" className="mb-2 block text-sm font-medium">
-            Email <span className="text-[var(--color-brand)]">*</span>
+            {t.email} <span className="text-[var(--color-brand)]">{t.required}</span>
           </label>
           <input id="email" name="email" type="email" required className="w-full rounded border border-[var(--color-border)] px-3 py-2" />
         </div>
         <div>
           <label htmlFor="phone" className="mb-2 block text-sm font-medium">
-            Phone
+            {t.phone}
           </label>
           <input id="phone" name="phone" type="tel" className="w-full rounded border border-[var(--color-border)] px-3 py-2" />
         </div>
@@ -83,7 +113,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className="mb-2 block text-sm font-medium">
-          Message <span className="text-[var(--color-brand)]">*</span>
+          {t.message} <span className="text-[var(--color-brand)]">{t.required}</span>
         </label>
         <textarea id="message" name="message" required rows={6} className="w-full rounded border border-[var(--color-border)] px-3 py-2" />
       </div>
@@ -95,7 +125,7 @@ export function ContactForm() {
       )}
 
       <Button type="submit" disabled={status === 'loading'}>
-        {status === 'loading' ? 'Sending…' : 'Send message'}
+        {status === 'loading' ? t.sending : t.send}
       </Button>
     </form>
   )

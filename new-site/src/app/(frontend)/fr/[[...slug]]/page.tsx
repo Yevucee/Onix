@@ -1,23 +1,41 @@
 import { notFound } from 'next/navigation'
-import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
-import { Container, Section } from '@/components/layout/Container'
-import { ContactForm } from '@/components/forms/ContactForm'
-import { PageBlocksRenderer } from '@/components/pages/PageBlocksRenderer'
+import { FrenchContactPageTemplate, frenchContactPageMetadata } from '@/components/onix/templates/FrenchContactPageTemplate'
+import { FrenchHomePageTemplate } from '@/components/onix/templates/FrenchHomePageTemplate'
 import { getPayloadClient } from '@/lib/payload'
 import { pathFromSlugSegments, resolvePublicPath } from '@/lib/page-resolver'
+import { productionCanonical } from '@/lib/canonical'
 import { buildMetadata } from '@/lib/seo'
 
 const FRENCH_PATH_MAP: Record<string, string> = {
-  '': '/',
+  '': '/fr/home-francais/',
   'home-francais': '/fr/home-francais/',
   'contactez-nous': '/fr/contactez-nous/',
   'a-propos': '/fr/a-propos/',
   'about-us': '/fr/a-propos/',
 }
 
+const FRENCH_HOME_KEYS = new Set(['', 'home-francais'])
+
 export async function generateMetadata({ params }: { params: Promise<{ slug?: string[] }> }) {
   const { slug = [] } = await params
   const key = slug.join('/')
+
+  if (key === 'contactez-nous') {
+    return frenchContactPageMetadata()
+  }
+
+  if (FRENCH_HOME_KEYS.has(key)) {
+    return buildMetadata(
+      {
+        title: 'Home – Français',
+        description: 'Onix Data Centre — Connecting Africa to the Globe',
+        canonicalUrl: productionCanonical(key === '' ? '/fr/' : '/fr/home-francais'),
+        hreflangPath: '/fr/',
+      },
+      'Home – Français',
+    )
+  }
+
   const legacyPath = FRENCH_PATH_MAP[key] || pathFromSlugSegments(slug.map((s) => `fr/${s}`))
   const payload = await getPayloadClient()
 
@@ -29,11 +47,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug?: st
   })
 
   const doc = page.docs[0]
+  const canonicalPath = key ? `/fr/${key}/` : '/fr/'
   return buildMetadata(
     {
       title: doc?.seo?.title,
       description: doc?.seo?.description,
-      canonicalUrl: doc?.seo?.canonicalUrl || `${process.env.NEXT_PUBLIC_SITE_URL}/fr/${key}`,
+      canonicalUrl: doc?.seo?.canonicalUrl || productionCanonical(canonicalPath),
     },
     doc?.title || 'Onix Data Centre',
   )
@@ -44,21 +63,16 @@ export default async function FrenchCatchAll({ params }: { params: Promise<{ slu
   const key = slug.join('/')
 
   if (key === 'contactez-nous') {
-    return (
-      <>
-        <Section className="border-b">
-          <Container>
-            <Breadcrumbs items={[{ label: 'Accueil', href: '/fr/' }, { label: 'Contactez-nous' }]} />
-            <h1 className="mt-6 text-4xl font-semibold">Contactez-nous</h1>
-          </Container>
-        </Section>
-        <Section>
-          <Container className="max-w-xl">
-            <ContactForm />
-          </Container>
-        </Section>
-      </>
-    )
+    return <FrenchContactPageTemplate />
+  }
+
+  if (FRENCH_HOME_KEYS.has(key)) {
+    return <FrenchHomePageTemplate />
+  }
+
+  if (key === 'a-propos' || key === 'about-us') {
+    // No French about content in WordPress export — documented in FRENCH-MIGRATION-STATUS.md
+    notFound()
   }
 
   const legacyPath = FRENCH_PATH_MAP[key] || `/fr/${key ? `${key}/` : ''}`
@@ -66,32 +80,9 @@ export default async function FrenchCatchAll({ params }: { params: Promise<{ slu
   const resolved = await resolvePublicPath(payload, legacyPath, 'fr')
 
   if (!resolved || resolved.type !== 'page') {
-    if (key === '' || key === 'home-francais') {
-      const home = await payload.find({
-        collection: 'pages',
-        where: { 'legacy.legacyPath': { equals: '/fr/home-francais/' } },
-        locale: 'fr',
-        limit: 1,
-      })
-      if (home.docs[0]) {
-        return (
-          <>
-            <PageBlocksRenderer blocks={home.docs[0].blocks} />
-          </>
-        )
-      }
-    }
     notFound()
   }
 
-  return (
-    <>
-      <Section className="border-b">
-        <Container>
-          <Breadcrumbs items={[{ label: 'Accueil', href: '/fr/' }, { label: resolved.doc.title }]} />
-        </Container>
-      </Section>
-      <PageBlocksRenderer blocks={resolved.doc.blocks} />
-    </>
-  )
+  // Future French corporate pages with CMS content
+  notFound()
 }

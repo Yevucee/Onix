@@ -1,5 +1,6 @@
 import { OnixHomePage } from '@/components/onix/OnixHomePage'
 import { getPayloadClient } from '@/lib/payload'
+import { productionCanonical } from '@/lib/canonical'
 import { buildMetadata } from '@/lib/seo'
 
 export async function generateMetadata() {
@@ -14,7 +15,8 @@ export async function generateMetadata() {
     {
       title: doc?.seo?.title || 'Onix Data Centre – Connecting Africa to the Globe',
       description: doc?.seo?.description || 'Onix is the leading provider of Tier IV Colocation data centre services in Ghana.',
-      canonicalUrl: doc?.seo?.canonicalUrl || process.env.NEXT_PUBLIC_SITE_URL,
+      canonicalUrl: doc?.seo?.canonicalUrl || productionCanonical('/'),
+      hreflangPath: '/',
     },
     'Onix Data Centre',
   )

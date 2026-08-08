@@ -105,15 +105,18 @@ export function ArticleBlocksRenderer({ blocks }: { blocks?: ArticleBlock[] | nu
             )
           case 'divider':
             return <hr key={key} className="border-[var(--color-border)]" />
-          case 'relatedArticle':
-            if (!block.article?.slug) return null
+          case 'relatedArticle': {
+            if (!block.article?.slug || !block.article?.publishedAt) return null
+            const d = new Date(block.article.publishedAt)
+            const path = `/${d.getFullYear()}/${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}/${block.article.slug}/`
             return (
               <p key={key}>
-                <Link href={`/news/`} className="text-[var(--color-brand)] hover:underline">
+                <Link href={path} className="text-[var(--color-brand)] hover:underline">
                   Related: {block.article.title}
                 </Link>
               </p>
             )
+          }
           default:
             return null
         }

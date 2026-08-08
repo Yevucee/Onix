@@ -1,9 +1,17 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { LIVE_FOOTER } from '@/data/live-site'
+import { FRENCH_FOOTER } from '@/data/french-site'
 
 export function OnixFooter() {
-  const { tagline, navigate, contact, social } = LIVE_FOOTER
+  const pathname = usePathname()
+  const isFrench = pathname?.startsWith('/fr')
+  const footer = isFrench ? FRENCH_FOOTER : LIVE_FOOTER
+  const homeUrl = isFrench ? '/fr/' : '/'
+  const { tagline, navigate, contact, social, copyright } = footer
 
   return (
     <footer className="bg-[var(--onix-footer-bg)] text-white">
@@ -11,7 +19,7 @@ export function OnixFooter() {
         <div className="grid gap-10 md:grid-cols-3">
           {/* Logo + tagline + social */}
           <div>
-            <Link href="/">
+            <Link href={homeUrl}>
               <Image src="/images/onix/logo-white.png" alt="ONIX" width={160} height={80} className="mb-4 h-auto w-[40%] min-w-[100px]" />
             </Link>
             <p className="mb-4 text-[15px] font-normal text-white">{tagline}</p>
@@ -76,7 +84,7 @@ export function OnixFooter() {
 
       <div className="border-t border-white/10 py-3">
         <div className="onix-container text-center">
-          <p className="text-base font-light text-white">{LIVE_FOOTER.copyright}</p>
+          <p className="text-base font-light text-white">{copyright}</p>
         </div>
       </div>
     </footer>

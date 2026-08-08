@@ -3,22 +3,29 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { LIVE_HEADER_NAV, LIVE_CLIENT_SUPPORT_CTA } from '@/data/live-site'
+import { FRENCH_HEADER_NAV, FRENCH_CLIENT_SUPPORT_CTA } from '@/data/french-site'
 import { OnixButton } from '@/components/onix/OnixButton'
 
 export function OnixHeader() {
+  const pathname = usePathname()
+  const isFrench = pathname?.startsWith('/fr')
+  const nav = isFrench ? FRENCH_HEADER_NAV : LIVE_HEADER_NAV
+  const supportCta = isFrench ? FRENCH_CLIENT_SUPPORT_CTA : LIVE_CLIENT_SUPPORT_CTA
+  const homeUrl = isFrench ? '/fr/' : '/'
   const [mobileOpen, setMobileOpen] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-[0_1px_0_#e5e5e5] transition-all duration-300">
       <div className="onix-container flex h-[var(--onix-header-h)] items-center justify-between">
-        <Link href="/" className="shrink-0">
+        <Link href={homeUrl} className="shrink-0">
           <Image src="/images/onix/logo.png" alt="ONIX" width={98} height={64} className="h-12 w-auto" priority />
         </Link>
 
         <nav className="hidden items-center lg:flex" aria-label="Main">
-          {LIVE_HEADER_NAV.map((item) => {
+          {nav.map((item) => {
             const key = `${item.label}-${item.url}`
             const hasChildren = item.children && item.children.length > 0
             if (!hasChildren) {
@@ -59,11 +66,11 @@ export function OnixHeader() {
 
         <OnixButton
           variant="header-support"
-          href={LIVE_CLIENT_SUPPORT_CTA.url}
+          href={supportCta.url}
           external
           className="hidden lg:inline-flex"
         >
-          {LIVE_CLIENT_SUPPORT_CTA.label}
+          {supportCta.label}
         </OnixButton>
 
         <button
@@ -87,7 +94,7 @@ export function OnixHeader() {
               </button>
             </div>
             <nav className="flex flex-col p-4" aria-label="Mobile">
-              {LIVE_HEADER_NAV.map((item) => {
+              {nav.map((item) => {
                 const key = `${item.label}-${item.url}`
                 const hasChildren = item.children && item.children.length > 0
                 if (!hasChildren) {
@@ -122,12 +129,12 @@ export function OnixHeader() {
               })}
               <OnixButton
                 variant="header-support"
-                href={LIVE_CLIENT_SUPPORT_CTA.url}
+                href={supportCta.url}
                 external
                 onClick={() => setMobileOpen(false)}
                 className="mt-4 w-full text-center"
               >
-                {LIVE_CLIENT_SUPPORT_CTA.label}
+                {supportCta.label}
               </OnixButton>
             </nav>
           </div>
