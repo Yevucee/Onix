@@ -9,7 +9,7 @@ export type OnixPageHeroProps = {
   imageAlt?: string
   ctaLabel?: string
   ctaUrl?: string
-  variant?: 'default' | 'dark'
+  variant?: 'default' | 'dark' | 'banner'
 }
 
 export function OnixPageHero({
@@ -22,7 +22,37 @@ export function OnixPageHero({
   ctaUrl,
   variant = 'default',
 }: OnixPageHeroProps) {
-  const isDark = variant === 'dark'
+  const isDark = variant === 'dark' || variant === 'banner'
+
+  if (variant === 'banner' && imageUrl) {
+    return (
+      <section className="relative flex min-h-[420px] items-center bg-[var(--onix-navy)] py-20 md:min-h-[520px] md:py-28">
+        <Image
+          src={imageUrl}
+          alt={imageAlt || title}
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="onix-container relative z-10 text-center">
+          {eyebrow && (
+            <p className="text-sm font-semibold uppercase tracking-wide text-[var(--onix-red)]">{eyebrow}</p>
+          )}
+          <h1 className="onix-heading-light mt-2 text-[32px] font-semibold leading-[1.2] md:text-[48px] md:leading-[56px]">
+            {title}
+          </h1>
+          {intro && <p className="mx-auto mt-4 max-w-3xl text-base leading-[22.4px] text-white/85">{intro}</p>}
+          {ctaLabel && ctaUrl && (
+            <OnixButton variant="primary-red" href={ctaUrl} className="mt-8" icon={<span aria-hidden>→</span>}>
+              {ctaLabel}
+            </OnixButton>
+          )}
+        </div>
+      </section>
+    )
+  }
 
   if (imageUrl) {
     return (

@@ -70,10 +70,25 @@ function OnixSplitSection({
   imagePosition?: 'left' | 'right' | null
 }) {
   const resolvedImageUrl = getMediaUrl(image, 'article') || imageUrl || null
+  const lines = body?.split('\n').filter(Boolean) || []
+  const isBulletList = lines.length > 1
+
   const textBlock = (
     <div>
       {heading && <h2 className="onix-heading-dark text-[40px] font-semibold leading-[48px]">{heading}</h2>}
-      {body && <p className="mt-4 whitespace-pre-line text-base leading-[22.4px] text-[var(--onix-body)]">{body}</p>}
+      {body && !isBulletList && (
+        <p className="mt-4 whitespace-pre-line text-base leading-[22.4px] text-[var(--onix-body)]">{body}</p>
+      )}
+      {isBulletList && (
+        <ul className="mt-4 space-y-2 text-base leading-[22.4px] text-[var(--onix-body)]">
+          {lines.map((line, i) => (
+            <li key={i} className="flex gap-2">
+              <span className="text-[var(--onix-red)]">•</span>
+              <span>{line}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
   const imageBlock = resolvedImageUrl ? (
@@ -131,7 +146,9 @@ function OnixFeatureCards({
                 className={`flex h-full flex-col items-center px-[30px] py-[50px] text-center ${
                   variant === 'navy'
                     ? 'bg-[var(--onix-navy)] text-white hover:bg-[#151b38]'
-                    : 'border border-[var(--onix-border,#e5e5e5)] bg-white'
+                    : variant === 'light'
+                      ? 'bg-[#ec02230f] text-[var(--onix-body)] hover:bg-[#1c244b12]'
+                      : 'border border-[var(--onix-border,#e5e5e5)] bg-white'
                 } transition-colors duration-300`}
               >
                 {item.icon && typeof item.icon === 'object' && item.icon.url && (
@@ -320,6 +337,7 @@ export function OnixPageBlocksRenderer({
                 imageAlt={getMediaAlt(block.image as MediaRef)}
                 ctaLabel={(block.ctaLabel as string) || undefined}
                 ctaUrl={normalizeCtaUrl(block.ctaUrl as string)}
+                variant={(block.variant as 'default' | 'dark' | 'banner') || 'default'}
               />
             )
           case 'richText':
@@ -343,7 +361,7 @@ export function OnixPageBlocksRenderer({
                 key={key}
                 heading={block.heading as string}
                 items={block.items as Array<{ title?: string; body?: string; url?: string; icon?: MediaRef }>}
-                variant={featureCardVariant}
+                variant={(block.cardVariant as 'navy' | 'light') || featureCardVariant}
               />
             )
           case 'logoGrid':

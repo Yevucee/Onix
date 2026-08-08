@@ -25,7 +25,7 @@ export const FRENCH_HEADER_NAV: NavItem[] = [
     url: '/home/our-solutions',
     children: [
       { label: 'Colocation', url: '/home/our-solutions#tangor' },
-      { label: 'Machines virtuelles', url: '/home/our-solutions#virtualmachines' },
+      { label: 'Machines virtuelles', url: '/home/virtual-machine' },
       { label: 'Services gérés', url: '/home/our-solutions#managedservices' },
       { label: 'Cybersécurité', url: '/home/our-solutions#cybersecurity' },
       { label: 'Internet Exchange', url: '/home/our-solutions#internetexchange' },

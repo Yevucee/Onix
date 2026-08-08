@@ -8,7 +8,7 @@ import { getPayload } from 'payload'
 import config from '../../src/payload.config'
 import { productionCanonical } from '../../src/lib/canonical'
 import { DEFAULT_CERTIFICATION_BLOCKS } from '../../src/data/certification-content'
-import { GROUP2_SOLUTION_PAGES } from '../../src/data/group2-solutions'
+import { SOLUTION_PAGE_BLOCKS } from '../../src/data/solution-pages'
 import type { Page } from '../../src/payload-types'
 
 async function updatePageByLegacyPath(
@@ -45,8 +45,8 @@ async function updatePageByLegacyPath(
 async function main() {
   const payload = await getPayload({ config })
 
-  for (const [legacyPath, config_] of Object.entries(GROUP2_SOLUTION_PAGES)) {
-    await updatePageByLegacyPath(payload, legacyPath, config_.blocks as Page['blocks'])
+  for (const [legacyPath, blocks] of Object.entries(SOLUTION_PAGE_BLOCKS)) {
+    await updatePageByLegacyPath(payload, legacyPath, blocks as Page['blocks'])
   }
 
   await updatePageByLegacyPath(payload, '/o-home/certification/', DEFAULT_CERTIFICATION_BLOCKS as Page['blocks'], {

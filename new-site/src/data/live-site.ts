@@ -38,7 +38,7 @@ export const LIVE_HEADER_NAV: NavItem[] = [
     url: '/home/our-solutions',
     children: [
       { label: 'Colocation', url: '/home/our-solutions#tangor' },
-      { label: 'Virtual machines', url: '/home/our-solutions#virtualmachines' },
+      { label: 'Virtual machines', url: '/home/virtual-machine' },
       { label: 'Managed Services', url: '/home/our-solutions#managedservices' },
       { label: 'Cyber Security', url: '/home/our-solutions#cybersecurity' },
       { label: 'Internet Exchange', url: '/home/our-solutions#internetexchange' },
@@ -105,7 +105,7 @@ export const LIVE_HOMEPAGE = {
     backgroundImage: '/images/home-hero-bg.jpg',
   },
   serviceShowcase: [
-    { title: 'Virtual Machines', body: "Maximise efficiency with VMs, offering direct access to Ghana's top networks.", url: '/home/our-solutions#virtualmachines' },
+    { title: 'Virtual Machines', body: "Maximise efficiency with VMs, offering direct access to Ghana's top networks.", url: '/home/virtual-machine' },
     { title: 'Managed Services', body: 'Boost IT reliability with our comprehensive Managed Services.', url: '/home/our-solutions#managedservices' },
     { title: 'Cyber Security', body: 'Defend against cyber threats with cutting-edge security measures', url: '/home/our-solutions#cybersecurity' },
     { title: 'Internet Exchange', body: 'Enhance connectivity, reduce latency and costs with our Internet Exchange', url: '/home/our-solutions#internetexchange' },
@@ -131,7 +131,7 @@ export const LIVE_HOMEPAGE = {
     items: [
       { title: 'Colocation', body: 'Achieve unparalleled uptime in our Tier IV certified Colocation facility.', url: '/home/our-solutions#tangor', icon: 'colocation' as const },
       { title: 'Cybersecurity', body: 'Defend against cyber threats with cutting-edge security measures.', url: '/home/our-solutions#cybersecurity', icon: 'cybersecurity' as const },
-      { title: 'Virtual Machines', body: "Maximise efficiency with VMs, offering direct access to Ghana's top networks.", url: '/home/our-solutions#virtualmachines', icon: 'virtual-machines' as const },
+      { title: 'Virtual Machines', body: "Maximise efficiency with VMs, offering direct access to Ghana's top networks.", url: '/home/virtual-machine', icon: 'virtual-machines' as const },
     ],
   },
   infrastructure: {

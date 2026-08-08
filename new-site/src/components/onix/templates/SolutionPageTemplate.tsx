@@ -3,15 +3,22 @@ import { OnixBreadcrumbs } from '@/components/onix/templates/OnixBreadcrumbs'
 import { OnixPageBlocksRenderer } from '@/components/onix/blocks/OnixPageBlocksRenderer'
 import { OnixPageCTA } from '@/components/onix/templates/OnixPageCTA'
 import { OnixPageHero } from '@/components/onix/templates/OnixPageHero'
-import { resolveSolutionBlocks } from '@/data/group2-solutions'
+import { OurSolutionsPageTemplate } from '@/components/onix/templates/OurSolutionsPageTemplate'
+import { resolveSolutionBlocks } from '@/data/solution-pages'
 
 type Crumb = { label: string; href?: string }
 
 export function SolutionPageTemplate({ page, breadcrumbs }: { page: Page; breadcrumbs: Crumb[] }) {
   const legacyPath = page.legacy?.legacyPath
-  const blocks = resolveSolutionBlocks(legacyPath, page.blocks as Parameters<typeof resolveSolutionBlocks>[1])
+
+  if (legacyPath === '/home/our-solutions/') {
+    return <OurSolutionsPageTemplate breadcrumbs={breadcrumbs} />
+  }
+
+  const blocks = resolveSolutionBlocks(legacyPath)
   const hasHero = blocks.some((b) => b.blockType === 'hero')
   const hasCta = blocks.some((b) => b.blockType === 'cta')
+  const featureVariant = legacyPath === '/home/virtual-machine/' ? 'light' : 'navy'
 
   return (
     <>
@@ -23,7 +30,7 @@ export function SolutionPageTemplate({ page, breadcrumbs }: { page: Page; breadc
 
       {!hasHero && <OnixPageHero title={page.title} />}
 
-      <OnixPageBlocksRenderer blocks={blocks} featureCardVariant="navy" />
+      <OnixPageBlocksRenderer blocks={blocks} featureCardVariant={featureVariant} />
 
       {!hasCta && (
         <OnixPageCTA
