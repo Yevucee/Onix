@@ -1,11 +1,11 @@
 import { notFound } from 'next/navigation'
-import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
-import { Container, Section } from '@/components/layout/Container'
-import { LeadershipProfileView } from '@/components/leadership/LeadershipGrid'
-import { PageBlocksRenderer } from '@/components/pages/PageBlocksRenderer'
-import { DataCentreTemplate } from '@/components/pages/DataCentreTemplate'
+import { DataCentrePageTemplate } from '@/components/onix/templates/DataCentrePageTemplate'
+import { LeadershipPageTemplate } from '@/components/onix/templates/LeadershipPageTemplate'
+import { OnixPageTemplate } from '@/components/onix/templates/OnixPageTemplate'
+import { ContactPageTemplate } from '@/components/onix/templates/ContactPageTemplate'
 import { getPayloadClient } from '@/lib/payload'
 import { pathFromSlugSegments, resolvePublicPath } from '@/lib/page-resolver'
+import { resolvePageTemplate } from '@/lib/page-templates'
 import { buildMetadata } from '@/lib/seo'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }) {
@@ -48,6 +48,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function CorporateCatchAllPage({ params }: { params: Promise<{ slug: string[] }> }) {
   const { slug } = await params
   const pathname = pathFromSlugSegments(slug)
+  const template = resolvePageTemplate(pathname)
+
+  if (template === 'contact') {
+    return <ContactPageTemplate breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Contact Us' }]} />
+  }
+
   const payload = await getPayloadClient()
   const resolved = await resolvePublicPath(payload, pathname)
 
@@ -55,44 +61,38 @@ export default async function CorporateCatchAllPage({ params }: { params: Promis
 
   if (resolved.type === 'leadership') {
     return (
-      <>
-        <Section className="border-b border-[var(--color-border)]">
-          <Container>
-            <Breadcrumbs
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'About Us', href: '/about-us' },
-                { label: resolved.doc.name },
-              ]}
-            />
-          </Container>
-        </Section>
-        <Section>
-          <Container>
-            <LeadershipProfileView person={resolved.doc} />
-          </Container>
-        </Section>
-      </>
+      <LeadershipPageTemplate
+        person={resolved.doc}
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'About Us', href: '/about-us' },
+          { label: resolved.doc.name },
+        ]}
+      />
     )
   }
 
   if (resolved.type === 'data-centre') {
-    return <DataCentreTemplate centre={resolved.doc} breadcrumbs={[{ label: 'Home', href: '/' }, { label: resolved.doc.name }]} />
+    return (
+      <DataCentrePageTemplate
+        centre={resolved.doc}
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: resolved.doc.name }]}
+      />
+    )
   }
 
   const page = resolved.doc
   const isHomepage = page.pageType === 'homepage' || pathname === '/home/'
 
+  if (isHomepage) {
+    return <OnixPageTemplate page={page} pathname={pathname} breadcrumbs={[{ label: 'Home', href: '/' }, { label: page.title }]} />
+  }
+
   return (
-    <>
-      {!isHomepage && (
-        <Section className="border-b border-[var(--color-border)]">
-          <Container>
-            <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: page.title }]} />
-          </Container>
-        </Section>
-      )}
-      <PageBlocksRenderer blocks={page.blocks} />
-    </>
+    <OnixPageTemplate
+      page={page}
+      pathname={pathname}
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: page.title }]}
+    />
   )
 }
