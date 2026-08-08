@@ -18,28 +18,33 @@ export const LIVE_LOGO = {
   height: 98,
 }
 
+export const LIVE_CLIENT_SUPPORT_CTA = {
+  label: 'Client support',
+  url: 'https://service.onixdatacentres.com/',
+  external: true,
+}
+
 export const LIVE_HEADER_NAV: NavItem[] = [
   {
     label: '🇬🇭 Ghana',
     url: '/',
-    children: [{ label: '🇬🇭 Ghana', url: '/' }],
-  },
-  {
-    label: '🇸🇳 Senegal',
-    url: '/o-home/senegal',
+    children: [
+      { label: '🇬🇭 Ghana', url: '/' },
+      { label: '🇸🇳 Senegal', url: '/o-home/senegal' },
+    ],
   },
   {
     label: 'Our Solutions',
     url: '/home/our-solutions',
     children: [
-      { label: 'Colocation', url: '/o-home/o-ghana/our-solutions#tangor' },
-      { label: 'Virtual machines', url: '/o-home/o-ghana/our-solutions#virtualmachines' },
-      { label: 'Managed Services', url: '/o-home/o-ghana/our-solutions#managedservices' },
-      { label: 'Cyber Security', url: '/o-home/o-ghana/our-solutions#cybersecurity' },
-      { label: 'Internet Exchange', url: '/o-home/o-ghana/our-solutions#internetexchange' },
-      { label: 'Carrier Neutrality', url: '/o-home/o-ghana/our-solutions#carriern' },
-      { label: 'Cloud and Connect', url: '/o-home/o-ghana/our-solutions#candc' },
-      { label: 'Peering', url: '/o-home/o-ghana/our-solutions#peering' },
+      { label: 'Colocation', url: '/home/our-solutions#tangor' },
+      { label: 'Virtual machines', url: '/home/our-solutions#virtualmachines' },
+      { label: 'Managed Services', url: '/home/our-solutions#managedservices' },
+      { label: 'Cyber Security', url: '/home/our-solutions#cybersecurity' },
+      { label: 'Internet Exchange', url: '/home/our-solutions#internetexchange' },
+      { label: 'Carrier Neutrality', url: '/home/our-solutions#carriern' },
+      { label: 'Cloud and Connect', url: '/home/our-solutions#candc' },
+      { label: 'Peering', url: '/home/our-solutions#peering' },
       { label: 'Finance', url: '/home/finance' },
     ],
   },
@@ -100,12 +105,12 @@ export const LIVE_HOMEPAGE = {
     backgroundImage: '/images/home-hero-bg.jpg',
   },
   serviceShowcase: [
-    { title: 'Virtual Machines', body: "Maximise efficiency with VMs, offering direct access to Ghana's top networks.", url: '/o-home/o-ghana/our-solutions#virtualmachines' },
-    { title: 'Managed Services', body: 'Boost IT reliability with our comprehensive Managed Services.', url: '/o-home/o-ghana/our-solutions#managedservices' },
-    { title: 'Cyber Security', body: 'Defend against cyber threats with cutting-edge security measures', url: '/o-home/o-ghana/our-solutions#cybersecurity' },
-    { title: 'Internet Exchange', body: 'Enhance connectivity, reduce latency and costs with our Internet Exchange', url: '/o-home/o-ghana/our-solutions#internetexchange' },
-    { title: 'Colocation', body: 'Achieve unparalleled uptime in our Tier IV certified Colocation facility', url: '/o-home/o-ghana/our-solutions#tangor' },
-    { title: 'Cloud and Content', body: 'Efficiently scale and deliver with our Cloud and Content solutions', url: '/o-home/o-ghana/our-solutions#candc' },
+    { title: 'Virtual Machines', body: "Maximise efficiency with VMs, offering direct access to Ghana's top networks.", url: '/home/our-solutions#virtualmachines' },
+    { title: 'Managed Services', body: 'Boost IT reliability with our comprehensive Managed Services.', url: '/home/our-solutions#managedservices' },
+    { title: 'Cyber Security', body: 'Defend against cyber threats with cutting-edge security measures', url: '/home/our-solutions#cybersecurity' },
+    { title: 'Internet Exchange', body: 'Enhance connectivity, reduce latency and costs with our Internet Exchange', url: '/home/our-solutions#internetexchange' },
+    { title: 'Colocation', body: 'Achieve unparalleled uptime in our Tier IV certified Colocation facility', url: '/home/our-solutions#tangor' },
+    { title: 'Cloud and Content', body: 'Efficiently scale and deliver with our Cloud and Content solutions', url: '/home/our-solutions#candc' },
     { title: 'Secure Power Supply', body: 'Ensure continuous operation with our robust power backup systems.', url: '/home/infrastructure' },
     { title: 'Sustainable Operations', body: 'Embrace sustainability with operations powered by our solar farm, a first in West Africa.', url: '/home/sustainability' },
     { title: 'Advanced Security Measures', body: 'Protect your assets with advanced security and fire protection systems at our Ghana centre.', url: '/home/infrastructure' },
@@ -124,18 +129,18 @@ export const LIVE_HOMEPAGE = {
     heading: 'Our Solutions',
     intro: 'We provide a range of options to suit your colocation requirements.',
     items: [
-      { title: 'Colocation', body: 'Achieve unparalleled uptime in our Tier IV certified Colocation facility.', url: '/o-home/o-ghana/our-solutions#tangor' },
-      { title: 'Cybersecurity', body: 'Defend against cyber threats with cutting-edge security measures.', url: '/o-home/o-ghana/our-solutions#cybersecurity' },
-      { title: 'Virtual Machines', body: "Maximise efficiency with VMs, offering direct access to Ghana's top networks.", url: '/o-home/o-ghana/our-solutions#virtualmachines' },
+      { title: 'Colocation', body: 'Achieve unparalleled uptime in our Tier IV certified Colocation facility.', url: '/home/our-solutions#tangor', icon: 'colocation' as const },
+      { title: 'Cybersecurity', body: 'Defend against cyber threats with cutting-edge security measures.', url: '/home/our-solutions#cybersecurity', icon: 'cybersecurity' as const },
+      { title: 'Virtual Machines', body: "Maximise efficiency with VMs, offering direct access to Ghana's top networks.", url: '/home/our-solutions#virtualmachines', icon: 'virtual-machines' as const },
     ],
   },
   infrastructure: {
     heading: 'Infrastucture',
-    intro: 'We provide a range of options to suit your colocation requirements.',
+    intro: 'Built for resilience, sustainability, and security across our Tier IV facilities.',
     items: [
-      { title: 'Secure Power Supply', body: 'Ensure continuous operation with our robust power backup systems.', url: '/home/infrastructure' },
-      { title: 'Sustainable Operations', body: 'Embrace sustainability with operations powered by our solar farm, a first in West Africa.', url: '/home/sustainability' },
-      { title: 'Advanced Security Measures', body: 'Protect your assets with advanced security and fire protection systems at our Ghana centre.', url: '/home/infrastructure' },
+      { title: 'Secure Power Supply', body: 'Ensure continuous operation with our robust power backup systems.', url: '/home/infrastructure', icon: 'power' as const },
+      { title: 'Sustainable Operations', body: 'Embrace sustainability with operations powered by our solar farm, a first in West Africa.', url: '/home/sustainability', icon: 'sustainability' as const },
+      { title: 'Advanced Security Measures', body: 'Protect your assets with advanced security and fire protection systems at our Ghana centre.', url: '/home/infrastructure', icon: 'security' as const },
     ],
   },
   contactCta: {

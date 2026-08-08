@@ -3,9 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { LIVE_HEADER_NAV } from '@/data/live-site'
-
-const CTA = { label: 'Client support', url: '/home/contact-us' }
+import { LIVE_HEADER_NAV, LIVE_CLIENT_SUPPORT_CTA } from '@/data/live-site'
 
 export function OnixHeader() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -27,7 +25,7 @@ export function OnixHeader() {
                 <Link
                   key={key}
                   href={item.url}
-                  className="px-5 py-[13px] text-base font-medium text-[var(--onix-red)] transition-colors hover:text-[var(--onix-navy)]"
+                  className="px-5 py-[13px] text-base font-medium leading-5 text-[var(--onix-red)] transition-colors hover:text-[var(--onix-navy)]"
                 >
                   {item.label}
                 </Link>
@@ -37,7 +35,7 @@ export function OnixHeader() {
               <div key={key} className="group relative">
                 <Link
                   href={item.url}
-                  className="flex items-center gap-1 px-5 py-[13px] text-base font-medium text-[var(--onix-red)] transition-colors hover:text-[var(--onix-navy)]"
+                  className="flex items-center gap-1 px-5 py-[13px] text-base font-medium leading-5 text-[var(--onix-red)] transition-colors hover:text-[var(--onix-navy)]"
                 >
                   {item.label}
                   <ChevronDown />
@@ -58,21 +56,22 @@ export function OnixHeader() {
           })}
         </nav>
 
-        <Link
-          href={CTA.url}
+        <a
+          href={LIVE_CLIENT_SUPPORT_CTA.url}
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden bg-[var(--onix-red)] px-6 py-3 text-[15px] text-white transition-colors hover:bg-[var(--onix-red-hover)] lg:inline-block"
         >
-          {CTA.label}
-        </Link>
+          {LIVE_CLIENT_SUPPORT_CTA.label}
+        </a>
 
         <button
           type="button"
           onClick={() => setMobileOpen(true)}
-          className="flex items-center gap-2 border border-[#e5e5e5] px-3 py-2 text-sm font-medium lg:hidden"
+          className="border border-[#e5e5e5] p-2 lg:hidden"
           aria-label="Open menu"
         >
           <MenuIcon />
-          Menu
         </button>
       </div>
 
@@ -120,13 +119,15 @@ export function OnixHeader() {
                   </div>
                 )
               })}
-              <Link
-                href={CTA.url}
+              <a
+                href={LIVE_CLIENT_SUPPORT_CTA.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="mt-4 bg-[var(--onix-red)] px-4 py-3 text-center text-sm text-white"
               >
-                {CTA.label}
-              </Link>
+                {LIVE_CLIENT_SUPPORT_CTA.label}
+              </a>
             </nav>
           </div>
         </>

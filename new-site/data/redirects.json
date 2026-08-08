@@ -614,5 +614,12 @@
     "statusCode": "301",
     "active": true,
     "notes": "Phase 5 — legacy contact path"
+  },
+  {
+    "sourcePath": "/o-home/o-ghana/our-solutions/",
+    "destination": "/home/our-solutions/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Fix round 1 — legacy WordPress Our Solutions permalink"
   }
 ]

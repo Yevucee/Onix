@@ -32,7 +32,7 @@ export const ONIX_TOKENS = {
     footerTagline: { size: '15px', weight: 400 },
     footerCopyright: { size: '16px', weight: 300, lineHeight: '1.5em' },
     ctaButton: { size: '15px', weight: 400 },
-    cardTitle: { size: '1.4em', weight: 600, letterSpacing: '2.5px', font: "'Montserrat', sans-serif" },
+    cardTitle: { size: '40px', weight: 600, lineHeight: '48px', font: "'Poppins', sans-serif" },
     statNumber: { size: '48px', weight: 600, font: "'Montserrat', sans-serif" },
     statLabel: { size: '16px', weight: 400, lineHeight: '26px' },
   },

@@ -54,7 +54,7 @@ export function StatsRow() {
             return (
               <div
                 key={stat.label}
-                className="m-[17px] bg-white px-0 py-[27px] pb-9 text-center shadow-[1px_1px_6px_rgba(0,0,0,0.11)] transition-all hover:bg-[#ececec]"
+                className="m-[17px] px-0 py-[27px] pb-9 text-center"
               >
                 <p className="font-[family-name:var(--font-montserrat)] text-5xl font-semibold text-[var(--onix-red)]" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   <AnimatedCounter value={num} suffix={suffix} />

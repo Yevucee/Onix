@@ -7,7 +7,10 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'onixdatacentres.com', pathname: '/wp-content/uploads/**' },
     ],
-    localPatterns: [{ pathname: '/api/media/file/**' }],
+    localPatterns: [
+      { pathname: '/api/media/file/**' },
+      { pathname: '/images/**' },
+    ],
   },
 }
 
