@@ -49,8 +49,6 @@ const DATA_CENTRE_PATHS = new Set(['/o-home/senegal/', '/senegal/'])
 
 const SPECIALIST_PATHS = new Set(['/home/cfo-roi/', '/linxaccra/'])
 
-const LEADERSHIP_PREFIXES = ['/o-home/', '/home/']
-
 function isLeadershipPath(path: string): boolean {
   const leadershipSlugs = [
     'bretttucker',
