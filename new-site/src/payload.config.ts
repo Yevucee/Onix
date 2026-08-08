@@ -45,6 +45,8 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URL || '',
     },
+    // Staging DB was bootstrapped before certificationGrid/bulletedFeatures blocks existed.
+    push: process.env.SITE_ENV === 'staging',
   }),
   localization: {
     locales: [
