@@ -1,0 +1,40 @@
+old_url,title,page_type,template_family,migration_priority,existing_components_reusable,new_components_required,content_source,status,notes
+/about-us/,About Us,About Us,About/company,2,"PageHero, PageBlocksRenderer",none,Payload pages,planned,Production page
+/baraawafall/,Bara Awa Fall,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/blog/,Blog,Blog,Article listing,2,news/page,none,Redirect to /news/,planned,Production page
+/contact-us/,Contact Us,Contact Us,Contact,2,ContactForm,none,Static + form,planned,Production page
+/fr/author/onixdc/,onixdc – Onix Data Centre,Author archive,French page,6,redirect,none,Redirect to /news/,planned,French URL — preserve content and path
+/fr/author/samuel/,Samuel – Onix Data Centre,Author archive,French page,6,redirect,none,Redirect to /news/,planned,French URL — preserve content and path
+/fr/author/yinka/,Yinka Oyelade – Onix Data Centre,Author archive,French page,6,redirect,none,Redirect to /news/,planned,French URL — preserve content and path
+/fr/home-francais/,Home – Français – Onix Data Centre,Home FR,Homepage,2,Homepage FR,FrenchHome,Payload pages locale fr,planned,French URL — preserve content and path
+/home/,Onix Data Centre,Home redirect,Homepage,1,redirect,none,301 to /,planned,Production page
+/home/cfo-roi/,CFO ROI,CFO ROI,Specialist landing,3,none,RoiCalculator,Custom HTML source,planned,Production page
+/home/cfo/,CFO,CFO,Standard corporate,4,PageBlocksRenderer,none,Payload pages,planned,Production page
+/home/eric-tenkorang/,Eric Tenkorang,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/home/feedback/,Feedback,Feedback,Standard corporate,5,PageBlocksRenderer,none,Payload pages,planned,Production page
+/home/finance/,Finance,Finance,Service/solution,3,PageBlocksRenderer,none,Payload pages,planned,Production page
+/home/infrastructure/,Infrastructure,Infrastructure,Data centre / infra,3,"PageBlocksRenderer, StatsGrid",none,Payload pages,planned,Production page
+/home/our-solutions/,Our Solutions,Our Solutions,Service/solution,2,"PageBlocksRenderer, FeatureCards",none,Payload pages,planned,Production page
+/home/sustainability/,Sustainability,Sustainability,Standard corporate,4,PageBlocksRenderer,none,Payload pages,planned,Production page
+/home/virtual-machine/,Virtual Machines,Virtual Machines,Service/solution,4,PageBlocksRenderer,none,Payload pages,planned,Production page
+/infrastructure-innovation/,Infrastructure Innovation,Infrastructure Innovation,Standard corporate,5,PageBlocksRenderer,none,Payload pages,planned,Production page
+/linxaccra/,Linx Accra,Linx Accra,Connectivity,4,"PageBlocksRenderer, LogoGrid",none,Payload pages,planned,Production page
+/news/,News,News,Article listing,2,news/page,none,Payload articles,planned,Production page
+/o-home/bretttucker/,Brett Tucker,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/o-home/certification/,Certification,Certification,Standard corporate,3,CertificationGrid,none,Payload pages,planned,Production page
+/o-home/edemscott/,Edem Scott,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/o-home/kevinopata/,Kevin Opata,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/o-home/leonardmckinlay/,Leornard McKinlay,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/o-home/mamadoukebe/,Mamadou KEBE,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/o-home/michaelthompson/,Michael Thompson,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/o-home/paulrichards/,Paul Richards,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/o-home/privacy-policy/,Privacy Policy,Privacy Policy,Legal,5,PageBlocksRenderer,none,Payload pages,planned,Production page
+/o-home/razak-awudulai/,Razak,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/o-home/razak-awudulai1/,Razak Awudulai,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/o-home/samuel-osew-kwatia/,Samuel Osew-Kwatia,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/o-home/samuelpolley/,Samuel Polley,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/o-home/senegal/,Senegal 🇸🇳,Senegal,Data centre,3,DataCentreTemplate,none,Data Centres collection,planned,Production page
+/o-home/serwaakankam/,Serwaa Kankam,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/o-home/stephenappiah/,Stephen Appiah Fordjour,Leadership profile,Leadership/profile,4,LeadershipProfile,none,Leadership collection,planned,Leadership profile page
+/partners/,Partners,Partners,Connectivity,4,LogoGrid,none,Payload pages,planned,Production page
+/services/,Services,Services,Service/solution,3,PageBlocksRenderer,none,Payload pages,planned,Production page

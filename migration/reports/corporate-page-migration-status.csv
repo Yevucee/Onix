@@ -1,0 +1,56 @@
+URL,Page name,Audience,Current staging status,Live page type,Component template required,Priority,Migration status
+/,Homepage (Ghana DC),Public,Complete — Onix design system,Homepage / Ghana data centre,Homepage (OnixHomePage),1,Complete
+/about-us/,About Us,Public,Onix CorporatePageTemplate,Corporate page,Corporate,1,Complete
+/o-home/about-us/,About Us (legacy),Public,Redirects to /about-us/,Corporate page,Corporate,1,Redirect
+/home/our-solutions/,Our Solutions,Public,Onix SolutionPageTemplate,Solution landing,Solution,1,Complete
+/home/infrastructure/,Infrastructure,Public,Onix InfrastructurePageTemplate,Infrastructure landing,Infrastructure,1,Complete
+/o-home/senegal/,Senegal Data Centre,Public,Onix DataCentrePageTemplate,Data centre landing,Data Centre,1,Complete
+/senegal/,Senegal (alias),Public,Redirects to /o-home/senegal/,Data centre landing,Data Centre,1,Redirect
+/o-home/bretttucker/,Brett Tucker,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/o-home/edemscott/,Edem Scott,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/o-home/kevinopata/,Kevin Opata,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/o-home/leonardmckinlay/,Leonard McKinlay,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/o-home/mamadoukebe/,Mamadou Kebe,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/o-home/michaelthompson/,Michael Thompson,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/o-home/paulrichards/,Paul Richards,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/o-home/razak-awudulai/,Razak Awudulai,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/o-home/samuel-osew-kwatia/,Samuel Osew-Kwatia,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/o-home/samuelpolley/,Samuel Polley,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/o-home/serwaakankam/,Serwaa Kankam,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/o-home/stephenappiah/,Stephen Appiah,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/home/eric-tenkorang/,Eric Tenkorang,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/o-home/senegal/baraawafall/,Bara Awa Fall,Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,1,Complete
+/contact-us/,Contact Us,Public,Onix ContactPageTemplate,Contact page,Contact,1,Complete
+/home/contact-us/,Contact Us (nav URL),Public,Onix ContactPageTemplate,Contact page,Contact,1,Complete
+/home/finance/,Finance,Public,Onix SolutionPageTemplate,Solution detail,Solution,2,Complete
+/home/virtual-machine/,Virtual Machines,Public,Onix SolutionPageTemplate,Solution detail,Solution,2,Complete
+/home/o-services/,Services,Public,Onix SolutionPageTemplate,Solution detail,Solution,2,Complete
+/services/,Services (alias),Public,Onix SolutionPageTemplate,Solution detail,Solution,2,Complete
+/home/sustainability/,Sustainability,Public,Onix CorporatePageTemplate,Corporate page,Corporate,4,Complete
+/o-home/certification/,Certification,Public,Onix CertificationPageTemplate,Certification page,Certification,4,Complete
+/o-home/privacy-policy/,Privacy Policy,Public,Onix CorporatePageTemplate,Legal page,Corporate,4,Complete
+/o-home/partners/,Partners,Public,Onix CorporatePageTemplate,Corporate page,Corporate,4,Complete
+/partners/,Partners (alias),Public,Onix CorporatePageTemplate,Corporate page,Corporate,4,Complete
+/home/cfo/,CFO,Public,Onix CorporatePageTemplate,Corporate page,Corporate,4,Complete
+/home/feedback/,Feedback,Public,Onix CorporatePageTemplate,Corporate page,Corporate,4,Complete
+/home/onix-team-contact/,Onix Team Contact,Public,Onix ContactPageTemplate,Contact page,Contact,4,Complete
+/linxaccra/,LINX Accra,Public,Onix SpecialistPageTemplate,Specialist landing,Specialist,4,Complete
+/home/cfo-roi/,CFO ROI,Public,Onix CFO ROI (dedicated route),Specialist tool,Specialist,4,Complete
+/infrastructure-innovation/,Infrastructure Innovation,Public,Onix InfrastructurePageTemplate,Infrastructure detail,Infrastructure,3,Complete
+/blog/,Blog,Public,Redirects to /news/,Article listing,News,6,Redirect
+/news/,News,Public,Legacy news/page,Article listing,News,6,Pending
+/fr/home-francais/,Home Français,Public,Legacy fr route,French homepage,French,5,Pending
+/fr/author/onixdc/,Author onixdc FR,Public,Redirect to /news/,French author,French,5,Redirect
+/fr/author/samuel/,Author Samuel FR,Public,Redirect to /news/,French author,French,5,Redirect
+/fr/author/yinka/,Author Yinka FR,Public,Redirect to /news/,French author,French,5,Redirect
+/o-home/senegal/about-us/,Senegal About Us,Public,Redirects to /about-us/,Corporate page,Corporate,5,Redirect
+/o-home/senegal/contact-us/,Senegal Contact,Public,Redirects to /contact-us/,Contact page,Contact,5,Redirect
+/o-home/senegal/infrastructure/,Senegal Infrastructure,Public,Redirects to /home/infrastructure/,Infrastructure,Infrastructure,5,Redirect
+/o-home/senegal/services/,Senegal Services,Public,Redirects to /services/,Solution,Solution,5,Redirect
+/o-home/senegal/sustainability/,Senegal Sustainability,Public,Redirects to /home/sustainability/,Corporate,Corporate,5,Redirect
+/home/,Home redirect,Public,Redirects to /,Homepage,Homepage,1,Redirect
+/home-english/,Home English,Public,Legacy page,Corporate page,Corporate,5,Pending
+/o-home/,O-Home landing,Public,Onix CorporatePageTemplate,Corporate page,Corporate,4,Complete
+/o-home/home-v2/,Home V2,Public,Legacy page,Corporate page,Corporate,5,Pending
+/elementor-9089/,Cookie Policy,Public,Legacy page,Legal page,Corporate,5,Pending
+/o-home/razak-awudulai1/,Razak Awudulai (dup),Public,Onix LeadershipPageTemplate,Leadership profile,Leadership,4,Complete

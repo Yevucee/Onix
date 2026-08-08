@@ -1,0 +1,639 @@
+[
+  {
+    "sourcePath": "/mamadoukebe/",
+    "destination": "/o-home/mamadoukebe/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/2023/11/21/bluespace-financial-cloud-and-onix-data-centre-join-forces-to-redefine-financial-technology-landscape/",
+    "destination": "/2023/11/21/bluespace-financial-cloud-onix-data-centre/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-ghana/",
+    "destination": "/o-home/o-ghana/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/senegal/",
+    "destination": "/o-home/senegal/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/2024/01/16/navigating-the-future-reflecting-on-vertivs-2024-data-centre-trends-and-their-implications-for-onix-data-centre/",
+    "destination": "/2024/01/16/navigating-2024-data-centre-trends/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/2024/03/07/the-role-of-edge-computing-in-ghanas-digital-transformation-in-ghana/",
+    "destination": "/2024/03/07/edge-computing-in-ghana/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/home-v2/",
+    "destination": "/o-home/home-v2/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/baraawafall/",
+    "destination": "/o-home/senegal/baraawafall/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-home/eric-tenkorang/",
+    "destination": "/o-home/o-ghana/eric-tenkorang/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-home/razak/",
+    "destination": "/o-home/razak-awudulai/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-home/o-ghana/eric-tenkorang-copy/",
+    "destination": "/o-home/o-ghana/staging123/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-ghana/contact-us/onix-team-contact/",
+    "destination": "/o-ghana/onix-team-contact/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/pitch-competition/",
+    "destination": "/pitch/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/2025/08/28/the-hidden-cost-of-latency-why-every-millisecond-matters-in-ghanas-digital-economy/",
+    "destination": "/2025/08/28/hidden-latency-ghana/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/elementor-9727/",
+    "destination": "/linx1/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/linx1/",
+    "destination": "/linx/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/linx/",
+    "destination": "/linxaccra/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-home/blog/",
+    "destination": "/blog/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-home/about-us/",
+    "destination": "/about-us/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/o-home/o-contact-us/",
+    "destination": "/contact-us/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/home/o-infrastructure/",
+    "destination": "/home/infrastructure/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Imported from WordPress Pretty Links"
+  },
+  {
+    "sourcePath": "/home/",
+    "destination": "/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 4 — homepage canonical at /"
+  },
+  {
+    "sourcePath": "/blog/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 4 — news listing"
+  },
+  {
+    "sourcePath": "/fr/author/onixdc/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 4 — author archive not migrated"
+  },
+  {
+    "sourcePath": "/fr/author/samuel/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 4 — author archive not migrated"
+  },
+  {
+    "sourcePath": "/fr/author/yinka/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 4 — author archive not migrated"
+  },
+  {
+    "sourcePath": "/author/onixdc/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — author archive redirect"
+  },
+  {
+    "sourcePath": "/author/samuel/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — author archive redirect"
+  },
+  {
+    "sourcePath": "/author/yinka/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — author archive redirect"
+  },
+  {
+    "sourcePath": "/category/africa/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — taxonomy archive redirect"
+  },
+  {
+    "sourcePath": "/category/blog/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — taxonomy archive redirect"
+  },
+  {
+    "sourcePath": "/category/data/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — taxonomy archive redirect"
+  },
+  {
+    "sourcePath": "/category/news/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — taxonomy archive redirect"
+  },
+  {
+    "sourcePath": "/category/technology/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — taxonomy archive redirect"
+  },
+  {
+    "sourcePath": "/category/uncategorized/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — taxonomy archive redirect"
+  },
+  {
+    "sourcePath": "/tag/2021/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — tag archive redirect"
+  },
+  {
+    "sourcePath": "/tag/africa/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — tag archive redirect"
+  },
+  {
+    "sourcePath": "/tag/cls/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — tag archive redirect"
+  },
+  {
+    "sourcePath": "/tag/corporations/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — tag archive redirect"
+  },
+  {
+    "sourcePath": "/tag/dakar/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — tag archive redirect"
+  },
+  {
+    "sourcePath": "/tag/data-centre/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — tag archive redirect"
+  },
+  {
+    "sourcePath": "/tag/growth/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — tag archive redirect"
+  },
+  {
+    "sourcePath": "/tag/solar/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — tag archive redirect"
+  },
+  {
+    "sourcePath": "/tag/sustainable/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — tag archive redirect"
+  },
+  {
+    "sourcePath": "/sustainability/",
+    "destination": "/home/sustainability/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP short alias"
+  },
+  {
+    "sourcePath": "/infrastructure/",
+    "destination": "/home/infrastructure/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP short alias"
+  },
+  {
+    "sourcePath": "/certification/",
+    "destination": "/o-home/certification/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP short alias"
+  },
+  {
+    "sourcePath": "/privacy-policy/",
+    "destination": "/o-home/privacy-policy/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP short alias"
+  },
+  {
+    "sourcePath": "/our-solutions/",
+    "destination": "/home/our-solutions/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP short alias"
+  },
+  {
+    "sourcePath": "/finance/",
+    "destination": "/home/finance/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP short alias"
+  },
+  {
+    "sourcePath": "/virtual-machine/",
+    "destination": "/home/virtual-machine/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP short alias"
+  },
+  {
+    "sourcePath": "/feedback/",
+    "destination": "/home/feedback/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP short alias"
+  },
+  {
+    "sourcePath": "/cfo/",
+    "destination": "/home/cfo/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP short alias"
+  },
+  {
+    "sourcePath": "/cfo-roi/",
+    "destination": "/home/cfo-roi/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP short alias"
+  },
+  {
+    "sourcePath": "/home-francais/",
+    "destination": "/fr/home-francais/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — FR homepage alias"
+  },
+  {
+    "sourcePath": "/home/contact-us/",
+    "destination": "/contact-us/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy path redirect"
+  },
+  {
+    "sourcePath": "/bretttucker/",
+    "destination": "/o-home/bretttucker/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/leonardmckinlay/",
+    "destination": "/o-home/leonardmckinlay/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/michaelthompson/",
+    "destination": "/o-home/michaelthompson/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/serwaakankam/",
+    "destination": "/o-home/serwaakankam/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/edemscott/",
+    "destination": "/o-home/edemscott/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/kevinopata/",
+    "destination": "/o-home/kevinopata/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/stephenappiah/",
+    "destination": "/o-home/stephenappiah/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/samuelpolley/",
+    "destination": "/o-home/samuelpolley/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/paulrichards/",
+    "destination": "/o-home/paulrichards/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/eric-tenkorang/",
+    "destination": "/home/eric-tenkorang/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/samuel-osew-kwatia/",
+    "destination": "/o-home/samuel-osew-kwatia/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/razak-awudulai/",
+    "destination": "/o-home/razak-awudulai/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/razak-awudulai1/",
+    "destination": "/o-home/razak-awudulai1/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — leadership short alias"
+  },
+  {
+    "sourcePath": "/o-home/",
+    "destination": "/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy section root"
+  },
+  {
+    "sourcePath": "/o-services/",
+    "destination": "/services/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy alias"
+  },
+  {
+    "sourcePath": "/home/o-services/",
+    "destination": "/services/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy alias"
+  },
+  {
+    "sourcePath": "/o-home/partners/",
+    "destination": "/partners/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy path"
+  },
+  {
+    "sourcePath": "/staging-tab/",
+    "destination": "/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP staging page"
+  },
+  {
+    "sourcePath": "/elementor-9089/",
+    "destination": "/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP staging elementor page"
+  },
+  {
+    "sourcePath": "/home/staging123/",
+    "destination": "/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — WP staging page"
+  },
+  {
+    "sourcePath": "/home-english/",
+    "destination": "/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy homepage variant"
+  },
+  {
+    "sourcePath": "/pitch/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy campaign page"
+  },
+  {
+    "sourcePath": "/o-home/senegal/about-us/",
+    "destination": "/about-us/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy senegal subpage"
+  },
+  {
+    "sourcePath": "/o-home/senegal/contact-us/",
+    "destination": "/contact-us/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy senegal subpage"
+  },
+  {
+    "sourcePath": "/o-home/senegal/infrastructure/",
+    "destination": "/home/infrastructure/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy senegal subpage"
+  },
+  {
+    "sourcePath": "/o-home/senegal/services/",
+    "destination": "/services/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy senegal subpage"
+  },
+  {
+    "sourcePath": "/o-home/senegal/sustainability/",
+    "destination": "/home/sustainability/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy senegal subpage"
+  },
+  {
+    "sourcePath": "/o-home/home-v2/",
+    "destination": "/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy homepage variant"
+  },
+  {
+    "sourcePath": "/o-home/michaelnahon/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy profile redirect"
+  },
+  {
+    "sourcePath": "/o-home/yen-choi/",
+    "destination": "/news/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy profile redirect"
+  },
+  {
+    "sourcePath": "/home/onix-team-contact/",
+    "destination": "/contact-us/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy contact path"
+  },
+  {
+    "sourcePath": "/onix-team-contact/",
+    "destination": "/contact-us/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Phase 5 — legacy contact path"
+  },
+  {
+    "sourcePath": "/o-home/o-ghana/our-solutions/",
+    "destination": "/home/our-solutions/",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Fix round 1 — legacy WordPress Our Solutions permalink"
+  },
+  {
+    "sourcePath": "/ims-policy/",
+    "destination": "/documents/IMS-SIMPLIFIED-12-May-2025.pdf",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Fix round 2 — IMS Policy document alias"
+  },
+  {
+    "sourcePath": "/ims-policy",
+    "destination": "/documents/IMS-SIMPLIFIED-12-May-2025.pdf",
+    "statusCode": "301",
+    "active": true,
+    "notes": "Fix round 2 — IMS Policy document alias (no trailing slash)"
+  }
+]

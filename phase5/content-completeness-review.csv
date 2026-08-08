@@ -1,0 +1,13 @@
+area,check,status,notes
+Corporate pages,Hero + sections migrated,PASS,16 Payload pages imported
+Articles,Body blocks + featured images,PASS_WITH_NOTES,14 articles with residual inline media URL references in content
+Leadership biographies,Bio text complete,PASS,15 profiles
+Leadership photos,Profile images,OPEN,Photos missing from Phase 3 media archive scope
+French homepage,/fr/home-francais/,PASS,Imported
+French about,/fr/a-propos/,OPEN,Route exists; WP export content not confirmed
+French contact,/fr/contactez-nous/,PASS,Form route live
+Data centre specs,Senegal facility page,PASS,Data centres collection
+Certification labels,/o-home/certification/,PASS,Migrated page
+ROI calculator,/home/cfo-roi/,PASS,TypeScript port with unit tests
+Footnotes/captions,Article captions,PASS_WITH_NOTES,Verify during editorial review
+Downloads,PDF/download blocks,PASS,Block renderer implemented

@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-08-07T19:11:50.739Z",
+  "reports": [
+    {
+      "slug": "what-is-peering",
+      "status": "success",
+      "warnings": [
+        "Updated existing article (idempotent)"
+      ],
+      "unsupported": [
+        "gutenberg_blocks"
+      ],
+      "missingMedia": [
+        "wp-content/uploads/2025/11/WhatsApp-Image-2025-11-10-at-12.18.35-1024x388.jpeg"
+      ],
+      "seoMapped": true,
+      "legacyPath": "/2025/11/13/what-is-peering/"
+    },
+    {
+      "slug": "africa-digital-cloud-resilience",
+      "status": "success",
+      "warnings": [
+        "Post has Elementor _elementor_data — manual conversion recommended",
+        "Updated existing article (idempotent)"
+      ],
+      "unsupported": [
+        "elementor_page_builder",
+        "gutenberg_blocks"
+      ],
+      "missingMedia": [
+        "wp-content/uploads/2025/10/aws-blog-7-1024x559.png",
+        "wp-content/uploads/2024/11/NOV-BLOG.png"
+      ],
+      "seoMapped": true,
+      "legacyPath": "/2025/10/28/africa-digital-cloud-resilience/"
+    }
+  ]
+}

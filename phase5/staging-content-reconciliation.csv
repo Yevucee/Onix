@@ -1,0 +1,9 @@
+content_type,expected,actual,difference,status,notes
+Articles,88,88,0,OK,
+Media,542,542,0,OK,
+Corporate pages (Pages collection),16,17,1,OVER,"Excludes leadership profiles, news, contact dedicated routes"
+Leadership profiles,15,15,0,OK,
+Data centres,1,1,0,OK,
+Categories,3,3,0,OK,Minimum seed categories
+Redirects (public),21,21,0,OK,
+French routes,3,2,-1,DIFF,FR homepage + contact routes; /fr/a-propos/ content pending

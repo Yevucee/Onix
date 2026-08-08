@@ -1,0 +1,25 @@
+url,template_family,desktop,mobile,content,media,links,seo,status,notes
+/about-us/,About/company,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/blog/,Article listing,PASS,PASS,PASS,PASS,PASS,PENDING,PASS,HTTP 200
+/contact-us/,Contact,PASS,PASS,PASS,PASS,PASS,PENDING,PASS,HTTP 200
+/fr/author/onixdc/,French page,PASS,PASS,PASS,PASS,PASS,PENDING,PASS,HTTP 200
+/fr/author/samuel/,French page,PASS,PASS,PASS,PASS,PASS,PENDING,PASS,HTTP 200
+/fr/author/yinka/,French page,PASS,PASS,PASS,PASS,PASS,PENDING,PASS,HTTP 200
+/fr/home-francais/,Homepage,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/home/,Homepage,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/home/cfo-roi/,Specialist landing,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/home/cfo/,Standard corporate,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/home/feedback/,Standard corporate,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/home/finance/,Service/solution,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/home/infrastructure/,Data centre / infra,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/home/our-solutions/,Service/solution,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/home/sustainability/,Standard corporate,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/home/virtual-machine/,Service/solution,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/infrastructure-innovation/,Standard corporate,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/linxaccra/,Connectivity,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/news/,Article listing,PASS,PASS,PASS,PASS,PASS,PENDING,PASS,HTTP 200
+/o-home/certification/,Standard corporate,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/o-home/privacy-policy/,Legal,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/o-home/senegal/,Data centre,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/partners/,Connectivity,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200
+/services/,Service/solution,PASS,PASS,PASS,PASS,PASS,PASS,PASS,HTTP 200

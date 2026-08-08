@@ -1,0 +1,40 @@
+legacyPath,slug,title,status,notes
+/about-us/,,,skipped,Dedicated route exists
+/baraawafall/,baraawafall,,skipped,Leadership collection
+/blog/,,,skipped,Dedicated route exists
+/contact-us/,,,skipped,Dedicated route exists
+/fr/author/onixdc/,,,skipped,Author archive — redirect
+/fr/author/samuel/,,,skipped,Author archive — redirect
+/fr/author/yinka/,,,skipped,Author archive — redirect
+/fr/home-francais/,fr-home-francais,Home - Français,updated,Idempotent update
+/home/,home,Onix Data Centre,updated,Idempotent update
+/home/cfo-roi/,home-cfo-roi,CFO ROI,skipped,Dedicated ROI route
+/home/cfo/,home-cfo,CFO,updated,Idempotent update
+/home/eric-tenkorang/,eric-tenkorang,,skipped,Leadership collection
+/home/feedback/,home-feedback,Feedback,updated,Idempotent update
+/home/finance/,home-finance,Finance,updated,Idempotent update
+/home/infrastructure/,home-infrastructure,Infrastructure,updated,Idempotent update
+/home/our-solutions/,home-our-solutions,Our Solutions,updated,Idempotent update
+/home/sustainability/,home-sustainability,Sustainability,updated,Idempotent update
+/home/virtual-machine/,home-virtual-machine,Virtual Machines,updated,Idempotent update
+/infrastructure-innovation/,infrastructure-innovation,Infrastructure Innovation,updated,Idempotent update
+/linxaccra/,linxaccra,Linx Accra,updated,Idempotent update
+/news/,,,skipped,Dedicated route exists
+/o-home/bretttucker/,bretttucker,,skipped,Leadership collection
+/o-home/certification/,o-home-certification,Certification,updated,Idempotent update
+/o-home/edemscott/,edemscott,,skipped,Leadership collection
+/o-home/kevinopata/,kevinopata,,skipped,Leadership collection
+/o-home/leonardmckinlay/,leonardmckinlay,,skipped,Leadership collection
+/o-home/mamadoukebe/,mamadoukebe,,skipped,Leadership collection
+/o-home/michaelthompson/,michaelthompson,,skipped,Leadership collection
+/o-home/paulrichards/,paulrichards,,skipped,Leadership collection
+/o-home/privacy-policy/,o-home-privacy-policy,Privacy Policy,updated,Idempotent update
+/o-home/razak-awudulai/,razak-awudulai,,skipped,Leadership collection
+/o-home/razak-awudulai1/,razak-awudulai1,,skipped,Leadership collection
+/o-home/samuel-osew-kwatia/,samuel-osew-kwatia,,skipped,Leadership collection
+/o-home/samuelpolley/,samuelpolley,,skipped,Leadership collection
+/o-home/senegal/,o-home-senegal,Senegal &#x1f1f8;&#x1f1f3;,updated,Idempotent update
+/o-home/serwaakankam/,serwaakankam,,skipped,Leadership collection
+/o-home/stephenappiah/,stephenappiah,,skipped,Leadership collection
+/partners/,partners,Partners,updated,Idempotent update
+/services/,services,Services,updated,Idempotent update

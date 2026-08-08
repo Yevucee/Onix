@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches: [main, 'cursor/**']
+  pull_request:
+    branches: [main]
+
+jobs:
+  new-site:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: new-site
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: onix
+          POSTGRES_PASSWORD: onix
+          POSTGRES_DB: onix
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U onix -d onix"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DATABASE_URL: postgresql://onix:onix@localhost:5432/onix
+      PAYLOAD_SECRET: ci-test-secret-minimum-32-characters-long
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+      SITE_ENV: development
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: new-site/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+        env:
+          SITE_ENV: production

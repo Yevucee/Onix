@@ -1,0 +1,15 @@
+article_id,article_url,legacy_media_url,expected_attachment_id,issue,fallback,manual_review_required
+5694,/2023/03/08/colocation-data-centres/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes
+5953,/2023/04/19/cold-aisle-containment-data-centre-cooling/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes
+6437,/2023/08/02/solar-data-sustainable-solution/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes
+6612,/2023/10/03/healthcare-colocation-data-centre/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes
+6961,/2024/01/16/navigating-2024-data-centre-trends/,,,2 inline media URLs not mapped,legacy url preserved in warnings,yes
+7047,/2024/02/20/solar-power-data-centres-sustainable/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes
+7142,/2024/03/18/digital-resilience-in-west-africa/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes
+7413,/2024/04/24/different-industries-utilise-data-centres/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes
+7546,/2024/05/15/transparency-customer-awareness-data-hosting/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes
+7677,/2024/06/20/strengthening-bonds-our-partnership-with-sekoe-chocolate-suppliers/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes
+8836,/2025/05/28/carrier-neutral-data-centres/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes
+9006,/2025/07/07/linx-accra-launches-ghana/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes
+9624,/2025/10/14/linx-accra-live-at-onix/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes
+9934,/2025/12/08/returnee-onix-data-centre-business/,,,1 inline media URLs not mapped,legacy url preserved in warnings,yes

@@ -1,0 +1,61 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+
+# Database dumps and backups (sensitive — never commit)
+*.sql
+*.sql.gz
+*.sql.bz2
+*.db.gz
+*db*.gz
+onix db.gz
+**/onix db.gz
+
+# WordPress runtime (not needed in new stack)
+wp-config.php
+wp-config-local.php
+
+# Node / Next.js (future new-site work)
+node_modules/
+.next/
+out/
+dist/
+build/
+.turbo/
+.vercel/
+new-site/.env
+new-site/media/
+*.tsbuildinfo
+
+# Payload CMS
+payload-types.ts.bak
+media/uploads/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker local overrides
+docker-compose.override.yml
+
+# Test and coverage
+coverage/
+.nyc_output/
+
+# Temporary migration working files (extracted uploads, caches)
+.migration-work/
+

@@ -1,0 +1,11 @@
+URL,Live sections,Staging sections,Hero complete,Images complete,CTA complete,Template correct,Visual QA,Status
+/home/our-solutions/#tangor,"Hero intro; Colocation section with 4 feature points","OurSolutionsPageTemplate: hero banner + #tangor section with 4 feature cards",yes,partial,yes,yes,PASS,COMPLETE
+/home/our-solutions/#virtualmachines,"VM overview: 4 feature points + dedicated page","#virtualmachines section + link to /home/virtual-machine/",yes,n/a,yes,yes,PASS,COMPLETE
+/home/our-solutions/#managedservices,"Managed Services: 3 feature points","#managedservices section with 3 feature cards",yes,n/a,yes,yes,PASS,COMPLETE
+/home/our-solutions/#cybersecurity,"Cyber Security: 4 feature points","#cybersecurity section with 4 feature cards",yes,n/a,yes,yes,PASS,COMPLETE
+/home/our-solutions/#internetexchange,"Internet Exchange: 4 feature points","#internetexchange section with 4 feature cards",yes,n/a,yes,yes,PASS,COMPLETE
+/home/our-solutions/#carriern,"Carrier Neutrality: 2 feature points","#carriern section with 2 feature cards",yes,n/a,yes,yes,PASS,COMPLETE
+/home/our-solutions/#candc,"Cloud and Content: 2 feature points","#candc section with 2 feature cards",yes,n/a,yes,yes,PASS,COMPLETE
+/home/our-solutions/#peering,"Peering: 3 feature points","#peering section with 3 feature cards",yes,n/a,yes,yes,PASS,COMPLETE
+/home/virtual-machine/,"Banner hero; 4 use-case cards; 4 image+text splits; flexibility cards; promo CTA","SolutionPageTemplate: banner hero + tinted use-case cards + 4 imageText splits + flexibility cards + CTA",yes,yes,yes,yes,PASS,COMPLETE
+/home/finance/,"Banner hero; intro; 5 navy feature cards; CTA","SolutionPageTemplate: banner hero + richText intro + 5 navy feature cards + CTA",yes,yes,yes,yes,PASS,COMPLETE

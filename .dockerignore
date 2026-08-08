@@ -1,0 +1,10 @@
+.git
+.cursor
+**/node_modules
+**/.next
+new-site/media
+.migration-work
+**/terminals
+phase5/*.csv
+*.md
+!migration/**
