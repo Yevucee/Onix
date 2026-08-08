@@ -2,215 +2,131 @@
 
 Private staging environment for the Onix website replacement (Next.js + Payload CMS + PostgreSQL).
 
-## Platform selection
-
-| Environment | Platform | URL | Purpose |
-|-------------|----------|-----|---------|
-| **QA / automated tests** | Cursor Cloud Agent VM | `http://localhost:3001` | Automated crawl, migration verification, CI-style QA |
-| **Recommended reviewer staging** | Self-hosted Docker (Beelink or equivalent) | `https://staging.onixdatacentres.com` (example) | Human review with HTTPS + Basic Auth |
-
-### Why Docker Compose on self-hosted hardware
-
-- Matches production architecture (Node, PostgreSQL, persistent media volume)
-- No mandatory proprietary PaaS dependency
-- Portable to any Linux host with Docker
-- Environment secrets via `.env.staging` (never committed)
-- Same repository and build process as production
-
-The Cloud Agent VM used for Phase 5 QA does not have Docker installed; deployment was validated via native Node.js + local PostgreSQL. Production staging should use `docker-compose.staging.yml`.
-
----
-
-## Prerequisites
-
-- Node.js ≥ 20 (for local/native deploy)
-- PostgreSQL 16
-- ~2 GB RAM minimum for app + DB
-- ~2 GB disk for media (migrated library ~1.5 GB)
-- TLS certificate (Let's Encrypt) for HTTPS staging hostname
-- Reverse proxy (nginx, Caddy, or Traefik) for HTTPS + optional additional auth
-
----
-
-## Quick start (Docker — recommended)
-
-```bash
-cd new-site
-cp .env.example .env.staging
-# Edit .env.staging — set all REQUIRED and STAGING_ONLY variables
-docker compose -f docker-compose.staging.yml up --build -d
-```
-
-### Required `.env.staging` values
-
-```env
-SITE_ENV=staging
-PAYLOAD_SECRET=<32+ random chars>
-NEXT_PUBLIC_SITE_URL=https://staging.onixdatacentres.com
-POSTGRES_PASSWORD=<strong password>
-STAGING_AUTH_USER=<reviewer username>
-STAGING_AUTH_PASSWORD=<strong password>
-STAGING_SEND_EMAIL=false
-STAGING_ADMIN_EMAIL=<admin email>
-STAGING_ADMIN_PASSWORD=<strong password>
-```
-
-### Bootstrap database and content
-
-```bash
-# Create database (if not using Docker postgres init)
-./scripts/staging/setup-database.sh
-
-# Run migrations against staging DB
-DATABASE_URL=postgresql://onix_staging:PASSWORD@localhost:5432/onix_staging npm run staging:migrate
-
-# Create secure admin (removes default seed account)
-npm run staging:admin
-
-# Verify
-npm run staging:verify
-```
-
----
-
-## Native deploy (development / QA VM)
-
-Used during Phase 5 automated QA:
-
-```bash
-cd new-site
-export DATABASE_URL=postgresql://onix:onix@localhost:5432/onix_staging
-export SITE_ENV=staging
-export PAYLOAD_SECRET=<secret>
-export NEXT_PUBLIC_SITE_URL=http://localhost:3001
-export STAGING_AUTH_USER=<user>
-export STAGING_AUTH_PASSWORD=<password>
-export STAGING_SEND_EMAIL=false
-export MEDIA_STORAGE_PATH=./media
-
-npm run build
-PORT=3001 npm run start
-```
-
----
-
-## Database
+## Current staging platform: Railway
 
 | Item | Value |
 |------|-------|
-| Database name | `onix_staging` |
-| Must NOT use | `onix` (dev), WordPress DB, future production Payload DB |
-| Setup script | `scripts/staging/setup-database.sh` |
-| Clone from dev (one-time) | `pg_dump onix \| psql onix_staging` |
+| **Platform** | [Railway](https://railway.app) — GitHub-connected PaaS |
+| **Project** | `onix-staging` |
+| **Web service** | `onix-staging-web` |
+| **Database service** | `Postgres` |
+| **Media volume** | `onix-staging-media` mounted at `/app/media` |
+| **Branch** | `cursor/phase5-staging-deployment-28a7` |
+| **Staging URL** | `https://onix-staging-web-production.up.railway.app` |
 
-Schema is managed by Payload on first boot (auto-migrate).
+### Why Railway
+
+- Deploy directly from GitHub on the Phase 5 branch
+- Managed PostgreSQL with persistent storage
+- Persistent volumes for ~1 GB migrated media
+- Long-running Node container (Next.js + Payload `/admin`)
+- HTTPS public URL for private review (with HTTP Basic Auth)
+- No changes to production WordPress or DNS
+- Secrets via Railway Variables (never in Git)
+
+### Repository configuration
+
+| File | Purpose |
+|------|---------|
+| `railway.toml` | Build/deploy config (Dockerfile, healthcheck) |
+| `Dockerfile.railway` | Monorepo build: `new-site/` + `migration/` assets |
+| `scripts/railway/docker-entrypoint.sh` | Volume permissions, optional bootstrap |
+| `scripts/railway/bootstrap.sh` | One-time content migration (run via SSH) |
+
+Healthcheck uses `/robots.txt` (no Basic Auth required). Homepage requires credentials.
 
 ---
 
-## Media storage
+## Access
 
 | Item | Detail |
 |------|--------|
-| Method | Local filesystem (`MEDIA_STORAGE_PATH=./media`) |
-| Docker | Named volume `media_staging` |
-| Backup | `tar czf media-backup.tar.gz media/` |
-| Production path | Same volume mount pattern; rsync or object storage optional |
+| **URL** | `https://onix-staging-web-production.up.railway.app` |
+| **Basic Auth** | `STAGING_AUTH_USER` / `STAGING_AUTH_PASSWORD` (set in Railway Variables — not in Git) |
+| **Payload admin** | `{URL}/admin` — separate CMS login (`STAGING_ADMIN_EMAIL`) |
+| **Indexing** | `noindex`, `robots.txt` → `Disallow: /` |
 
-Do not use ephemeral container filesystem without a volume.
-
----
-
-## Access protection
-
-HTTP Basic Auth is enforced by `src/middleware.ts` when:
-
-- `SITE_ENV=staging`
-- `STAGING_AUTH_USER` and `STAGING_AUTH_PASSWORD` are set
-
-Unauthenticated requests return **401**. Credentials must be stored as environment secrets, never in Git.
-
-`robots.txt` and `sitemap.xml` are excluded from auth (still noindex via headers on pages).
+See `docs/staging-review-guide.md` for the review checklist.
 
 ---
 
-## Search-engine protection (defence in depth)
+## Environment variables (Railway → `onix-staging-web`)
 
-1. HTTP Basic Auth
-2. `X-Robots-Tag: noindex, nofollow, noarchive` on all pages
-3. `<meta name="robots" content="noindex, nofollow">` in layout
-4. `robots.txt` → `Disallow: /`
-5. No GA4 on staging (`SITE_ENV=staging`)
-6. No Search Console submission
-7. Canonical URLs point to `onixdatacentres.com` (production), not staging hostname
+| Variable | Classification | Notes |
+|----------|----------------|-------|
+| `SITE_ENV` | REQUIRED | `staging` |
+| `PAYLOAD_SECRET` | REQUIRED | 32+ random chars |
+| `DATABASE_URL` | REQUIRED | `${{Postgres.DATABASE_URL}}` |
+| `NEXT_PUBLIC_SITE_URL` | REQUIRED | Railway public URL (no trailing slash) |
+| `STAGING_AUTH_USER` | STAGING_ONLY | HTTP Basic Auth username |
+| `STAGING_AUTH_PASSWORD` | STAGING_ONLY | HTTP Basic Auth password |
+| `STAGING_SEND_EMAIL` | STAGING_ONLY | `false` |
+| `STAGING_ADMIN_EMAIL` | STAGING_ONLY | Payload admin email |
+| `STAGING_ADMIN_PASSWORD` | STAGING_ONLY | Payload admin password |
+| `MEDIA_STORAGE_PATH` | REQUIRED | `/app/media` |
 
-Verify: `npm run staging:indexing-test` → `phase5/staging-indexing-test.md`
+Do **not** set `GA4_MEASUREMENT_ID`, production email providers, or production DNS on staging.
 
 ---
 
-## Migration pipeline (staging)
+## Deploy / update
 
-Idempotent — safe to re-run:
+Automatic deploys trigger on push to `cursor/phase5-staging-deployment-28a7`.
+
+Manual redeploy:
 
 ```bash
-npm run staging:migrate
-# Or step by step:
-npm run migrate:media
-npm run migrate:articles:resolve
-npm run migrate:pages          # MIGRATE_PAGES_SKIP_MEDIA=1 if media already imported
-npm run migrate:leadership
-npm run migrate:redirects
-npm run migrate:verify
-```
-
-Reconcile counts: `npm run staging:reconcile`
-
----
-
-## QA scripts
-
-| Command | Output |
-|---------|--------|
-| `npm run staging:indexing-test` | `phase5/staging-indexing-test.md` |
-| `npm run staging:crawl` | `phase5/staging-crawl.csv` |
-| `npm run staging:legacy-urls` | `phase5/legacy-url-final-check.csv` |
-| `npm run staging:article-warnings` | `phase5/article-warning-final.csv` |
-| `npm run staging:qa-reports` | page-visual, SEO, content completeness CSVs |
-| `npm run staging:verify` | indexing + crawl + legacy URLs |
-
-Set `STAGING_BASE_URL` to the deployed URL before running QA scripts.
-
----
-
-## Backup
-
-Before major QA changes:
-
-```bash
-# Database
-pg_dump $DATABASE_URL > staging-backup-$(date +%Y%m%d).sql
-
-# Media
-tar czf media-backup-$(date +%Y%m%d).tar.gz media/
+railway link -p onix-staging -s onix-staging-web
+railway redeploy --from-source -y
 ```
 
 ---
 
-## Deployment repeatability
+## Bootstrap content (one-time)
 
-1. Clone repository
-2. Copy `.env.staging` from secrets manager
-3. `docker compose -f docker-compose.staging.yml up --build -d`
-4. `npm run staging:migrate` (against staging DB)
-5. `npm run staging:admin`
-6. `npm run staging:verify`
+The Docker image includes migration tooling. Because `uploads.zip` is large, initial bootstrap used:
 
-No hidden manual steps beyond secrets configuration and media archive extraction (`migration/source/media/uploads.zip` → `.migration-work/uploads/`).
+1. **Database** — `pg_restore` from Phase 5 QA dump via Railway Postgres tunnel
+2. **Media** — `railway volume files upload` of pre-migrated `media/` archive, extracted on volume
+3. **Admin** — `npm run staging:admin` via SSH
+
+To re-run migration inside the container:
+
+```bash
+ssh railway-onix-staging-web   # after `railway ssh config`
+cd /app/new-site && MIGRATE_PAGES_SKIP_MEDIA=1 npm run staging:migrate
+npm run staging:admin
+```
 
 ---
 
-## Staging URL for reviewers
+## QA verification
 
-Configure DNS A/CNAME for `staging.onixdatacentres.com` → staging server IP.  
-Do **not** modify production `onixdatacentres.com` DNS.
+From a machine with Railway credentials:
 
-Provide reviewers credentials via secure channel (not Git). See `docs/staging-review-guide.md`.
+```bash
+export STAGING_BASE_URL=https://onix-staging-web-production.up.railway.app
+export STAGING_AUTH_USER=... STAGING_AUTH_PASSWORD=...
+npm run staging:indexing-test
+npm run staging:legacy-urls
+```
+
+Full crawl (requires DB access — run on container):
+
+```bash
+ssh railway-onix-staging-web "cd /app/new-site && npm run staging:crawl"
+```
+
+---
+
+## Media persistence
+
+- Volume: `onix-staging-media` → `/app/media`
+- Migrated library: ~1 GB, ~542 Payload media records
+- Do not use ephemeral container storage for uploads
+
+---
+
+## Production note
+
+This Railway environment is **temporary private staging only**. Production will deploy to Onix Data Centre infrastructure later. Do not use this project for production traffic.

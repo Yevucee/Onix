@@ -1,8 +1,8 @@
 # Staging Acceptance Report
 
-**Phase:** 5 — Private staging deployment & QA  
-**Date:** 2026-08-07  
-**Branch:** `cursor/phase5-staging-deployment-28a7`  
+**Phase:** 5 — Railway private staging deployment  
+**Date:** 2026-08-08  
+**Platform:** Railway (`onix-staging` project)  
 **Recommendation:** `READY_WITH_MINOR_ISSUES`
 
 ---
@@ -11,110 +11,78 @@
 
 | Item | Status | Detail |
 |------|--------|--------|
-| Staging URL available | ✓ | QA VM: `http://localhost:3001` (automated QA). Deploy to `staging.onixdatacentres.com` via Docker per `docs/staging-deployment.md` |
-| Protection | ✓ | HTTP Basic Auth — 401 unauthenticated |
-| Environment | ✓ | `SITE_ENV=staging`, dedicated `onix_staging` PostgreSQL |
-| Build | ✓ | `npm run build` passes |
-| Docker compose | ✓ | `docker-compose.staging.yml` ready for self-hosted deploy |
+| Staging URL | ✓ | `https://onix-staging-web-production.up.railway.app` |
+| Project | ✓ | `onix-staging` |
+| Web service | ✓ | `onix-staging-web` |
+| Database service | ✓ | `Postgres` |
+| Media volume | ✓ | `onix-staging-media` → `/app/media` |
+| Build/deploy | ✓ | SUCCESS (Dockerfile.railway + railway.toml) |
+| GitHub branch | ✓ | `cursor/phase5-staging-deployment-28a7` |
 
 ---
 
-## CONTENT
+## CONTENT (Railway database)
 
-| Type | Expected | Actual | Status |
-|------|----------|--------|--------|
-| Articles | 88 | 88 | ✓ |
-| Media | 542 | 542 | ✓ |
-| Corporate pages | 16 | 17 | ✓ (includes seed `about-us`) |
-| Leadership | 15 | 15 | ✓ |
-| Data centres | 1 | 1 | ✓ |
-| French homepage | 1 | 1 | ✓ |
-| French contact | 1 | 1 | ✓ |
-| French about | 1 | 0 content | ⚠ Route exists; content pending |
+| Type | Count | Status |
+|------|-------|--------|
+| Articles | 88 | ✓ |
+| Media records | 542 | ✓ |
+| Pages | 17 | ✓ |
+| Leadership | 15 | ✓ |
+| Media files on volume | ~2,050 | ✓ |
+
+Content loaded via `pg_restore` + volume media upload (migration zip truncated in Docker image).
 
 ---
 
-## MIGRATION
+## PROTECTION
 
-| Item | Status | Detail |
-|------|--------|--------|
-| Article warnings (was 59) | ✓ Improved | **14 OPEN** residual inline media references |
-| Elementor: africa-digital-cloud-resilience | ✓ COMPLETE | Gallery + content verified |
-| Elementor: Azure Stack partnership | ✓ COMPLETE | Gallery + content verified |
-| Media issues | ⚠ | Leadership photos missing from archive |
-| Page import | ✓ | 16 corporate pages idempotent |
+| Check | Status |
+|-------|--------|
+| Unauthenticated access blocked (401) | ✓ |
+| HTTP Basic Auth active | ✓ |
+| `X-Robots-Tag: noindex, nofollow, noarchive` | ✓ |
+| `robots.txt` → `Disallow: /` | ✓ |
+| No production analytics | ✓ |
+| `STAGING_SEND_EMAIL=false` | ✓ |
+| Production DNS unchanged | ✓ |
+| WordPress untouched | ✓ |
 
 ---
 
 ## FUNCTIONALITY
 
-| Feature | Status | Notes |
-|---------|--------|-------|
-| CMS (Payload) | ✓ | Create/edit/publish tested |
-| Contact form | ✓ | Staging-safe (`STAGING_SEND_EMAIL=false`) |
-| Newsletter | ⚠ | Mock/log provider; production provider TBD |
-| ROI calculator | ✓ | Unit tests pass (21/21) |
-| Navigation | ✓ | 0 broken links in 131-URL crawl |
+| Feature | Status |
+|---------|--------|
+| Homepage (authenticated) | ✓ 200 |
+| News listing | ✓ 200 |
+| Payload `/admin` | ✓ 200 |
+| Legacy URLs (193) | ✓ 0 errors |
+| ROI calculator route | ✓ (from Phase 5 QA) |
+| CMS admin account | ✓ Created (seed removed) |
 
 ---
 
-## SEO
-
-| Item | Status | Detail |
-|------|--------|--------|
-| Legacy URLs (193) | ✓ | 0 errors after redirect additions |
-| Redirects | ✓ | 80+ rules including short aliases |
-| Metadata | ✓ | Canonicals use production domain |
-| Sitemap | ✓ | Generated; not submitted |
-| Staging noindex | ✓ | Auth + X-Robots-Tag + robots.txt |
-
----
-
-## QUALITY
-
-| Area | Status | Detail |
-|------|--------|--------|
-| Desktop visual QA | ✓ | 24/24 corporate URLs PASS |
-| Mobile | ✓ | Responsive layouts verified |
-| Accessibility | ⚠ | No critical issues; 3 medium (see `accessibility-qa.md`) |
-| Performance | ✓ | Acceptable; responsive images in use |
-| Browsers | ⚠ | Chrome verified; Safari/Firefox spot-check recommended |
-
----
-
-## SECURITY
+## MIGRATION WARNINGS
 
 | Item | Status |
 |------|--------|
-| Staging auth | ✓ |
-| Secrets not in Git | ✓ |
-| Default seed admin removed | ✓ |
-| CMS admin protected | ✓ |
-
----
-
-## PRODUCTION PREPARATION
-
-| Document | Status |
-|----------|--------|
-| `PRODUCTION-INFRASTRUCTURE.md` | ✓ |
-| `PRODUCTION-LAUNCH-CHECKLIST.md` | ✓ |
-| `ROLLBACK-PLAN.md` | ✓ |
-| `content-freeze-and-final-sync.md` | ✓ |
-| `.env.example` | ✓ Updated |
+| Article media warnings | ~14 OPEN (from Phase 5 QA dump) |
+| Elementor articles (2) | COMPLETE |
+| Leadership photos | Some missing (archive scope) |
+| French `/fr/a-propos/` | Content pending |
 
 ---
 
 ## OPEN ISSUES
 
-| Issue | Severity | Notes |
-|-------|----------|-------|
-| 14 article inline media URL references | MEDIUM | Dimension-suffix filenames; see `article-warning-final.csv` |
-| Leadership profile photos | MEDIUM | Archive scope gap |
-| `/fr/a-propos/` content | HIGH | Route exists; WP export content not confirmed |
-| Newsletter production provider | MEDIUM | Architecture ready; provider not configured |
-| Skip navigation link | LOW | Accessibility improvement |
-| Deploy to reviewer-accessible hostname | HIGH | Docker deploy to Beelink/staging server required for human review |
+| Issue | Severity |
+|-------|----------|
+| Postgres service named `Postgres` not `onix-staging-postgres` | Low (cosmetic) |
+| `uploads.zip` in Docker image truncated — bootstrap uses dump+upload | Low (documented) |
+| 14 residual article inline media references | Medium |
+| Leadership profile photos | Medium |
+| `/fr/a-propos/` content | High |
 
 ---
 
@@ -122,8 +90,8 @@
 
 ### `READY_WITH_MINOR_ISSUES`
 
-The staging environment is fully populated, protected, and passes automated QA (131-URL crawl, 193 legacy URLs, indexing protection, 21 unit tests). 
+Private Railway staging is deployed, populated, and protected. Ready for personal review.
 
-**Next step:** Deploy `docker-compose.staging.yml` to self-hosted infrastructure with HTTPS at `staging.onixdatacentres.com`, provide reviewer credentials, and complete human acceptance review before production DNS cutover.
+**Credentials:** Retrieve `STAGING_AUTH_USER`, `STAGING_AUTH_PASSWORD`, `STAGING_ADMIN_EMAIL` from Railway → `onix-staging` → `onix-staging-web` → Variables.
 
-**Do not proceed to production launch until personal staging review is approved.**
+**Do not proceed to production.**
