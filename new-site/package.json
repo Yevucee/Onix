@@ -32,6 +32,7 @@
     "phase6:seed-groups-2-4": "tsx scripts/phase6/seed-groups-2-4.ts",
     "phase6:staging": "tsx scripts/phase6/phase6-staging.ts",
     "phase6:visual-qa": "tsx scripts/visual-audit/group1-qa.ts",
+    "staging:push-schema": "cross-env NODE_OPTIONS=--no-deprecation payload run scripts/staging/push-schema.ts",
     "staging:migrate": "tsx scripts/staging/migrate-all.ts",
     "staging:admin": "tsx scripts/staging/create-admin.ts",
     "staging:reconcile": "tsx scripts/staging/reconcile-content.ts",

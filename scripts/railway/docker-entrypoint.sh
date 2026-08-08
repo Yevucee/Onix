@@ -11,4 +11,12 @@ if [ "${RUN_BOOTSTRAP:-false}" = "true" ]; then
   echo "=== Bootstrap complete ==="
 fi
 
+# Ensure Payload schema matches code (new block tables after bootstrap).
+if [ "${SITE_ENV:-}" = "staging" ]; then
+  echo "=== Staging schema push ==="
+  su-exec nextjs sh -c "cd /app/new-site && NODE_OPTIONS=--no-deprecation node node_modules/payload/bin.js run scripts/staging/push-schema.ts" || {
+    echo "WARNING: staging schema push failed — app may error on page loads"
+  }
+fi
+
 exec su-exec nextjs "$@"
