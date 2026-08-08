@@ -125,12 +125,55 @@ async function seed() {
     slug: 'header-navigation',
     data: {
       items: [
-        { label: 'Our Solutions', url: '/about-us' },
-        { label: 'Senegal', url: '/senegal' },
-        { label: 'Infrastructure', url: '/about-us' },
-        { label: 'Blog', url: '/2025/11/13/what-is-peering/' },
+        { label: '🇬🇭 Ghana', url: '/', children: [{ label: '🇬🇭 Ghana', url: '/' }] },
+        { label: '🇸🇳 Senegal', url: '/o-home/senegal' },
+        {
+          label: 'Our Solutions',
+          url: '/home/our-solutions',
+          children: [
+            { label: 'Colocation', url: '/o-home/o-ghana/our-solutions#tangor' },
+            { label: 'Virtual machines', url: '/o-home/o-ghana/our-solutions#virtualmachines' },
+            { label: 'Managed Services', url: '/o-home/o-ghana/our-solutions#managedservices' },
+            { label: 'Cyber Security', url: '/o-home/o-ghana/our-solutions#cybersecurity' },
+            { label: 'Internet Exchange', url: '/o-home/o-ghana/our-solutions#internetexchange' },
+            { label: 'Carrier Neutrality', url: '/o-home/o-ghana/our-solutions#carriern' },
+            { label: 'Cloud and Connect', url: '/o-home/o-ghana/our-solutions#candc' },
+            { label: 'Peering', url: '/o-home/o-ghana/our-solutions#peering' },
+            { label: 'Finance', url: '/home/finance' },
+          ],
+        },
+        { label: 'Infrastructure', url: '/home/infrastructure' },
+        { label: 'Blog', url: '/blog' },
+        { label: 'Contact Us', url: '/home/contact-us' },
       ],
-      cta: { label: 'Contact Us', url: '/about-us' },
+      cta: { label: 'Contact Us', url: '/home/contact-us' },
+    },
+  })
+
+  await payload.updateGlobal({
+    slug: 'footer',
+    data: {
+      columns: [
+        {
+          heading: 'Navigate',
+          links: [
+            { label: 'About Us', url: '/o-home/about-us' },
+            { label: 'Certification', url: '/o-home/certification' },
+            { label: 'Sustainability', url: '/home/sustainability' },
+            { label: 'Privacy Policy', url: '/o-home/privacy-policy' },
+          ],
+        },
+        {
+          heading: 'Get in touch',
+          links: [
+            { label: 'info@onixdatacentres.com', url: 'mailto:info@onixdatacentres.com' },
+            { label: '+233 50 086 5266', url: 'tel:+233500865266' },
+            { label: '+221 77 668 41 10', url: 'tel:+221776684110' },
+          ],
+        },
+      ],
+      copyright: '© 2026 All Rights Reserved.',
+      legalLinks: [{ label: 'Privacy Policy', url: '/o-home/privacy-policy' }],
     },
   })
 

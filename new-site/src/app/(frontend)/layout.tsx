@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
+import { LIVE_HEADER_CTA, LIVE_HEADER_NAV } from '@/data/live-site'
 import { getPayloadClient } from '@/lib/payload'
 import { getStagingRobotsMeta } from '@/lib/staging'
 import './styles.css'
@@ -19,30 +20,23 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-const defaultNav = [
-  { label: 'Our Solutions', url: '/home/our-solutions' },
-  { label: 'Infrastructure', url: '/home/infrastructure' },
-  { label: 'News', url: '/news' },
-  { label: 'About Us', url: '/about-us' },
-  { label: 'Contact Us', url: '/contact-us' },
-]
-
 export default async function FrontendLayout({ children }: { children: React.ReactNode }) {
   const payload = await getPayloadClient()
-  const [header, footer, siteSettings] = await Promise.all([
+  const [header, siteSettings] = await Promise.all([
     payload.findGlobal({ slug: 'header-navigation' }).catch(() => null),
-    payload.findGlobal({ slug: 'footer' }).catch(() => null),
     payload.findGlobal({ slug: 'site-settings' }).catch(() => null),
   ])
 
   const logo = typeof header?.logo === 'object' && header.logo?.url ? header.logo.url : undefined
-  const navItems = header?.items?.length
-    ? header.items.map((item) => ({
-        label: item.label,
-        url: item.url,
-        children: item.children?.map((child) => ({ label: child.label, url: child.url })),
-      }))
-    : defaultNav
+
+  // CHECKPOINT 1B: live production site is the navigation source of truth.
+  // Payload header-navigation global is incomplete (missing dropdowns, language switch).
+  const navItems = LIVE_HEADER_NAV
+
+  const cta = {
+    label: header?.cta?.label || LIVE_HEADER_CTA.label,
+    url: header?.cta?.url || LIVE_HEADER_CTA.url,
+  }
 
   return (
     <html lang="en">
@@ -52,27 +46,9 @@ export default async function FrontendLayout({ children }: { children: React.Rea
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <Header
-          logoUrl={logo}
-          siteName={siteSettings?.siteName || 'Onix Data Centre'}
-          items={navItems}
-          cta={{
-            label: header?.cta?.label ?? 'Contact Us',
-            url: header?.cta?.url ?? '/about-us',
-          }}
-        />
+        <Header logoUrl={logo} siteName={siteSettings?.siteName || 'Onix Data Centres'} items={navItems} cta={cta} />
         <main id="main-content">{children}</main>
-        <Footer
-          columns={(footer?.columns || []).map((column) => ({
-            heading: column.heading ?? undefined,
-            links: column.links?.map((link) => ({ label: link.label, url: link.url })) ?? [],
-          }))}
-          copyright={footer?.copyright || undefined}
-          legalLinks={(footer?.legalLinks || [{ label: 'Privacy Policy', url: '/about-us' }]).map((link) => ({
-            label: link.label,
-            url: link.url,
-          }))}
-        />
+        <Footer />
       </body>
     </html>
   )

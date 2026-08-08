@@ -25,7 +25,8 @@ This checklist consolidates outstanding items from Phases 1–4 and Phase 5 depl
 | Staging PostgreSQL (`onix_staging`) | BLOCKING | RESOLVED | Dedicated DB; not dev or production |
 | Staging media persistence | BLOCKING | RESOLVED | `./media` volume path; Docker volume in compose |
 | Next.js + Payload build | BLOCKING | RESOLVED | `npm run build` passes |
-| Staging app running | BLOCKING | RESOLVED | Port 3001 on QA VM; Docker compose for self-host |
+| Staging app running | BLOCKING | RESOLVED | Railway `onix-staging-web` at `onix-staging-web-production.up.railway.app` |
+| Platform | — | RESOLVED | Railway (GitHub-connected); not Beelink |
 | HTTP Basic Auth | BLOCKING | RESOLVED | 401 unauthenticated; credentials in env secrets |
 | Search-engine protection | BLOCKING | RESOLVED | Auth + noindex + robots.txt Disallow |
 | Default seed admin removed | HIGH | RESOLVED | `admin@onix.local` removed; staging admin via script |

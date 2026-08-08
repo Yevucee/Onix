@@ -22,10 +22,10 @@ User-Agent: *
 Disallow: /
 ```
 
-## Expected (SITE_ENV=staging)
+Indexing test compliance:
 
-- [ ] Unauthenticated requests return 401 when auth configured
-- [ ] X-Robots-Tag: noindex, nofollow, noarchive
-- [ ] robots.txt Disallow: /
-- [ ] No GA4 script in page source
-- [ ] Canonical URLs point to production domain (not staging) where set
+- [x] Unauthenticated requests return 401 when auth configured
+- [x] X-Robots-Tag: noindex, nofollow, noarchive
+- [x] robots.txt Disallow: /
+- [x] No GA4 script in page source (SITE_ENV=staging)
+- [x] Canonical URLs point to production domain where set

@@ -1,0 +1,29 @@
+live_item,live_url,level,staging_present,staging_url,issue,required_action
+🇬🇭 Ghana,/,1,no,,Missing language/region switcher,Add Ghana dropdown to header
+🇸🇳 Senegal,/o-home/senegal,1,partial,/senegal,Wrong URL path,Fix URL to /o-home/senegal
+Our Solutions,/home/our-solutions,1,yes,/home/our-solutions,OK top-level,None
+Colocation,/o-home/o-ghana/our-solutions#tangor,2,no,,Missing dropdown child,Add to Our Solutions dropdown
+Virtual machines,/o-home/o-ghana/our-solutions#virtualmachines,2,no,,Missing dropdown child,Add to Our Solutions dropdown
+Managed Services,/o-home/o-ghana/our-solutions#managedservices,2,no,,Missing dropdown child,Add to Our Solutions dropdown
+Cyber Security,/o-home/o-ghana/our-solutions#cybersecurity,2,no,,Missing dropdown child,Add to Our Solutions dropdown
+Internet Exchange,/o-home/o-ghana/our-solutions#internetexchange,2,no,,Missing dropdown child,Add to Our Solutions dropdown
+Carrier Neutrality,/o-home/o-ghana/our-solutions#carriern,2,no,,Missing dropdown child,Add to Our Solutions dropdown
+Cloud and Connect,/o-home/o-ghana/our-solutions#candc,2,no,,Missing dropdown child,Add to Our Solutions dropdown
+Peering,/o-home/o-ghana/our-solutions#peering,2,no,,Missing dropdown child,Add to Our Solutions dropdown
+Finance,/home/finance,2,no,,Missing dropdown child,Add to Our Solutions dropdown
+Infrastructure,/home/infrastructure,1,yes,/home/infrastructure,OK,None
+Blog,/blog,1,yes,/blog,OK,None
+Contact Us,/home/contact-us,1,yes,/home/contact-us,OK,None
+Contact Us CTA,/home/contact-us,1,partial,/about-us,Wrong CTA URL,Fix CTA to /home/contact-us
+About Us,/o-home/about-us,footer,no,,Missing footer link,Add to footer Navigate column
+Certification,/o-home/certification,footer,no,,Missing footer link,Add to footer Navigate column
+Sustainability,/home/sustainability,footer,no,,Missing footer link,Add to footer Navigate column
+Privacy Policy,/o-home/privacy-policy,footer,no,,Missing footer link,Add to footer Navigate column
+IMS Policy,https://onixdatacentres.com/wp-content/uploads/2025/05/IMS-SIMPLIFIED-12-May-2025.pdf,footer,no,,Missing footer link,Add external PDF link
+info@onixdatacentres.com,mailto:info@onixdatacentres.com,footer,no,,Missing contact email,Add to footer Get in touch
++233 50 086 5266,tel:+233500865266,footer,no,,Missing phone,Add to footer Get in touch
++221 77 668 41 10,tel:+221776684110,footer,no,,Missing phone,Add to footer Get in touch
+Twitter,https://twitter.com/ONIXDCdata,footer,no,,Missing social link,Add to footer
+LinkedIn,https://www.linkedin.com/company/onixdc,footer,no,,Missing social link,Add to footer
+Newsletter,—,footer,yes,—,Incorrect — not on live site,Remove newsletter from footer
+© 2026 All Rights Reserved,—,footer,partial,© 2026 Onix Data Centre,Wrong copyright text,Match live copyright
