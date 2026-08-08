@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'onixdatacentres.com', pathname: '/wp-content/uploads/**' },
     ],
     localPatterns: [
-      { pathname: '/api/media/file/**' },
-      { pathname: '/images/**' },
+      { pathname: '/api/media/file/**', search: '' },
+      { pathname: '/images/**', search: '' },
     ],
   },
 }
