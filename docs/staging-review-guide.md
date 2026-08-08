@@ -6,9 +6,8 @@ Use this guide when reviewing the private staging deployment of the new Onix web
 
 | Item | Detail |
 |------|--------|
-| **Staging URL** | `https://staging.onixdatacentres.com` (when deployed via Docker on your server) |
-| **QA environment** | Phase 5 automated QA ran against `http://localhost:3001` on the build VM |
-| **Authentication** | HTTP Basic Auth — username and password provided separately via secure channel |
+| **Staging URL** | `https://onix-staging-web-production.up.railway.app` |
+| **Authentication** | HTTP Basic Auth — retrieve `STAGING_AUTH_USER` and `STAGING_AUTH_PASSWORD` from Railway Dashboard → `onix-staging` → `onix-staging-web` → Variables |
 | **CMS admin** | `{STAGING_URL}/admin` — use Payload credentials (not Basic Auth password) |
 | **Indexing** | Staging is `noindex` — do not share URLs publicly |
 
