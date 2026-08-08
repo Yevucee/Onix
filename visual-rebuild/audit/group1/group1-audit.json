@@ -1,0 +1,776 @@
+{
+  "about-us": {
+    "live": {
+      "url": "https://onixdatacentres.com/about-us/",
+      "title": "About Us – Onix Data Centre",
+      "metaDescription": "",
+      "canonical": "https://onixdatacentres.com/about-us/",
+      "h1": [],
+      "h2": [
+        "State-of-the-Art Data Centres in West Africa for Global Standards",
+        "Leading Provider of Tier IV Colocation in West Africa"
+      ],
+      "sections": [
+        "H2: State-of-the-Art Data Centres in West Africa for Global Standards",
+        "H2: Leading Provider of Tier IV Colocation in West Africa",
+        "H3: Our Leadership Team",
+        "H3: Michael Nahon",
+        "H3: Paul Richards",
+        "H3: Navigate",
+        "H3: Get in touch"
+      ],
+      "images": [
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/elementor/thumbs/ONIX-DATA-CENTER-KEELSON-STUDIOS-61-scaled-q3d440c8ucjkm",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-61",
+          "w": 700,
+          "h": 700
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2021/11/Screenshot-2021-11-15-at-13.55.02.png",
+          "alt": "",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2021/11/Screenshot-2021-11-15-at-13.56.00.png",
+          "alt": "",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "src": "https://pixel.wp.com/g.gif?v=ext&blog=220638620&post=5148&tz=0&srv=onixdatacentres.com&hp=atomic&ac=2&amp=0&j=1%3A16.1-b",
+          "alt": "",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        }
+      ],
+      "hasForm": false,
+      "stats": [
+        "The flagship facility is the Tier IV certified Data Centre in Accra, Ghana. The Data Centre in Dakar, Senegal is located at the 2Africa cable landing station and offers direct access to all major landing cables in Senegal.",
+        "Onix has a world class executive team with a track record of success in Africa. Onix majority shareholder is African Infrastructure Investment Managers (Pty) Ltd (“AIIM”) who are committed to the long-term development of African infrastructure and the uplifting of its people."
+      ]
+    },
+    "staging": {
+      "url": "https://onix-staging-web-production.up.railway.app/about-us",
+      "title": "About Us – Onix Data Centre",
+      "metaDescription": "",
+      "canonical": "http://localhost:3000/about-us",
+      "h1": [
+        "About Us"
+      ],
+      "h2": [
+        "Partner with Onix"
+      ],
+      "sections": [
+        "H1: About Us",
+        "H2: Partner with Onix",
+        "H3: Navigate",
+        "H3: Get in touch"
+      ],
+      "images": [],
+      "ctas": [
+        {
+          "text": "Contact Us",
+          "href": "/home/contact-us"
+        },
+        {
+          "text": "Contact us",
+          "href": "/about-us"
+        }
+      ],
+      "hasForm": false,
+      "stats": []
+    }
+  },
+  "our-solutions": {
+    "live": {
+      "url": "https://onixdatacentres.com/home/our-solutions/",
+      "title": "Our Solutions – Onix Data Centre",
+      "metaDescription": "",
+      "canonical": "https://onixdatacentres.com/home/our-solutions/",
+      "h1": [],
+      "h2": [
+        "Welcome to Onix Data Centres!",
+        "Here, we offer bespoke solutions tailored to your unique needs. Our team is ready to help you find the perfect fit. Explore below to see how we can elevate your data management, with streamlined efficiency and top-tier security.",
+        "Virtual Machines",
+        "Cyber Security",
+        "Internet Exchange"
+      ],
+      "sections": [
+        "H2: Welcome to Onix Data Centres!",
+        "H2: Here, we offer bespoke solutions tailored to your unique needs. Our team is ready to help you find the perfect fit. Explore below to see how we can elevate your data management, with streamlined efficiency and top-tier security.",
+        "H3: Colocation",
+        "H2: Virtual Machines",
+        "H3: Managed Services",
+        "H2: Cyber Security",
+        "H2: Internet Exchange",
+        "H3: Carrier Neutrality",
+        "H3: Cloud and Content",
+        "H3: Peering",
+        "H3: Get in touch with us today",
+        "H3: Navigate",
+        "H3: Get in touch"
+      ],
+      "images": [
+        {
+          "src": "https://pixel.wp.com/g.gif?v=ext&blog=220638620&post=7155&tz=0&srv=onixdatacentres.com&hp=atomic&ac=2&amp=0&j=1%3A16.1-a",
+          "alt": "",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact us",
+          "href": "https://onixdatacentres.com/o-home/o-ghana/contact-us/"
+        }
+      ],
+      "hasForm": false,
+      "stats": [
+        "Our World-Class Tier IV data centre currently houses 170 3kW and 5kW racks in module one.",
+        "Our Tier IV certification ensures that our facility meets the highest industry standards for uptime and reliability.",
+        "A pod of 30 or 50 racks available for individual clients"
+      ]
+    },
+    "staging": {
+      "url": "https://onix-staging-web-production.up.railway.app/home/our-solutions",
+      "title": "Our Solutions – Onix Data Centre – Onix Data Centre",
+      "metaDescription": "",
+      "canonical": "https://onixdatacentres.com/home/our-solutions/",
+      "h1": [],
+      "h2": [
+        "Welcome to Onix Data Centres!",
+        "Here, we offer bespoke solutions tailored to your unique needs. Our team is ready to help you find the perfect fit. Explore below to see how we can elevate your data management, with streamlined efficiency and top-tier security.",
+        "Colocation",
+        "Virtual Machines",
+        "Managed Services",
+        "Cyber Security",
+        "Internet Exchange",
+        "Carrier Neutrality",
+        "Cloud and Content",
+        "Peering",
+        "Get in touch with us today",
+        "Read more",
+        "Contact us"
+      ],
+      "sections": [
+        "H2: Welcome to Onix Data Centres!",
+        "H2: Here, we offer bespoke solutions tailored to your unique needs. Our team is ready to help you find the perfect fit. Explore below to see how we can elevate your data management, with streamlined efficiency and top-tier security.",
+        "H2: Colocation",
+        "H2: Virtual Machines",
+        "H2: Managed Services",
+        "H2: Cyber Security",
+        "H2: Internet Exchange",
+        "H2: Carrier Neutrality",
+        "H2: Cloud and Content",
+        "H2: Peering",
+        "H2: Get in touch with us today",
+        "H2: Read more",
+        "H2: Contact us",
+        "H3: Navigate",
+        "H3: Get in touch"
+      ],
+      "images": [],
+      "ctas": [
+        {
+          "text": "Contact Us",
+          "href": "/home/contact-us"
+        },
+        {
+          "text": "Contact us",
+          "href": "https://onixdatacentres.com/o-home/o-ghana/contact-us/"
+        }
+      ],
+      "hasForm": false,
+      "stats": []
+    }
+  },
+  "infrastructure": {
+    "live": {
+      "url": "https://onixdatacentres.com/home/infrastructure/",
+      "title": "Infrastructure – Onix Data Centre",
+      "metaDescription": "",
+      "canonical": "https://onixdatacentres.com/home/infrastructure/",
+      "h1": [],
+      "h2": [
+        "Building",
+        "We hope that this detailed information about our services and infrastructure provides you with a better understanding of how we can support your business needs. Our state-of-the-art data centre is designed to meet the demands of businesses of all sizes, and our team is dedicated to ensuring that you have the necessary infrastructure to thrive in today's digital age."
+      ],
+      "sections": [
+        "H2: Building",
+        "H3: Building",
+        "H3: Secure Power Supply",
+        "H3: Phase 1",
+        "H3: Phase 2",
+        "H3: Sustainable Operations",
+        "H3: Advanced Security Measures",
+        "H3: Optimal Temperature Control",
+        "H3: Secure Interconnection Services",
+        "H3: Comfortable Business Space",
+        "H3: Cross Connects",
+        "H2: We hope that this detailed information about our services and infrastructure provides you with a better understanding of how we can support your business needs. Our state-of-the-art data centre is designed to meet the demands of businesses of all sizes, and our team is dedicated to ensuring that you have the necessary infrastructure to thrive in today's digital age.",
+        "H3: Get in touch with us today",
+        "H3: Navigate",
+        "H3: Get in touch"
+      ],
+      "images": [
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2023/01/ONIX-DATA-CENTER-KEELSON-STUDIOS-5-scaled.jpg",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-5",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2023/01/ONIX-DATA-CENTER-KEELSON-STUDIOS-3-scaled.jpg",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-3",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2023/01/ONIX-DATA-CENTER-KEELSON-STUDIOS-51-scaled.jpg",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-51",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2023/01/ONIX-DATA-CENTER-KEELSON-STUDIOS-2-scaled.jpg",
+          "alt": "Building of Onix Data Centres Accra",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2023/01/ONIX-DATA-CENTER-KEELSON-STUDIOS-5-scaled.jpg",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-5",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2023/01/ONIX-DATA-CENTER-KEELSON-STUDIOS-3-scaled.jpg",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-3",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2023/01/ONIX-DATA-CENTER-KEELSON-STUDIOS-83-scaled.jpg",
+          "alt": "",
+          "w": 513,
+          "h": 446
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2023/01/ONIX-DATA-CENTER-KEELSON-STUDIOS-2-scaled.jpg",
+          "alt": "Building of Onix Data Centres Accra",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2021/12/IMG_9660-scaled.jpg",
+          "alt": "",
+          "w": 535,
+          "h": 446
+        },
+        {
+          "src": "https://pixel.wp.com/g.gif?v=ext&blog=220638620&post=4839&tz=0&srv=onixdatacentres.com&hp=atomic&ac=2&amp=0&j=1%3A16.1-b",
+          "alt": "",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact us",
+          "href": "http://8nt.402.myftpupload.com/o-contact-us/"
+        }
+      ],
+      "hasForm": false,
+      "stats": [
+        "The Tier IV certified facility secures its power from the solar farm during daylight hours and from the power grid at night.",
+        "3 x 456kw generators in place should the solar and/or grid not be available.",
+        "With an uptime of 99.995% redundancy is a key feature of Onix in Accra",
+        "Phase 2 will add an additional 1450m² of concrete buildings being modules 3 and  4 and as well as associated infrastructure. The infrastructure which has been certified Tier IV by the Uptime Institute provides redundancy of power, cooling, connectivity and fire suppression.",
+        "Onix solar farm has 2200 panels and provides daytime energy to the data centre, with a power peak of 640kW helping to reduce the reliance on grid energy."
+      ]
+    },
+    "staging": {
+      "url": "https://onix-staging-web-production.up.railway.app/home/infrastructure",
+      "title": "Infrastructure – Onix Data Centre – Onix Data Centre",
+      "metaDescription": "",
+      "canonical": "https://onixdatacentres.com/home/infrastructure/",
+      "h1": [],
+      "h2": [
+        "Building",
+        "Building",
+        "Secure Power Supply",
+        "Sustainable Operations",
+        "Advanced Security Measures",
+        "Optimal Temperature Control",
+        "Secure Interconnection Services",
+        "Comfortable Business Space",
+        "Cross Connects",
+        "We hope that this detailed information about our services and infrastructure provides you with a better understanding of how we can support your business needs. Our state-of-the-art data centre is designed to meet the demands of businesses of all sizes, and our team is dedicated to ensuring that you have the necessary infrastructure to thrive in today's digital age.",
+        "Get in touch with us today",
+        "Contact us"
+      ],
+      "sections": [
+        "H2: Building",
+        "H2: Building",
+        "H2: Secure Power Supply",
+        "H2: Sustainable Operations",
+        "H2: Advanced Security Measures",
+        "H2: Optimal Temperature Control",
+        "H2: Secure Interconnection Services",
+        "H2: Comfortable Business Space",
+        "H2: Cross Connects",
+        "H2: We hope that this detailed information about our services and infrastructure provides you with a better understanding of how we can support your business needs. Our state-of-the-art data centre is designed to meet the demands of businesses of all sizes, and our team is dedicated to ensuring that you have the necessary infrastructure to thrive in today's digital age.",
+        "H2: Get in touch with us today",
+        "H2: Contact us",
+        "H3: Navigate",
+        "H3: Get in touch"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FONIX-DATA-CENTER-KEELSON-STUDIOS-3-scaled-1200x800.jpg&w=1920&q=75",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-3",
+          "w": 451,
+          "h": 192
+        },
+        {
+          "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FONIX-DATA-CENTER-KEELSON-STUDIOS-51-scaled-1200x800.jpg&w=1920&q=75",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-51",
+          "w": 451,
+          "h": 192
+        },
+        {
+          "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FONIX-DATA-CENTER-KEELSON-STUDIOS-2-scaled-1200x800.jpg&w=1920&q=75",
+          "alt": "Building of Onix Data Centres Accra",
+          "w": 451,
+          "h": 192
+        },
+        {
+          "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FONIX-DATA-CENTER-KEELSON-STUDIOS-5-scaled-1200x800.jpg&w=1920&q=75",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-5",
+          "w": 451,
+          "h": 192
+        },
+        {
+          "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FONIX-DATA-CENTER-KEELSON-STUDIOS-83-scaled-1200x800.jpg&w=1920&q=75",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-83",
+          "w": 640,
+          "h": 427
+        },
+        {
+          "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FONIX-DATA-CENTER-KEELSON-STUDIOS-2-scaled-1200x800.jpg&w=1920&q=75",
+          "alt": "Building of Onix Data Centres Accra",
+          "w": 640,
+          "h": 427
+        },
+        {
+          "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FIMG_9660-scaled-1200x800.jpg&w=1920&q=75",
+          "alt": "IMG_9660",
+          "w": 640,
+          "h": 427
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact Us",
+          "href": "/home/contact-us"
+        },
+        {
+          "text": "Contact us",
+          "href": "http://8nt.402.myftpupload.com/o-contact-us/"
+        }
+      ],
+      "hasForm": false,
+      "stats": []
+    }
+  },
+  "senegal": {
+    "live": {
+      "url": "https://onixdatacentres.com/o-home/senegal/",
+      "title": "Senegal 🇸🇳 – Onix Data Centre",
+      "metaDescription": "",
+      "canonical": "https://onixdatacentres.com/o-home/senegal/",
+      "h1": [
+        "1er neutral CLS datacenter en Afrique"
+      ],
+      "h2": [],
+      "sections": [
+        "H1: 1er neutral CLS datacenter en Afrique",
+        "H3: Fournisseur de premier plan de colocation de niveau IV",
+        "H3: Expertise et Engagement",
+        "H3: Qui Sommes Nous",
+        "H3: Navigate",
+        "H3: Get in touch"
+      ],
+      "images": [
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2023/01/ONIX-DATA-CENTER-KEELSON-STUDIOS-51-1024x683.jpg",
+          "alt": "",
+          "w": 146,
+          "h": 97
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2023/01/ONIX-DATA-CENTER-KEELSON-STUDIOS-40-1024x683.jpg",
+          "alt": "",
+          "w": 243,
+          "h": 162
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2023/03/ONIX-DATA-CENTER-KEELSON-STUDIOS-61-1024x683.jpg",
+          "alt": "",
+          "w": 374,
+          "h": 250
+        },
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/2023/01/ONIX-DATA-CENTER-KEELSON-STUDIOS-62-1024x683.jpg",
+          "alt": "Server racks inside a modern Onix data centre, showing secure infrastructure, organised cabling and a controlled technical environment.",
+          "w": 187,
+          "h": 125
+        },
+        {
+          "src": "https://pixel.wp.com/g.gif?v=ext&blog=220638620&post=5432&tz=0&srv=onixdatacentres.com&hp=atomic&ac=2&amp=0&j=1%3A16.1-b",
+          "alt": "",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/o-home/senegal/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/o-home/senegal/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/o-home/senegal/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/o-home/senegal/contact-us/"
+        },
+        {
+          "text": "Learn more",
+          "href": "https://onixdatacentres.com/senegal/about-us/"
+        },
+        {
+          "text": "Learn more",
+          "href": "http://8nt.402.myftpupload.com/senegal/about-us/"
+        }
+      ],
+      "hasForm": false,
+      "stats": [
+        "ONIX Datacenter au Sénégal c’est une infrastructure de Datacenter de dernière génération Neutre vis á vis des fournisseurs d’accès internet et idéalement situé á la station d’atterrissage du câble 2Africa. Ce centre sera équipé des dernières technologies en matière de sécurité, de refroidissement, d’alimentation énergétique et de redondance pour satisfaire á la certification Uptime Tier 3. Nos installations permettront ainsi de garantir á nos clients un taux de disponibilité des ressources hébergées de 99,98% ce qui représente une indisponibilité annuel maximale de moins de 1h30mn."
+      ]
+    },
+    "staging": {
+      "url": "https://onix-staging-web-production.up.railway.app/o-home/senegal",
+      "title": "Senegal 🇸🇳 – Onix Data Centre – Onix Data Centre",
+      "metaDescription": "",
+      "canonical": "https://onixdatacentres.com/o-home/senegal/",
+      "h1": [],
+      "h2": [
+        "1er neutral CLS datacenter en Afrique",
+        "Fournisseur de premier plan de colocation de niveau IV",
+        "Expertise et Engagement",
+        "Qui Sommes Nous",
+        "Navigate",
+        "Get in touch",
+        "© 2026 All Rights Reserved.",
+        "Learn more",
+        "Learn more"
+      ],
+      "sections": [
+        "H2: 1er neutral CLS datacenter en Afrique",
+        "H2: Fournisseur de premier plan de colocation de niveau IV",
+        "H2: Expertise et Engagement",
+        "H2: Qui Sommes Nous",
+        "H2: Navigate",
+        "H2: Get in touch",
+        "H2: © 2026 All Rights Reserved.",
+        "H2: Learn more",
+        "H2: Learn more",
+        "H3: Navigate",
+        "H3: Get in touch"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FONIX-DATA-CENTER-KEELSON-STUDIOS-51-scaled-1200x800.jpg&w=1920&q=75",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-51",
+          "w": 640,
+          "h": 427
+        },
+        {
+          "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FONIX-DATA-CENTER-KEELSON-STUDIOS-40-scaled-1200x800.jpg&w=1920&q=75",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-40",
+          "w": 640,
+          "h": 427
+        },
+        {
+          "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FONIX-DATA-CENTER-KEELSON-STUDIOS-61-scaled-1200x800.jpg&w=1920&q=75",
+          "alt": "ONIX DATA CENTER- KEELSON STUDIOS-61",
+          "w": 640,
+          "h": 427
+        },
+        {
+          "src": "/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FONIX-DATA-CENTER-KEELSON-STUDIOS-62-scaled-1200x800.jpg&w=1920&q=75",
+          "alt": "Server racks inside a modern Onix data centre, showing secure infrastructure, organised cabling and a controlled technical environment.",
+          "w": 640,
+          "h": 427
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact Us",
+          "href": "/home/contact-us"
+        },
+        {
+          "text": "Learn more",
+          "href": "https://onixdatacentres.com/senegal/about-us/"
+        },
+        {
+          "text": "Learn more",
+          "href": "http://8nt.402.myftpupload.com/senegal/about-us/"
+        }
+      ],
+      "hasForm": false,
+      "stats": [
+        "ONIX Datacenter au Sénégal c’est une infrastructure de Datacenter de dernière génération Neutre vis á vis des fournisseurs d’accès internet et idéalement situé á la station d’atterrissage du câble 2Africa. Ce centre sera équipé des dernières technologies en matière de sécurité, de refroidissement, d’alimentation énergétique et de redondance pour satisfaire á la certification Uptime Tier 3. Nos installations permettront ainsi de garantir á nos clients un taux de disponibilité des ressources hébergées de 99,98% ce qui représente une indisponibilité annuel maximale de moins de 1h30mn. Avec des services allant de l’hébergement de ressources communément appelé colocation, au cloud avec des partenaires tels que Microsoft Azure, AWS, ou encore Console Connect : sans oublier les solutions de sécurité managées via CCDOC ; nous sommes confiants que ce centre répondra aux besoins croissants de nos clients en matière de services sécurisés et de traitement rapide des données."
+      ]
+    }
+  },
+  "leadership": {
+    "live": {
+      "url": "https://onixdatacentres.com/o-home/bretttucker/",
+      "title": "Brett Tucker – Onix Data Centre",
+      "metaDescription": "",
+      "canonical": "https://onixdatacentres.com/o-home/bretttucker/",
+      "h1": [
+        "Brett Tucker"
+      ],
+      "h2": [],
+      "sections": [
+        "H1: Brett Tucker",
+        "H3: +27 828 678 117",
+        "H3: brett@onixdatacentres.com",
+        "H3: Navigate",
+        "H3: Get in touch"
+      ],
+      "images": [
+        {
+          "src": "https://onixdatacentres.com/wp-content/uploads/elementor/thumbs/Brett-Tucker-qf5i97w0ovta4s7pdd845edjdb4t4lr52sjs00r3dc.",
+          "alt": "Brett Tucker",
+          "w": 191,
+          "h": 191
+        },
+        {
+          "src": "https://pixel.wp.com/g.gif?v=ext&blog=220638620&post=6673&tz=0&srv=onixdatacentres.com&hp=atomic&ac=2&amp=0&j=1%3A16.1-b",
+          "alt": "",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        }
+      ],
+      "hasForm": false,
+      "stats": []
+    },
+    "staging": {
+      "url": "https://onix-staging-web-production.up.railway.app/o-home/bretttucker",
+      "title": "Brett Tucker – Onix Data Centre",
+      "metaDescription": "Leadership",
+      "canonical": "",
+      "h1": [
+        "Brett Tucker"
+      ],
+      "h2": [],
+      "sections": [
+        "H1: Brett Tucker",
+        "H3: Navigate",
+        "H3: Get in touch"
+      ],
+      "images": [],
+      "ctas": [
+        {
+          "text": "Contact Us",
+          "href": "/home/contact-us"
+        }
+      ],
+      "hasForm": false,
+      "stats": []
+    }
+  },
+  "contact-us": {
+    "live": {
+      "url": "https://onixdatacentres.com/contact-us/",
+      "title": "Contact Us – Onix Data Centre",
+      "metaDescription": "",
+      "canonical": "https://onixdatacentres.com/contact-us/",
+      "h1": [
+        "Send us a message"
+      ],
+      "h2": [
+        "We would love to hear from you",
+        "Stay Connected"
+      ],
+      "sections": [
+        "H2: We would love to hear from you",
+        "H2: Stay Connected",
+        "H3: International Head Office",
+        "H3: Ghana Head Office",
+        "H3: Onix Data Centre",
+        "H3: +233 50 086 5266",
+        "H3: +233 50 086 5266",
+        "H3: info@onixdatacentres.com",
+        "H3: Senegal Head Office",
+        "H3: Onix Data Centre",
+        "H3: +221 77 668 41 10",
+        "H3: Senegal@onixdatacentres.com",
+        "H1: Send us a message",
+        "H3: Navigate",
+        "H3: Get in touch"
+      ],
+      "images": [
+        {
+          "src": "https://pixel.wp.com/g.gif?v=ext&blog=220638620&post=4846&tz=0&srv=onixdatacentres.com&hp=atomic&ac=2&amp=0&j=1%3A16.0-a",
+          "alt": "",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://onixdatacentres.com/home/contact-us/"
+        }
+      ],
+      "hasForm": true,
+      "stats": [
+        "6th Floor, International House, 4 Maddox Street, Mayfair, London, W1S 1QP, UK",
+        "8 Avenue Léopold Sédar Senghor, Place de l’indépendance, Dakar, Sénégal",
+        "2Africa Landing station,  Almadies, Dakar"
+      ]
+    },
+    "staging": {
+      "url": "https://onix-staging-web-production.up.railway.app/contact-us",
+      "title": "Contact Us – Onix Data Centre",
+      "metaDescription": "Contact Onix Data Centre",
+      "canonical": "",
+      "h1": [
+        "Contact Us"
+      ],
+      "h2": [],
+      "sections": [
+        "H1: Contact Us",
+        "H3: Navigate",
+        "H3: Get in touch"
+      ],
+      "images": [],
+      "ctas": [
+        {
+          "text": "Contact Us",
+          "href": "/home/contact-us"
+        }
+      ],
+      "hasForm": true,
+      "stats": []
+    }
+  }
+}

@@ -44,6 +44,8 @@ function RichSection({ title, content }: { title: string; content?: LexicalRoot 
 
 export function DataCentrePageTemplate({ centre, breadcrumbs }: { centre: DataCentre; breadcrumbs: Crumb[] }) {
   const heroImage = getMediaUrl(centre.heroImage, 'hero')
+  const headline = centre.summary && centre.summary.length < 120 ? centre.summary : centre.name
+  const subheading = centre.summary && centre.summary.length >= 120 ? centre.summary : undefined
 
   return (
     <>
@@ -53,10 +55,10 @@ export function DataCentrePageTemplate({ centre, breadcrumbs }: { centre: DataCe
           <div className="grid items-center gap-10 py-12 lg:grid-cols-2">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-[var(--onix-red)]">
-                {[centre.city, centre.country].filter(Boolean).join(', ')}
+                {[centre.name, centre.city, centre.country].filter(Boolean).join(' · ')}
               </p>
-              <h1 className="onix-heading-dark mt-2 text-[40px] font-semibold leading-[48px]">{centre.name}</h1>
-              {centre.summary && <p className="mt-4 text-base leading-[22.4px] text-[var(--onix-body)]">{centre.summary}</p>}
+              <h1 className="onix-heading-dark mt-2 text-[40px] font-semibold leading-[48px]">{headline}</h1>
+              {subheading && <p className="mt-4 text-base leading-[22.4px] text-[var(--onix-body)]">{subheading}</p>}
             </div>
             {heroImage && (
               <Image

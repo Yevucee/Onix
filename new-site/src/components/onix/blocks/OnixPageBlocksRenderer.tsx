@@ -10,6 +10,22 @@ import { getMediaAlt, getMediaUrl } from '@/lib/media-url'
 
 type MediaRef = number | Media | null | undefined
 
+/** Rewrite legacy/staging URLs to current site paths */
+function normalizeCtaUrl(url?: string | null): string {
+  if (!url) return '/contact-us'
+  if (url.startsWith('/')) return url
+  if (url.includes('contact-us') || url.includes('o-contact')) return '/contact-us'
+  if (url.includes('myftpupload.com') || url.includes('onixdatacentres.com')) {
+    try {
+      const parsed = new URL(url)
+      return parsed.pathname.endsWith('/') ? parsed.pathname.slice(0, -1) : parsed.pathname
+    } catch {
+      return '/contact-us'
+    }
+  }
+  return url
+}
+
 function OnixStatsSection({ items }: { items: Array<{ value?: string | null; label?: string | null }> }) {
   if (!items?.length) return null
   return (
@@ -42,23 +58,25 @@ function OnixSplitSection({
   heading,
   body,
   image,
+  imageUrl,
   imagePosition = 'right',
 }: {
   heading?: string | null
   body?: string | null
   image?: MediaRef
+  imageUrl?: string | null
   imagePosition?: 'left' | 'right' | null
 }) {
-  const imageUrl = getMediaUrl(image, 'article')
+  const resolvedImageUrl = getMediaUrl(image, 'article') || imageUrl || null
   const textBlock = (
     <div>
       {heading && <h2 className="onix-heading-dark text-[40px] font-semibold leading-[48px]">{heading}</h2>}
-      {body && <p className="mt-4 text-base leading-[22.4px] text-[var(--onix-body)]">{body}</p>}
+      {body && <p className="mt-4 whitespace-pre-line text-base leading-[22.4px] text-[var(--onix-body)]">{body}</p>}
     </div>
   )
-  const imageBlock = imageUrl ? (
+  const imageBlock = resolvedImageUrl ? (
     <Image
-      src={imageUrl}
+      src={resolvedImageUrl}
       alt={getMediaAlt(image, heading || '')}
       width={600}
       height={400}
@@ -296,10 +314,10 @@ export function OnixPageBlocksRenderer({
                 eyebrow={(block.eyebrow as string) || undefined}
                 title={(block.heading as string) || ''}
                 intro={(block.subheading as string) || undefined}
-                imageUrl={getMediaUrl(block.image as MediaRef, 'hero')}
+                imageUrl={getMediaUrl(block.image as MediaRef, 'hero') || (block.imageUrl as string) || undefined}
                 imageAlt={getMediaAlt(block.image as MediaRef)}
                 ctaLabel={(block.ctaLabel as string) || undefined}
-                ctaUrl={(block.ctaUrl as string) || undefined}
+                ctaUrl={normalizeCtaUrl(block.ctaUrl as string)}
               />
             )
           case 'richText':
@@ -311,6 +329,7 @@ export function OnixPageBlocksRenderer({
                 heading={block.heading as string}
                 body={block.body as string}
                 image={block.image as MediaRef}
+                imageUrl={block.imageUrl as string}
                 imagePosition={block.imagePosition as 'left' | 'right'}
               />
             )
@@ -356,7 +375,7 @@ export function OnixPageBlocksRenderer({
                 heading={(block.heading as string) || undefined}
                 body={(block.body as string) || undefined}
                 buttonLabel={(block.buttonLabel as string) || 'Contact us'}
-                buttonUrl={(block.buttonUrl as string) || '/contact-us'}
+                buttonUrl={normalizeCtaUrl(block.buttonUrl as string)}
               />
             )
           default:

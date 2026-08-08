@@ -1,8 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Leadership } from '@/payload-types'
+import { leadershipContactFromLegacyPath } from '@/data/leadership-contacts'
+import { leadershipPhotoFromLegacyPath } from '@/data/leadership-photos'
 import { getPayloadClient } from '@/lib/payload'
 import { getMediaAlt, getMediaUrl } from '@/lib/media-url'
+
+function resolveLeadershipPhoto(person: Leadership, size: 'card' | 'article' = 'card'): string | null {
+  const payloadPhoto = getMediaUrl(person.photo, size)
+  if (payloadPhoto) return payloadPhoto
+  return leadershipPhotoFromLegacyPath(person.legacy?.legacyPath)
+}
 
 export async function OnixLeadershipGrid({ heading, intro }: { heading?: string | null; intro?: string | null }) {
   const payload = await getPayloadClient()
@@ -28,14 +36,15 @@ export async function OnixLeadershipGrid({ heading, intro }: { heading?: string 
 
 function OnixLeadershipCard({ person }: { person: Leadership }) {
   const href = person.legacy?.legacyPath || '#'
-  const photo = getMediaUrl(person.photo, 'card')
+  const photo = resolveLeadershipPhoto(person, 'card')
+  const photoAlt = getMediaAlt(person.photo, person.name) || person.name
 
   return (
     <Link href={href} className="group block bg-white p-6 text-center transition-shadow hover:shadow-md">
       {photo ? (
         <Image
           src={photo}
-          alt={getMediaAlt(person.photo, person.name)}
+          alt={photoAlt}
           width={200}
           height={200}
           className="mx-auto mb-4 h-40 w-40 rounded-full object-cover"
@@ -52,7 +61,9 @@ function OnixLeadershipCard({ person }: { person: Leadership }) {
 }
 
 export function OnixLeadershipProfile({ person }: { person: Leadership }) {
-  const photo = getMediaUrl(person.photo, 'article')
+  const photo = resolveLeadershipPhoto(person, 'article')
+  const photoAlt = getMediaAlt(person.photo, person.name) || person.name
+  const contact = leadershipContactFromLegacyPath(person.legacy?.legacyPath)
 
   return (
     <article className="grid gap-10 lg:grid-cols-[280px_1fr]">
@@ -60,7 +71,7 @@ export function OnixLeadershipProfile({ person }: { person: Leadership }) {
         {photo ? (
           <Image
             src={photo}
-            alt={getMediaAlt(person.photo, person.name)}
+            alt={photoAlt}
             width={400}
             height={400}
             className="w-full object-cover"
@@ -84,6 +95,24 @@ export function OnixLeadershipProfile({ person }: { person: Leadership }) {
       <div>
         <h1 className="onix-heading-dark text-[40px] font-semibold leading-[48px]">{person.name}</h1>
         {person.title && <p className="mt-2 text-lg text-[var(--onix-muted)]">{person.title}</p>}
+        {(contact?.phone || contact?.email) && (
+          <div className="mt-6 space-y-2">
+            {contact.phone && (
+              <p>
+                <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="text-lg text-[var(--onix-body)] hover:text-[var(--onix-red)]">
+                  {contact.phone}
+                </a>
+              </p>
+            )}
+            {contact.email && (
+              <p>
+                <a href={`mailto:${contact.email}`} className="text-lg text-[var(--onix-body)] hover:text-[var(--onix-red)]">
+                  {contact.email}
+                </a>
+              </p>
+            )}
+          </div>
+        )}
         {person.biography && typeof person.biography === 'object' && (
           <div className="onix-prose mt-8 max-w-none text-base leading-[22.4px] text-[var(--onix-body)]">
             <LexicalBio content={person.biography} />

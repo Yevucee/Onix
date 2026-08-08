@@ -2,7 +2,6 @@ import type { Page } from '@/payload-types'
 import { OnixBreadcrumbs } from '@/components/onix/templates/OnixBreadcrumbs'
 import { OnixPageBlocksRenderer } from '@/components/onix/blocks/OnixPageBlocksRenderer'
 import { OnixPageCTA } from '@/components/onix/templates/OnixPageCTA'
-import { OnixPageHero } from '@/components/onix/templates/OnixPageHero'
 import { OnixLeadershipGrid } from '@/components/onix/templates/OnixLeadershipGrid'
 
 type Crumb = { label: string; href?: string }
@@ -16,10 +15,8 @@ export function CorporatePageTemplate({
   breadcrumbs: Crumb[]
   showDefaultLeadership?: boolean
 }) {
-  const hasHero = page.blocks?.some((b) => b.blockType === 'hero')
   const hasLeadership = page.blocks?.some((b) => b.blockType === 'leadershipGrid')
   const hasCta = page.blocks?.some((b) => b.blockType === 'cta')
-  const introBlock = page.blocks?.find((b) => b.blockType === 'richText')
 
   return (
     <>
@@ -28,13 +25,6 @@ export function CorporatePageTemplate({
           <OnixBreadcrumbs items={breadcrumbs} />
         </div>
       </div>
-
-      {!hasHero && (
-        <OnixPageHero
-          title={page.title}
-          intro={introBlock && introBlock.blockType === 'richText' ? undefined : undefined}
-        />
-      )}
 
       <OnixPageBlocksRenderer blocks={page.blocks} featureCardVariant="light" />
 

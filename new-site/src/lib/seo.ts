@@ -11,9 +11,16 @@ type SEOInput = {
   robots?: string | null
 }
 
+const TITLE_SUFFIX = ' – Onix Data Centre'
+
+function normalizeTitle(title: string): string {
+  return title.replace(new RegExp(`${TITLE_SUFFIX.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`), '').trim()
+}
+
 export function buildMetadata(input: SEOInput, fallbackTitle: string): Metadata {
   const siteUrl = getSiteUrl()
-  const title = input.title || fallbackTitle
+  const rawTitle = input.title || fallbackTitle
+  const title = normalizeTitle(rawTitle)
   const description = input.description || undefined
   const canonical = input.canonicalUrl || undefined
 

@@ -1,6 +1,9 @@
 import { notFound } from 'next/navigation'
+import type { Page } from '@/payload-types'
 import { CorporatePageTemplate } from '@/components/onix/templates/CorporatePageTemplate'
+import { resolveAboutUsBlocks } from '@/data/group1-about-us'
 import { getPayloadClient } from '@/lib/payload'
+import { productionCanonical } from '@/lib/canonical'
 import { buildMetadata } from '@/lib/seo'
 
 export async function generateMetadata() {
@@ -12,7 +15,7 @@ export async function generateMetadata() {
     {
       title: doc.seo?.title,
       description: doc.seo?.description,
-      canonicalUrl: doc.seo?.canonicalUrl || `${process.env.NEXT_PUBLIC_SITE_URL}/about-us`,
+      canonicalUrl: doc.seo?.canonicalUrl || productionCanonical('/about-us'),
     },
     doc.title,
   )
@@ -24,9 +27,14 @@ export default async function AboutPage() {
   const page = result.docs[0]
   if (!page) notFound()
 
+  const enrichedPage: Page = {
+    ...page,
+    blocks: resolveAboutUsBlocks(page.blocks as Page['blocks']) as Page['blocks'],
+  }
+
   return (
     <CorporatePageTemplate
-      page={page}
+      page={enrichedPage}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: page.title }]}
       showDefaultLeadership
     />

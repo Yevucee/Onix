@@ -1,11 +1,7 @@
-import { ContactPageTemplate } from '@/components/onix/templates/ContactPageTemplate'
-import { buildMetadata } from '@/lib/seo'
+import { ContactPageTemplate, contactPageMetadata } from '@/components/onix/templates/ContactPageTemplate'
 
 export async function generateMetadata() {
-  return buildMetadata(
-    { title: 'Contact Us', description: 'Contact Onix Data Centre' },
-    'Contact Us',
-  )
+  return contactPageMetadata()
 }
 
 export default function ContactPage() {

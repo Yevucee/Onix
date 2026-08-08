@@ -6,6 +6,7 @@ import { ContactPageTemplate } from '@/components/onix/templates/ContactPageTemp
 import { getPayloadClient } from '@/lib/payload'
 import { pathFromSlugSegments, resolvePublicPath } from '@/lib/page-resolver'
 import { resolvePageTemplate } from '@/lib/page-templates'
+import { productionCanonical } from '@/lib/canonical'
 import { buildMetadata } from '@/lib/seo'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }) {
@@ -17,8 +18,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!resolved) return { title: 'Page not found' }
 
   if (resolved.type === 'leadership') {
+    const legacyPath = resolved.doc.legacy?.legacyPath || pathname
     return buildMetadata(
-      { title: resolved.doc.name, description: resolved.doc.title || undefined },
+      {
+        title: resolved.doc.name,
+        description: resolved.doc.title || undefined,
+        canonicalUrl: productionCanonical(legacyPath),
+      },
       resolved.doc.name,
     )
   }
